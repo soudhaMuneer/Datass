@@ -1,0 +1,69 @@
+﻿@using HireMeNow_BlazorApp.Dtos;
+<div class="fillDiv">
+
+
+
+    <div color="black" align="center">
+
+        @if (userModel.Image==null)
+        {
+            <img src="publicassets/images/gray-user.png" alt="" class="proImg " />
+        }
+        else
+        {
+
+            <img src="Uploads/@userModel.Image" alt="" class="proImg ">
+        }
+        @*<input type="file" name="profileImage" />*@
+
+        <center>  <b>@userModel?.FirstName </b> &nbsp; <b>@userModel?.LastName</b> </center>
+        <center> <em>Designation</em> <br></center>
+    </div>
+
+
+    @*<h5><img src="jobseekerassets/images/resume.png" width="25px" alt="Resume "> RESUME </h5>*@
+    <font size="4" face="math" color="black" align="center">
+        <i>
+            <img src="jobseekerassets/images/mail.png" width="20px" alt="mail ">
+            @userModel?.Email
+        </i>
+        <br>
+
+        <i>
+            <img src="jobseekerassets/images/phone.png" width="20px" alt="phone ">
+            @userModel?.Phone
+        </i><br>
+        <i>
+            <img src="jobseekerassets/images/location.png" width="20px" alt="location "> @userModel?.Location
+        </i><br>
+
+    </font>
+</div>
+<br>
+<br />
+<br />
+<div class="aboutMeDiv">
+
+
+    @*    <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" onclick="editAbout()" />
+    *@
+    <h4> <img src="jobseekerassets/images/user.png" width="25px"> About Me</h4>
+    @*<input type="submit" class="btn btn-sm btn-primary btnSaveChanges" id="btnSaveChanges" value="Save Changes" />*@
+    <font size="3" face="math" color="black" align="justify-content-center">
+
+
+        <blockquote>
+            <div class="aboutMeContentDiv profileContent fillDiv" id="aboutMeTxtDiv">
+              
+                @userModel?.About
+            </div>
+        </blockquote>
+    </font>
+
+
+</div>
+
+@code {
+    [Parameter]
+    public UserDto userModel { get; set; } = new();
+}

@@ -1,0 +1,104 @@
+<!-- header -->
+
+<nav class="navbar">
+    <div class="navbar-left">
+      <ul class="nav-items">
+        <h2><li><a>New Registrations</a></li></h2> 
+      </ul>
+    </div>
+    <div class="navbar-center">
+      <ul class="nav-items">
+        <li><a ><div class="search-bar">
+            <input type="text" placeholder="Search something here...">
+            <button type="button">
+              <img src="../../assets/images/Search.png">
+            </button>
+          </div></a></li>
+      </ul>
+    </div>
+    <div class="navbar-right">
+      <ul class="nav-items">
+        <li >
+            <a  href="#"><img src="../../assets/images/notification.png"></a>
+          </li>
+        <li><a><img src="../../assets/images/notification (1).png"></a></li>
+      </ul>
+      <div class="profile">
+        <img src="../../assets/images/profilePicture.png" alt="Profile Picture" />
+        <div class="profile-info">
+          <h2>Oda Dink</h2>
+          <p>Super Admin</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+<br>
+<br>
+<br>
+  <!-- second-header -->
+
+<div class="main-heading">
+    <div class="heading-info">
+        <h3>Showing 45 Applicants</h3>
+        <p>Based Your Preferences</p>
+    </div>
+    <div class="pill"  (click)="filterTableData('All')" [class.active]="filterStatus === 'All'"[class.hover]="filterStatus === 'All'">All</div>
+    <div class="pill" (click)="filterTableData('Pending')" [class.active]="filterStatus === 'Pending'"[class.hover]="filterStatus === 'Pending'">Pending</div>
+    <div class="pill" (click)="filterTableData('On-Hold')" [class.active]="filterStatus === 'On-Hold'"[class.hover]="filterStatus === 'On-Hold'">On-Hold</div>
+    <div class="pill" (click)="filterTableData('Candidate')" [class.active]="filterStatus === 'Candidate'"[class.hover]="filterStatus === 'Candidate'">Candidate</div>
+</div>
+<br>
+
+<!-- content -->
+
+<table class="data-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Date Applied</th>
+        <th>Company</th>
+        <th>Type</th>
+        <th>Position</th>
+        <th>Contact</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of getFilteredTableData()">
+            <td><input type="checkbox" /></td>
+            <td>{{ item.id }}</td>
+            <td>{{ item.date }}</td>
+            <td>
+                <div class="company-details">
+                <div class="company-logo">
+                    <img [src]="item.companyLogo" alt="Company Logo" />
+                </div>
+                <div class="company-text">
+                    <h5>{{ item.companyName }}</h5>
+                    <h6>{{ item.jobtitle }}</h6>
+                </div>
+                </div>
+            </td>   
+            <td>{{ item.type }}</td>
+            <td>{{ item.position }}</td>
+            <td>
+                <div class="contact-images">
+                    <img [src]="item.contactPhone" alt="Contact 1" />
+                    <img [src]="item.contactMail" alt="Contact 2" />
+                </div>
+            </td>
+            <td>
+                <div class="status-button" [ngClass]="item.status.toLowerCase()">
+                    <span>{{ item.status }}</span>
+                </div>
+            </td>
+            <td>
+                <img [src]="item.threedots" alt="three dots" />
+            </td>   
+        </tr>
+    </tbody>
+  </table>
+  
+

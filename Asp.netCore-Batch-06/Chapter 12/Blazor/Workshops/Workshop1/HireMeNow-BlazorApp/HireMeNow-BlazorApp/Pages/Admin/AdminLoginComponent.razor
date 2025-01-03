@@ -1,0 +1,84 @@
+﻿@page "/Adminlogin"
+@page "/"
+@using HireMeNow_BlazorApp.Interfaces;
+@layout LoginLayout
+@inject IUserService _userService
+@inject NavigationManager NavManager
+ <link href="AdminLogin/Css/AdminLoginStyles.css" rel="stylesheet" />
+<link href="AdminLogin/Css/Corousalstyle.css" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="col-md-12 bg-white">
+        <div class="row">
+          
+            <div class="col-md-7 ">
+                <CorousalComponent></CorousalComponent>
+            </div>
+            <div class="col-md-5 bg-white">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="row row-grid">
+                            <div class="was-validated form-container">
+                                <h3 class="h3 wid3">Sign in to Admin Dashboard</h3><br>
+                                <div class="row">
+                                    <div class="errors text-danger" asp-validation-summary="All">@Error</div>
+                                </div>
+                                <div class="mb-3 mt-3 wid3">
+                                    <label for="uname" class="form-label" style="color: black; font-weight: bold;">Email:</label>
+                                    <input type="text" asp-for="Email" @bind="Email" class="form-control rounded-corner form-control-lg custom-input" id="uname" placeholder="Input your email in here" name="email" required style="border-color: rgb(88, 66, 213);">
+                                    <!-- <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div> -->
+                                </div>
+                                <div class="mb-3 wid3">
+                                    <label for="pwd" class="form-label" style="color: black; font-weight: bold;">Password:</label>
+                                    <input type="password" accept="Password" @bind="Password" class="form-control rounded-corner form-control-lg custom-input" id="pwd" placeholder="inpu your password in here" name="pswd" required style="border-color: rgb(88, 66, 213);">
+                                    <!-- <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div> -->
+                                    <div class="form-group mt-2 float-right" style="float:right">
+                                        <a href="#" class="forgot-password">Forgot Password?</a>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn wid3 mt-5 rounded-corner custom-button" style="background-color: rgb(88, 66, 213); color: white;" @onclick="Login">Sign in</button>
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+</div>
+   
+</div>
+
+
+@code {
+    [Parameter]
+    public string Email { get; set; }
+
+    [Parameter]
+    public string Password { get; set; }
+
+    [Parameter]
+    public string? Error { get; set; }
+    [Parameter]
+    public string? msg { get; set; }
+
+    private async void Login()
+    {
+        Error = "";
+        var result = _userService.login(Email, Password);
+        if (result != null && result.Role==Enums.Roles.Admin)
+        {
+
+            NavManager.NavigateTo("/admin/jobproviders");
+        }
+        else
+        {
+            Error = "Login Failed";
+        }
+    }
+
+}

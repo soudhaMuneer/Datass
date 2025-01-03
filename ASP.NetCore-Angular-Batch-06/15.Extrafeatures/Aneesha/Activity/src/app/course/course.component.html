@@ -1,0 +1,8 @@
+<h1>course works!</h1>
+
+<!-- <app-search [item]="all" [Free]="free" [Paid]="paid"></app-search> -->
+
+<!-- <app-search [Child]="getAll()"></app-search> -->
+<app-search (message)="getData($event)"></app-search>
+{{messageFromChild}}
+

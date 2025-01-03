@@ -1,0 +1,74 @@
+﻿@page 
+@model IndexModel
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        main p {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .register-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer p {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+    </style>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Our Website</h1>
+        </header>
+        <main>
+            <p>Join us to get the latest updates and exclusive content.</p>
+            <a asp-page="/Register" class="register-button">Register</a>
+        </main>
+        <footer>
+            <p>&copy; 2024 Our Website. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+

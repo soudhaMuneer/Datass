@@ -1,0 +1,48 @@
+
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #4f35e3;
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 0;
+  }
+  
+  .sidebar ul li a {
+    display: block;
+    color: #0b0b0b;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #555;
+   
+  }
+  
+  .content {
+    margin-left: 200px; /* Adjust based on sidebar width */
+    padding: 20px;
+  }
+  a.active{
+    background-color: aliceblue;
+   
+  }

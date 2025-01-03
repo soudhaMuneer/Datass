@@ -1,0 +1,106 @@
+﻿@page "/JobList"
+@model RazorExercise.Pages.JobListModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Job Listings</title>
+    <style>
+        /* General table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+            /* Table header styling */
+            table thead {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            table th, table td {
+                padding: 12px;
+                border: 1px solid #ddd;
+            }
+
+            /* Row styling */
+            table tbody tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            /* Hover effect for rows */
+            table tbody tr:hover {
+                background-color: #ddd;
+            }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Apply button link styling */
+        .nav-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Job Listings</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Requirements</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Salary</th>
+            <th>Apply</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model!=null)
+        {
+            @foreach (var job in Model.jobs)
+            {
+                <tr>
+                    <td>@job.Id</td>
+                    <td>@job.Title</td>
+                    <td>@job.Requirements</td>
+                    <td>@job.Location</td>
+                    <td>@job.Type</td>
+                    <td>@job.Salary</td>
+                    <td>
+                        <form method="post">
+                            <input type="hidden" name="jobId" value="@job.Id" />
+                            <a class="nav-link text-white" asp-area="" asp-page="/Apply">
+                                <button asp-page="/Apply" type="submit">Apply</button>
+                            </a>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        
+    </tbody>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,8 @@
+﻿@model List<MVC_Paartial_view.Models.Person>
+
+<h2>People List</h2>
+
+@foreach (var person in Model)
+{
+    @Html.Partial("_PersonPartial", person)
+}

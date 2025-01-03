@@ -1,0 +1,75 @@
+#app{
+    
+    height: 40em;
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#left{
+    border: 1px solid white;
+    width: 10cm;
+    background-color: #2980B9;
+}
+
+#menujobs{
+    margin-top: 10px;
+    background-color: #2980B9;
+    border: 1px solid blue;
+    text-align: center;
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: white;
+
+}
+
+#menuapplication{
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    color: #2980B9;
+
+}
+
+
+#right{
+    border: 1px solid white;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+#Application{
+    margin: auto;
+    margin-top: 10px;
+    background-color: lightgrey;
+    border: 2px solid white;
+    font-size: 3em ;
+    height: 2cm ;
+    width: 6cm;
+    text-align: center;
+    color: crimson;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#linkjobs{
+    color: white;
+    text-decoration: none;
+}
+#linkapplication{
+    color: #2980B9;
+    text-decoration: none;
+}

@@ -1,0 +1,130 @@
+.header {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 78%;
+    height: 25%;
+    padding-bottom: 25px;
+    padding-left: 20px;
+}
+
+.search {
+height: 75%;
+width: 85%;
+padding: 3px;
+}
+#searchBox{outline: none;}
+.searchContainer {
+height: 30%;
+width: 95%;
+padding: 3px;
+padding-top: 2%;
+border: 1px solid gray;
+border-radius: 15px;
+
+}
+
+.bellIcons {
+position: absolute;
+left: 85%;
+top: 32%;
+}
+
+.logIcon {
+position: absolute;
+left: 90%;
+top: 30%;
+}
+
+.searchIcon {
+color: royalblue;
+}
+
+
+.content-container {
+    position: absolute;
+    top: 31%;
+    left: 22%;
+  
+   
+    padding: 4%;
+    height: 65%;
+    width:50%;
+    overflow-y: scroll;
+    background-color: gainsboro;
+}
+#view {
+    float: right;
+    padding: 2% 10%;
+    background-color: cornflowerblue;
+    border-radius: 20%;
+}
+
+.card_row {
+
+   
+    gap: 20px;
+}
+
+.member-card {
+    width: 600px;
+    font-size: 1.4rem;
+    padding: 4%;
+}
+p{
+    font-size: large;
+}
+.jobpost{
+  
+    margin-left: 100px;
+}
+.location{
+    
+    position: absolute;
+    margin-left: 160px;
+    margin-top: -20px;
+font-size: medium;
+}
+.companyname{
+  position: absolute;
+    margin-left: 100px;
+    color: blue; 
+    font-size: medium;
+    margin-top: -20px;
+ 
+    
+}
+.member-image{
+    position:absolute;
+    margin-top:-10px;
+}
+.btnn{
+    margin-left: 20px;
+    border-radius: 10px;
+    height: 30px;
+    background-color: gray;
+    border: transparent;
+}
+.postjobs{
+    position: absolute;
+    margin-top: -48px;
+    margin-left: 150px;
+}
+.savedjobs{
+    position: absolute;
+    margin-top: -48px;
+    margin-left: 300px;
+} 
+.sideimage{
+    position: absolute;
+    margin-left: 975px;
+    margin-top: -700px;
+   
+}
+.sidedimage{
+    height: 490px;
+    width: 245px;
+    
+   
+}
+

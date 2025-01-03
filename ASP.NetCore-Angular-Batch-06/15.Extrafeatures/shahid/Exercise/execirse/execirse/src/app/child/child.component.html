@@ -1,0 +1,70 @@
+
+<div *ngIf="btnclick">
+    <div class="profile-image" [ngStyle]="{'background-image': 'url(' +childdata.back  + ')'}"><img [src]="childdata.companylogo" class="pt-5 d-block mx-auto"></div>
+    <div class="row">
+          
+            <span><b>12 Applicants</b><b class="float-end">posted 6 days ago</b></span>
+            <br>
+            <h3>{{childdata.jobpost}} <img [src]="childdata.saved" class="float-end"></h3>
+            <p><span class="text-primary">{{childdata.companyname}}</span> <b>.{{childdata.location}}</b></p>
+            <hr>
+            <div class="row"> 
+
+
+                <div class="col-md-6">
+                 <span><img src="../../assets/images/Group 1 (14).png" align="center">Type of Employment<br><span class="ms-5">Full-time</span></span><br>
+                 <span><img src="../../assets/images/Group 1 (14).png" align="center">Experience Level<br><span class="ms-5">Mid-Level</span></span><br>
+                 <span><img src="../../assets/images/Group 1 (14).png" align="center">Salary Range<br><span class="ms-5">$3000-$5000</span></span>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <span><img src="../../assets/images/Group 1 (14).png" align="center">Location<br><span class="ms-5">Indonesia</span></span><br>
+                    <span><img src="../../assets/images/Group 1 (14).png" align="center">Onsite/Remote<br><span class="ms-5">Onsite</span></span>
+                </div>
+                <div class="row"> 
+                    <div class="col-md-12">
+                    <span >
+                        <button (click)="shodesc2()" class="ms-5 border-0 shadow-lg rounded" style="background-color: rgba(216, 208, 208, 0.884);">company</button>
+                        <button (click)="shodesc()" class="ms-5 border-0 shadow-lg rounded" style="background-color: rgba(182, 178, 178, 0.884);">Job Desc</button>
+                        <button (click)="shodesc1()" class="ms-5  border-0 shadow-lg rounded" style="background-color: rgba(216, 208, 208, 0.884);">Responsibilities</button>
+                        <hr>
+                    </span>
+                    <p *ngIf="btnclick1">
+                        {{childdata.description}}
+        
+                    </p>
+                    <div *ngIf="btnclick2">
+                        {{childdata.jobpost}}
+        
+                    </div>
+                    <p *ngIf="btnclick3">
+                        {{childdata.companyname}}
+        
+                    </p>
+                    </div>
+                    
+                    <span><button class="bg-primary rounded border-0 shadow-lg">Apply Job</button>&nbsp; <button class="bg-secondary rounded border-0 shadow-lg">Message</button></span>
+                </div>
+
+            </div>
+            </div>
+            
+
+           
+          <!-- <button (click)="shodesc()">click</button> -->
+            
+            <!-- <button (click)="shodesc1()">click</button>
+            <div *ngIf="btnclick2">
+                {{childdata.description}}
+
+            </div>
+            <button (click)="shodesc2()">click</button>
+            <p *ngIf="btnclick3">
+                {{childdata.description}}
+
+            </p> -->
+           
+    </div>
+

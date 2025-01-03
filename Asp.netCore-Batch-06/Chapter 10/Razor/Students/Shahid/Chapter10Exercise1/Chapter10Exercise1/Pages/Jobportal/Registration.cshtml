@@ -1,0 +1,39 @@
+﻿@page "/"
+@model Chapter10Exercise1.Pages.Jobportal.RegistrationModel
+@{
+    Layout = "_RegisterLayout";
+}
+<style>
+    .regbg{
+        background-color : steelblue;
+    }
+</style>
+<div class="Container">
+    <div class="row m-5">
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-4">
+            <div class="p-5 regbg text-end border rounded-3">
+                <div class="p-2">
+                    <form method="post">
+                        <span>Username</span>
+                        <input asp-for="Userdto.UserName" type="text" class="form-control" /><br /><br />
+                        <span>Email</span>
+                        <input asp-for="Userdto.Email" type="text" class="form-control" /><br /><br />
+                        <span>Password</span>
+                        <input asp-for="Userdto.Password" type="password" class="form-control" /><br /><br />
+                        <span>Confirm Password</span>
+                        <input type="text" name="name" value="" /><br /><br />
+                        <input type="submit" name="name" value="Register" class="btn btn-light" />
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+        </div>
+
+    </div>
+
+</div>
+

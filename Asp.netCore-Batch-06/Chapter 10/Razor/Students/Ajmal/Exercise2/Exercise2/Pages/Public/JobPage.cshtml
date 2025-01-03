@@ -1,0 +1,35 @@
+﻿@page
+@model Exercise2.Pages.Public.JobPageModel
+@{
+    Layout = "HomeLayout";
+}
+<style>
+    .card:hover {
+        scale: 1.1;
+    }
+</style>
+<div class="row mt-3">
+    @for (int i = 0; i < Model.jobs.Count; i += 3)
+    {
+        <div class="row mb-2">
+
+            @for (int j = i; j < i + 3 && j < Model.jobs.Count; j++)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4> @Model.jobs[j].JobTitle</h4>
+                            <p>Comapny : @Model.jobs[j].Company </p>
+                            <p>Discription : @Model.jobs[j].JobDescription</p>
+                            <span>Date : @Model.jobs[j].Date</span> <span>Location: @Model.jobs[j].Place</span>
+                            <form method="post">
+                                <input type="hidden" name="id" value="@Model.jobs[j].Id" />
+                                <button type="submit" class="btn btn-primary mt-3">Apply</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

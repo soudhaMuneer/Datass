@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap exercise</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+body{
+    background-color: #F2F2F2;
+    
+}
+#sidebar{
+background-color:dodgerblue;
+}
+#sidebar-div .nav .nav-item{
+    width: 100%;
+    position:relative;        
+   
+} 
+#sidebar-div .nav .nav-item:hover{
+    background-color: #F2F2F2;
+    color: black;   
+    border-top-left-radius: 25px; 
+    border-bottom-left-radius: 25px;             
+} 
+ul.nav .nav-item .nav-link, ul.nav .nav-item .nav-link:visited {
+    color: rgb(255, 255, 255) !important;            
+}
+
+ul.nav .nav-item .nav-link:hover, ul.nav .nav-item .nav-link:active {
+    color: rgb(0, 0, 0) !important;
+}
+.nav-item:hover::after  {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 100%;
+    right: 0;
+    height: 100%;
+    width: 45px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 30px 0 0 #F2F2F2;
+  
+  }
+  .nav-item:hover::before  {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 100%;
+    right: 0;
+    height: 100%;
+    width: 45px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 -30px 0 0 #F2F2F2;
+  
+  }
+  #main-content::before  {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 0%;
+    left: 16.7%;
+    height: 25%;
+    width: 50px;
+    
+   
+  
+  }
+  .card{
+    color: #FFFFFF;
+  }
+  .jisni
+   { font-size: 100px; 
+   }
+   .ruaa{position: relative;
+    height: 70px;
+    top: 50px;
+    left: -50px;
+   }
+   .rins{position: relative;
+    height: 70px;
+  top: 60px;
+  left: -50px;
+ }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap ">
+            <div class="col-2 col-md-2  px-0 pt-3 " id="sidebar">
+                <p class="text-white fs-4  pt-4 text-center" >HireMe Now!</p>
+                
+                <div class="d-flex flex-column  pt- text-white min-vh-100 " id="sidebar-div">
+                   
+                    
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start pt-" id="menu">
+                        <li class="nav-item py-2" id="listitems" >
+                            <a href="#" class="nav-link px-0 align-middle link-light"   >
+                                 <i class="ms-4 fs-4  bi-backpack4-fill text-dark"></i>
+                                <span class="ms-1 d-none d-xl-inline" >Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2  ">
+                            <a href="#"  class="nav-link px-0 align-middle link-light"  >
+                                <i class=" ms-4 fs-4 bi bi-journal-bookmark text-dark"></i>
+                                <span class="ms-1 d-none d-xl-inline">Jobs</span> </a>
+                        </li>
+                        <li  class="nav-item py-2">
+                            <a href="#" class="nav-link px-0 align-middle link-light"  >
+                                <i class=" ms-4 fs-4 bi bi-window-dock text-dark"></i>                                
+                                <span class="ms-1 d-none d-xl-inline">Applications</span></a>
+                        </li>
+                        <li  class="nav-item py-2">
+                            <a href="#" class="nav-link  px-0 align-middle link-light" >
+                                <i class="ms-4 fs-4 bi bi-patch-question-fill text-dark"></i>
+                                <span class="ms-1 d-none d-xl-inline">Interviews</span>
+                            </a>                   
+                        </li>
+                        <li  class="nav-item py-2">
+                            <a href="#" class="nav-link px-0 align-middle link-light">
+                                <i class="ms-4 fs-4 bi bi-chat-dots text-dark"></i>
+                                <span class="ms-1 d-none d-xl-inline">Messages</span></a>
+                        </li>
+
+                        <li  class="nav-item py-2">
+                            <a href="#" class="nav-link px-0 align-middle link-light">
+                                <i class="ms-4 fs-4 bi bi-gear-fill text-dark"></i>
+                                <span class="ms-1 d-none d-xl-inline">Settings</span> </a>
+                        </li>
+                        
+                        <li  class="nav-item py-3 ">
+                            <a href="#" class="nav-link px-0 align-middle link-light">
+                                <i class="ms-5  bi bi-person-plus-fill jisni text-dark"></i>
+                                <span class=" ms-5 d-none d-xl-inline text-nowrap rinshad text-center" >
+                                    Add new</span> </a>
+                              
+                            </li> 
+                        
+                         
+                          
+                       
+                        
+                    </ul>
+                
+                    <div class="py-3">
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col py-2 " id="main-content">
+               <div class="row">
+               
+                    <!-- //<nav class="navbar navbar-expand-lg navbar-light "> -->
+                       
+                      
+                           
+                       
+                        <div class="col-md-12 text-end">
+                            
+                            <ul class="navbar-nav  mt-2 mt-lg-0">
+                                <li class="nav-item active">
+                                    <img class="img-fluid"  src="image/bell.png" style="width: 20px;">
+                                
+                                
+                                    <img class="img-fluid" src="image/girl.png">
+                                
+                                
+                                    Olivia <img class="img-fluid" src="image/icons8-dropdown-24.png" style="width: 20px;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </nav>
+                
+                <div class="row">
+                <div class="col-md-12 border-top  border-dark ">
+                    <div class="text-end fw-bold fs-5"> Short List &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    </div>
+                <div class="row">
+                <div class="col-md-1">
+                </div>
+<div class="col-md-10 border-top  border-dark ">
+   
+    <form >
+        
+        <div class="mt-4 mb-2">
+          <label for="uname" class="form-label fw-bold">Job title:</label>
+          <input type="text" class="form-control  bg-secondary-subtle" id="uname" placeholder="Select Jobtitle" name="job title" required>
+          <label for="uname" class="form-label fw-bold pt-4">Date:</label> <img class="float-end   ruaa " src="image/calendar (4) 1.png" >
+          <input type="text" class="form-control w-75 bg-secondary-subtle" id="uname" placeholder="Date" name="Date" required>
+          <label for="uname" class="form-label fw-bold pt-4">Time:</label> <img class="float-end  rins " src="image/clock 1.png" >
+          <input type="text" class="form-control  w-75 bg-secondary-subtle" id="uname" placeholder="Time" name="Time" required>
+          <label for="uname" class="form-label fw-bold pt-4">Location:</label><img class="float-end   ruaa" src="image/location 1.png" >
+          <input type="text" class="form-control w-75  bg-secondary-subtle" id="uname" placeholder="Location" name="Location" required>
+</form>
+<div class="mt-3 mb-5">
+    
+    
+   
+   
+
+</div>
+                </div>
+                <div class="col-md-1">
+                </div>
+                </div>
+                </div>
+
+            </div>
+            
+                <div class="row">
+                <div class="col-md-1">
+                </div>
+<div class="col-md-8">
+    <button class="bg-info rounded-1 btn btn-info">send</button>  <span class="ms-4">Push Notification <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+ </label></span>
+    
+ <span class="ps-5">Push Notification <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider round"></span>
+</label></span>
+        
+</div>
+
+    </div>
+    <div class="col-md-1">
+    </div>
+</body>
+</html>
+<!-- <img class="float-end w-10 " src="./images/icons8-clock-50.png" > -->
+<!-- <img class="float-end   w-20 " src="./images/icons8-location-50.png" > -->

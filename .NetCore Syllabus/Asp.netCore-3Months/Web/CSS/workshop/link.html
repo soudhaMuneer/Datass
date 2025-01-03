@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        img {width: 100%;
+            height: auto;}
+
+        h2 {font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: rgb(3, 3, 104);}
+
+        h5 {font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        a {color: rgb(24, 35, 159);
+            font-weight: bold; }
+       .link:link {color: #FF0000;} /* unvisited link */
+        .link:visited {color: #ff0000;} /* visited link */
+        .link:hover {color: #FF00FF;} /* mouse over link */
+        .link:active {color: #0000FF;}
+
+        .dec:link { text-decoration: none;  }  /* unvisited link */
+        .dec:visited { text-decoration: none;  }  /* visited link */
+        .dec:hover { text-decoration: underline;  }  /* mouse over link */
+        .dec:active { text-decoration: underline;} /* selected link */
+
+        .bg:link { background-color: #B2FF99;} /* unvisited link */
+        .bg:visited { background-color: #FFFF85;  }  /* visited link */
+        .bg:hover {  background-color: #FF704D; }  /* mouse over link */
+        .bg:active {  background-color: #FF704D;  }  /* selected link */
+   
+        .box:link,
+        .box:visited {
+            display: block;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #98bf21;
+            width: 120px;
+            text-align: center;
+            padding: 4px;
+            text-decoration: none;
+        }
+        .box:hover,
+        .box:active {
+            background-color: #7A991A;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a href="main.html"><i class="fa fa-angle-double-left" style="font-size:20px;"></i>Back</a>
+
+        <div class="row ">
+            <div class="col-md-12 d-flex justify-content-center p-5">
+                <h2>CSS LINKS </h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>1.Add Different Colors To Visited/Unvisited Links</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/links/1.png">
+            </div>
+            <div class="col-md-6">
+                <p><b><a class="link " href="http://aitrich.com/">This is a link</a></b></p>
+
+                <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS
+                    definition in order to be effective.</p>
+                <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order
+                    to be effective.</p>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>2.Use Text Decoration On Link</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/links/2.png">
+            </div>
+            <div class="col-md-6">
+                <p><b><a class="dec" href=" http://aitrich.com/">This is a link to Aitrich</a></b></p>
+    <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS
+        definition in order to be effective.</p>
+    <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order
+        to be effective.</p>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>3.Set A Background For Link</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/links/3.png">
+            </div>
+            <div class="col-md-6">
+                <p><b><a class="bg" href="http://aitrich.com/" target="_blank">This is a link</a></b></p>
+    <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS
+        definition in order to be effective.</p>
+    <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order
+        to be effective.</p>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>4.Advanced-Create Link Box</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/links/4.png">
+            </div>
+            <div class="col-md-6">
+                <a class="box" href="http://aitrich.com/" target="_blank">This is a link</a>
+            </div>
+        </div>
+         
+        <a href="main.html"><i class="fa fa-angle-double-left" style="font-size:20px;"></i>Back</a>
+    </div>
+</body>
+
+</html>

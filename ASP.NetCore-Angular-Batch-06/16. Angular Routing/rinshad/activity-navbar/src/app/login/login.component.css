@@ -1,0 +1,24 @@
+a:hover {
+    background-color: brown;
+  }
+  
+  .active {
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    margin-right: 100px;
+  }
+  
+  a {
+    text-decoration: none;
+    color:black;
+    border: 1px solid black;
+    background-color: dodgerblue;
+  }

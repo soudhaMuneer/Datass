@@ -1,0 +1,62 @@
+﻿@page "/Jobseeker/MyApplication"
+@using HireMeNow_BlazorApp.Interfaces
+@using HireMeNow_BlazorApp.Models
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+@layout JobSeekerLayout
+@inject IApplicationService Applicationservices
+@inject NavigationManager NavigationManager
+@inject ProtectedSessionStorage ProtectedSessionStore
+@inject IUserService userService
+<div>
+    <div class="row jobListDiv">
+
+        <h2 align="center" color="#3487bf">All Applied Jobs</h2>
+        @if (applications is null)
+        {
+            <p><em>...............................................Loading!</em></p>
+        }
+        else
+        {
+
+            <div class="left col-md-8 scroll">
+                @foreach (var jobs in applications)
+                {
+                    <Applications job="@jobs"></Applications>
+                }
+            </div>
+        }
+        <div class="center">
+
+            <div class="pagination">
+                <a href="Job/JobListComponent">&laquo;</a>
+                <a href="Job/JobListComponent" class="active">1</a>
+                <a href="Job/JobListComponent">2</a>
+                <a href="Job/JobListComponent">3</a>
+                <a href="Job/JobListComponent">4</a>
+                <a href="Job/JobListComponent">5</a>
+                <a href="Job/JobListComponent">6</a>
+                <a href="Job/JobListComponent">&raquo;</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+@code 
+{
+    List<Application> applications;
+    protected override void OnInitialized()
+    {
+        var loggedUser = userService.getLoggedUser();
+        if (loggedUser == null)
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            //Implement code to get all applications of the logged user 
+
+            // applications = Applicationservices.GetAll(loggedUser.Id);
+
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.nav-item{
+    color: white;
+    text-decoration: none;
+}
+a{
+    color: white;
+    font-size:larger;
+    text-decoration: none;
+    
+}
+img{
+    border-radius: 15px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.profile{
+    color: white;
+    font-size: x-large;
+}

@@ -1,0 +1,40 @@
+﻿@page "/user/profile/{userId}"
+@page "/user/profile"
+@using HireMeNow_BlazorApp.Interfaces;
+@using HireMeNow_BlazorApp.Shared;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+@inject NavigationManager NavigationManager
+@inject ProtectedSessionStorage ProtectedSessionStore
+@inject IUserService userService
+
+@layout JobSeekerLayout
+@if (String.IsNullOrWhiteSpace(userId))
+{
+    <ProfileComponent></ProfileComponent>
+}
+else
+{
+    try
+    {
+        <ProfileComponent UserId="new Guid(userId)" />
+    }
+    catch
+    {
+        <h1>User Not Fount</h1>
+    }
+}
+
+@code {
+    [Parameter]
+    public string userId{ get; set; }
+
+    protected override void OnInitialized()
+    {
+        var loggedUser = userService.getLoggedUser();
+        if (loggedUser == null)
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        
+    }
+}

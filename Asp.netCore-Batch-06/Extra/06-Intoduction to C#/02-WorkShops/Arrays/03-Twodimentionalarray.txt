@@ -1,0 +1,28 @@
+
+using System;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Example
+{
+    class Program
+    {
+        public static void Main()
+        {
+            // declaration of two dimentional array
+            int[,] array = new int[2, 2];
+            // initialization of two dimentional array
+            array[0, 0] = 1;
+            array[0, 1] = 2;
+            array[1, 0] = 1;
+            array[1, 1] = 2;
+            Console.WriteLine(array[0, 0]);
+            Console.ReadLine();
+
+        }
+    }
+}
+

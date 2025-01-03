@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #0c3955;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #f1f1f1;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .header h1 {
+      color: rgb(28, 62, 131);
+      margin: 0;
+      font-weight: bold;
+    }
+    .card {
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #edebb9;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-title {
+      color: #333;
+    }
+    .card-text {
+      color: #666;
+    }
+    .logo {
+      max-width: 100px;
+      margin: 10px auto;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="images/Aitrich.png" alt="Aitrich Logo" class="logo">
+  <h1>HTML Workshops</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mt-5">
+      <div class="card" onclick="window.location.href='page1.html'">
+        <div class="card-body">
+          <h5 class="card-title">HTML Basics</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mt-5">
+      <div class="card" onclick="window.location.href='page2.html'">
+        <div class="card-body">
+          <h5 class="card-title">Visual Elements</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mt-5">
+      <div class="card" onclick="window.location.href='page3.html'">
+        <div class="card-body">
+          <h5 class="card-title">HTML Lists</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mt-5">
+      <div class="card" onclick="window.location.href='page4.html'">
+        <div class="card-body">
+          <h5 class="card-title">Iframes</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card" onclick="window.location.href='page5.html'">
+        <div class="card-body">
+          <h5 class="card-title">HTML Tables</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" onclick="window.location.href='page6.html'">
+        <div class="card-body">
+          <h5 class="card-title">HTML Forms</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" onclick="window.location.href='page7.html'">
+        <div class="card-body">
+          <h5 class="card-title">Hyperlinks</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" onclick="window.location.href='HTML5.html'">
+        <div class="card-body">
+          <h5 class="card-title">HTML 5</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>&copy; Aitrich Technology.Copy-right Protected, Workshop not allowed to take over to home. All Rights Reserved. </p>
+</footer>
+
+</body>
+</html>

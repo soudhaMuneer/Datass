@@ -1,0 +1,43 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Workshop.Models
+{
+    public partial class User
+    {
+        public Guid Id { get; set; }
+
+        public string? FirstName { get; set; }
+
+        public string? LastName { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = null!;
+
+        public string? Gender { get; set; }
+
+        public string? Location { get; set; }
+
+        public string? Phone { get; set; }
+
+        public string? Password { get; set; }
+
+        public string? Role { get; set; }
+
+        public string? About { get; set; }
+
+        public string? Designation { get; set; }
+
+        public Guid? CompanyId { get; set; }
+
+        public string? Status { get; set; }
+
+        public string? Image { get; set; }
+
+        public DateTime? CreatedDate { get; set; }
+        public virtual Company? Company { get; set; }
+        public virtual ICollection<Application> Applications { get; set; } = new List<Application>();
+        public virtual ICollection<Job> Jobs { get; set; } = new List<Job>();
+
+
+    }
+}

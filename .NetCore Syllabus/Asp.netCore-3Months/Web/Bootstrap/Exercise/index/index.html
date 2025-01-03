@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Exercise</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .custom-section {
+            padding: 50px 0;
+        }
+        .custom-footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+        .navbar-brand img {
+            height: 40px;
+        }
+        .card img {
+            max-height: 150px;
+            object-fit: cover;
+        }
+        .custom-section h2 {
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .custom-section p {
+            color: #323331;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="images/bts1.png"alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="custom-section text-center" style="background: url('images/bts2.jpg') no-repeat center center; background-size: cover; color: white;">
+        <div class="container">
+            <h1 class="display-4"><b>Welcome to Aitrich</b></h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="custom-section bg-light text-center py-5">
+        <div class="container">
+            <h2 class="mb-4">About Us</h2>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <img src="images/bts3.jpg" height="500" width="500"  class="img-fluid rounded" alt="About Us">
+                </div>
+            </div>
+            <p class="lead">Welcome to Aitrich Academy,</p>
+            <p>
+                At Aitrich, we are dedicated to empowering individuals and organizations with the practical IT skills they need to thrive in today's technology-driven world. Our mission is to bridge the gap between theoretical knowledge and real-world application, ensuring our students are well-prepared to tackle the challenges of the IT industry.
+            </p>
+            <br>
+            <p><b>Our Mission</b></p>
+            <p>
+                Our mission is to provide high-quality, hands-on IT training that equips learners with the practical skills required to succeed in their careers. We aim to foster a learning environment that is both engaging and effective, focusing on real-world applications and problem-solving.
+            </p>
+            <br>
+            <p><b>Our Vision</b></p>
+            <p>
+                We envision a world where every individual has access to the IT skills necessary to pursue their passions and contribute to technological innovation. By making practical IT education accessible and relevant, we strive to be a catalyst for personal and professional growth.
+            </p>
+            <br>
+            <p><b>What We Offer</b></p>
+            <ul class="text-left d-inline-block">
+                <li>Software Development: Learn the latest programming languages and frameworks through hands-on projects.</li>
+                <li>Network and Security: Gain practical experience in managing and securing IT networks.</li>
+                <li>Data Science and Analytics: Master the tools and techniques used in data analysis and machine learning.</li>
+                <li>Cloud Computing: Understand cloud technologies and how to deploy and manage cloud-based solutions.</li>
+                <li>IT Support and Administration: Develop the skills needed to provide effective IT support and manage IT infrastructure.</li>
+            </ul>
+            <br>
+            <p><b>Why Choose Us?</b></p>
+            <ul class="text-left d-inline-block">
+                <li>Experienced Instructors: Our instructors are industry experts with years of practical experience.</li>
+                <li>Hands-On Learning: We emphasize practical, project-based learning to ensure you can apply what you learn.</li>
+                <li>Flexible Learning Options: We offer both online and in-person courses to fit your schedule.</li>
+                <li>Career Support: Our courses are designed to enhance your career prospects, with support for job placements and internships.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="custom-section text-center">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/bts4.jpg" class="card-img-top" alt="Service 1">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-cog"></i> Software Development</h5>
+                            <p class="card-text">
+                                At Aitrich Academy, our Software Development courses are designed to provide you with a deep understanding of modern programming languages and frameworks. Through a series of hands-on projects, you will learn how to write clean, efficient, and maintainable code. Our curriculum includes popular languages like Python, Java, and JavaScript, and covers frameworks such as React, Angular, and Spring Boot. Whether you're aiming to build dynamic web applications, develop robust backend systems, or venture into mobile app development, our courses offer the practical experience and industry insights needed to turn your ideas into reality. With guidance from experienced instructors, you will gain the confidence to tackle real-world software development challenges and advance your career in the tech industry.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/bts8.jpg" class="card-img-top" alt="Service 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-heart"></i> Network and Security</h5>
+                            <p class="card-text">Our Network and Security courses at Aitrich Academy are meticulously designed to equip you with the essential skills needed to manage and secure complex IT networks. You will gain hands-on experience with network configuration, troubleshooting, and maintenance, ensuring robust and reliable connectivity. Our curriculum covers key areas such as network architecture, firewall management, intrusion detection systems, and cybersecurity protocols. Through practical labs and real-world scenarios, you will learn how to protect systems from various cyber threats, perform vulnerability assessments, and implement security measures that safeguard sensitive data. Guided by industry experts, these courses will prepare you to handle the ever-evolving challenges of network security, making you a valuable asset in any organization. Whether you are starting your career or looking to enhance your skills, our comprehensive training will provide you with the expertise needed to excel in the field of IT security.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/bts9.jpg" class="card-img-top" alt="Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-star"></i> Data Science and Analytics</h5>
+                            <p class="card-text">At Aitrich Academy, our Data Science and Analytics courses are designed to provide you with the knowledge and skills required to make data-driven decisions and unlock valuable insights. You will learn how to collect, process, and analyze large datasets using tools such as Python, R, and SQL. Our curriculum covers essential topics such as statistical analysis, machine learning, data visualization, and big data technologies like Hadoop and Spark. Through hands-on projects and case studies, you will gain practical experience in building predictive models, performing data mining, and creating interactive dashboards. Guided by experienced data scientists, these courses will help you understand how to leverage data to solve real-world problems and drive business growth. Whether you are a beginner looking to enter the field or a professional aiming to enhance your skills, our comprehensive training will equip you with the expertise needed to excel in the rapidly growing domain of data science and analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="custom-section bg-light text-center">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us via the form below.</p>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Message</label>
+                    <textarea class="form-control" id="inputMessage" rows="3" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="custom-footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Aitrich Academy. All Rights Reserved.</p>
+            <p>
+                <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mr-3"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

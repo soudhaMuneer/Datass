@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HireMeNow_MVC_Application.Models.Job>
+
+@{
+    ViewData["Title"] = "JobList";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h1>JobList</h1>
+
+
+@*
+<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<div class="row mainDiv">
+    <div class="containerdiv col-md-10">
+        @foreach (var job in Model)
+        {
+
+            <div class="col-md-3 detailsDiv p-3 m-3">
+                <img src="" /><br>
+                <b> @job.CompanyName </b><br>
+                <b> @job.Title </b><br>
+               Salary : <b> @job.Salary </b><br>
+                Experience : <b> @job.Experience </b><br>
+                <b> @job.Description </b><br>
+                Location : <b> @job.Location </b><br>
+                Job Type : <b> @job.Type </b><br>
+               @* <b> @job.Email </b><br><br>*@
+
+                <input type="button" value="View" class="btn btn-primary">
+
+            </div>
+        }
+    </div>
+
+</div>
+

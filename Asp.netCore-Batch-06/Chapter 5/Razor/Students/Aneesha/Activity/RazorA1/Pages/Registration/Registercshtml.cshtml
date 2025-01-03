@@ -1,0 +1,50 @@
+﻿@page
+@model RazorA1.Pages.Registration.RegistercshtmlModel
+
+<form method="post">
+    <input type="text" asp-for="student.Name"/>
+    <input type ="text" asp-for="student.Description" />
+    <input type="text" asp-for="student.Address" />
+    <input type="submit" text="Add" />
+</form>
+
+<table>
+    <thead>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Address
+        </th>
+    </thead>
+
+    <tbody>
+
+   
+    @if (Model.Studentslist1 != null)
+    {
+        @foreach(var st in Model.Studentslist1)
+        {
+            <tr>
+                <td>
+                    @st.Name
+                </td>
+                <td>
+                    @st.Description
+                </td>
+                <td>
+                    @st.Address
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
+
+
+
+

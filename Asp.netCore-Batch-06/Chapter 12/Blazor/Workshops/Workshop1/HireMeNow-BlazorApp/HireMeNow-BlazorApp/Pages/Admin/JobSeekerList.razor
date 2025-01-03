@@ -1,0 +1,64 @@
+﻿@page "/admin/jobseekers"
+@using HireMeNow_BlazorApp.Models;
+@using HireMeNow_BlazorApp.Interfaces
+@inject IUserService _userServices
+@layout AdminLayout
+<style>
+    .providerList {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        color: black;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+</style>
+<div class="container-fluid">
+    <h3>Job Seekers</h3>
+    <div class="col-md-6 m-4">
+        <div class="input-group rounded-pill  bg-light">
+            <button type="button" class="btn " @onclick="SearchData">
+                <i class="bi bi-search"></i>
+            </button>
+            <div class="form-outline bg-light col-md-10">
+                <input type="search" @bind=Search id="form1" class="form-control bg-light border-0" placeholder="Search by Title, Company or any jobs keyword..." />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-3 providerList">
+            <JobProviderListComponent users="users" ReloadData="getAllJobSeekers"></JobProviderListComponent>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public List<User> users { get; set; } = new();
+    [Parameter]
+    public string Search { get; set; }
+    protected override void OnInitialized()
+    {
+        getAllJobSeekers();
+        
+    }
+    public void getAllJobSeekers()
+    {
+        users = _userServices.jobseekerListing();
+    }
+    public void SearchData()
+    {
+        if (String.IsNullOrWhiteSpace(Search))
+            users = _userServices.jobseekerListing();
+        else
+            users = _userServices.GetByFilter(Search, Enums.Roles.JobSeeker);
+    }
+}

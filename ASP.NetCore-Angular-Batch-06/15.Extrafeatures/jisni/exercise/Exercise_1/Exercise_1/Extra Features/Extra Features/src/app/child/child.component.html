@@ -1,0 +1,22 @@
+<div class="container-fluid">
+<p class="fw-bold" >Showing {{arry1.length}} Applicants</p>
+    
+<div class="card border-0  mb-3  " style="width: 55em;" *ngFor="let item of arry1"  >
+  <ul type="none">
+    <li class="mt-5">
+      <img [src]="item.companyLogo" style="float: left; padding-bottom: 6px;">
+          <h4>{{item.designation}}<br><small style="color: dodgerblue;">{{item.compantName}} </small><small>&#8226;</small></h4>
+    </li>
+  </ul>
+  <p>We are looking for a UI/UX Designer to turn our software into easy-to- use products for our clients.</p>
+  <ul type="none"  class="mb-3">
+    <li>
+      <button class="me-3 btnn ">{{item.text_1}}</button>
+      <button class="me-3 btnn">{{item.text_2}}</button>
+      <button class="me-3 btnn">{{item.text_3}}</button>
+      <button class="me-3 btnn">{{item.text_4}}</button>
+      <button class="me-3 btnn">{{item.text_5}}</button>
+      <button class="me-3 btnn">{{item.text_6}}</button>
+      
+  </ul>
+</div>

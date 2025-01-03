@@ -1,0 +1,129 @@
+﻿@using HireMeNow_BlazorApp.Models;
+@using HireMeNow_BlazorApp.Dtos;
+@using HireMeNow_BlazorApp.Interfaces
+@inject IUserService _userServices
+<style>
+
+
+    .confirmation-box {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background: #40189d;
+        padding: 20px;
+        margin: 10px;
+        color: white;
+        background-image: linear-gradient(175deg, #744ad4, #08011ac7);
+        font-family: popins;
+        font-size: medium;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px 1px #3a3939e8;
+    }
+
+    .overlay {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+</style>
+
+@if (showConfirmationOverlay)
+{
+    <div class="col-md-12" style="
+    z-index: 10;
+">
+        <div class="overlay">
+            <div class="confirmation-box">
+                <h4>Are you sure you want to Remove  ?</h4>
+                <div class="buttons">
+                    <button class="btn btn-outline-danger" @onclick="Remove">Yes</button>
+                    <button class="btn btn-outline-primary " @onclick="HideConfirmation">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (users.Count>0)
+{
+
+    @foreach (var user in users)
+    {
+        <div class="col-md-3">
+            <div class="card">
+                <img class="img-fluid" src="publicassets/images/Aitrich_logo.jpg" width="100px">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">@user.FirstName</h5>
+                    <p class="card-text">@user.Email</p>
+                    <div class="d-flex justify-content-between">
+                        <button class="remove btn rounded-pill mr-2" @onclick=@(()=>selectId(user.Id))>REMOVE</button>
+                        <button class="block btn rounded-pill">BLOCK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+}
+else
+{
+    <h2>No JobSeekers Found...</h2>
+}
+
+@code {
+    [Parameter]
+    public string id { get; set; }
+    [Parameter]
+    public User User { get; set; }
+    [Parameter]
+    public List<User> users { get; set; } = new();
+    bool showConfirmationOverlay = false;
+    private Guid selectedId;
+    //protected override void OnInitialized()
+    //{
+    //    users = _userServices.jobProviderListing();
+    //    //users = _userServices.getAllUsers();
+    //}
+    [Parameter]
+    public EventCallback ReloadData { get; set; }
+    [Parameter]
+    public EventCallback RemoveConfirmation { get; set; }
+
+    private async Task loadDatas()
+    {
+        await ReloadData.InvokeAsync();
+    }
+
+    public void Remove()
+    {
+        //implement the Remove Functionality
+
+
+
+        HideConfirmation();
+        loadDatas();
+
+    }
+    private void selectId(Guid id)
+    {
+        selectedId = new();
+        selectedId = id;
+        ShowConfirmation();
+    }
+    private void ShowConfirmation()
+    {
+        showConfirmationOverlay = true;
+    }
+
+    private void HideConfirmation()
+    {
+        showConfirmationOverlay = false;
+    }
+
+}

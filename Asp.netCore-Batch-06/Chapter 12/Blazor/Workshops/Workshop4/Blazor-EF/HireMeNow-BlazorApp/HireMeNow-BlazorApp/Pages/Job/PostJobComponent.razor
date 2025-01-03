@@ -1,0 +1,78 @@
+﻿@page "/Job/PostJob"
+@using HireMeNow_BlazorApp.Interfaces
+@using HireMeNow_BlazorApp.Models
+@layout JobProviderLayoutComponent
+@inject IJobService Jobservices
+@inject NavigationManager NavigationManager
+@inject IUserService userService
+<div class="row">
+
+	<div class="col-md-10 p-5 mx-auto d-block border rounded mb-5" style="border-radius: 30px; box-shadow: 0px 0px 5px 2px gray;">
+		<form @onsubmit=@Add>
+			<div class="row">
+				<div class="col-md-10">
+					<div class="form-group">
+						<label for="jobTitle"><h4>Job Title</h4></label>
+						<br>
+						<input class="form-control p-4 bg-light" type="text" @bind="obj.Title" placeholder="Enter Job Title" required>
+					</div>
+					<div class="form-group">
+						<label for="description"><h4>Description</h4></label>
+						<br>
+						<input  class="form-control p-4 bg-light" type="text" placeholder="Enter Description"  @bind="obj.Description">
+					</div>
+					<div class="form-group">
+						<label ><h4>Salary</h4></label>
+						<br>
+						<input  class="form-control p-4 bg-light" type="text" placeholder="Enter Salary" required @bind="obj.Salary">
+					</div>
+					<div class="form-group">
+						<label for="Experience"><h4>Experience</h4></label>
+						<br>
+						<input  class="form-control p-4 bg-light" type="text" placeholder="Enter TypeOfWork" required="" @bind="obj.Experience">
+					</div>
+					<div class="form-group">
+						<label><h4>TypeOfWork</h4></label>
+						<br>
+						<input class="form-control p-4 bg-light" type="text" placeholder="Enter TypeOfWork" required="" @bind="obj.TypeOfWorkPlace">
+					</div>
+					<div class="form-group">
+						<label for="Location"><h4>Location</h4></label>
+						<br>
+						<input class="form-control p-4 bg-light" type="text" placeholder="Enter Location" required="" @bind="obj.Location">
+					</div>
+				</div>
+			</div>
+			<div class="row pt-4">
+				<div class="col-md-3">
+					
+					<input type="submit" value="Post Job" @onsubmit="@Add" class="btn bg-primary pl-5 pr-5" />
+
+				</div>
+				<div class="col-md-3">
+					<label>Push Notification</label>
+					<img class="img-fluid" src="postjob/images/Group 14.png">
+				</div>
+				<div class="col-md-3">
+					<label>Email Notification</label>
+					<img class="img-fluid" src="postjob/images/Group 14.png">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+@code {
+
+	Job obj = new Job();
+	protected void Add()
+	{
+		var loggedUser = userService.getLoggedUser();
+		obj.CompanyId = loggedUser.CompanyId;
+		Jobservices.PostJob(obj);
+		NavigationManager.NavigateTo("/Jobprovider/JobList");
+    }
+    void Cancel()
+    {
+		NavigationManager.NavigateTo("/Jobprovider/JobList");
+    }
+}

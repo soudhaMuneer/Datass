@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #0c3955;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #f1f1f1;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .header h1 {
+      color: rgb(28, 62, 131);
+      margin: 0;
+      font-weight: bold;
+    }
+    .card {
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #edebb9;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-title {
+      color: #333;
+    }
+    .card-text {
+      color: #666;
+    }
+    .logo {
+      max-width: 100px;
+      margin: 10px auto;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #6c757d;
+    }
+    .back-btn-container {
+      text-align: center;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #030326;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .back-btn:hover {
+      background-color: #34ac21;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="images/Aitrich.png" alt="Aitrich Logo" class="logo">
+  <h1>HTML 5 Workshops</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mt-5">
+      <div class="card" onclick="window.location.href='page8.html'">
+        <div class="card-body">
+          <h5 class="card-title">New Semantic Tags</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mt-5">
+      <div class="card" onclick="window.location.href='page9.html'">
+        <div class="card-body">
+          <h5 class="card-title">New Input Types</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mt-5">
+      <div class="card" onclick="window.location.href='page10.html'">
+        <div class="card-body">
+          <h5 class="card-title">New Media Elements</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mt-5">
+      <div class="card" onclick="window.location.href='page11.html'">
+        <div class="card-body">
+          <h5 class="card-title">New Attributes</h5>
+          <p class="card-text">Click to visit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<br>
+<br>
+<br>
+<div class="back-btn-container">
+  <a href="index.html" class="back-btn">&larr; Back to Main Page</a>
+</div>
+<footer class="footer">
+  <p>&copy; Aitrich Technology.Copy-right Protected, Workshop not allowed to take over to home. All Rights Reserved. </p>
+</footer>
+
+</body>
+</html>

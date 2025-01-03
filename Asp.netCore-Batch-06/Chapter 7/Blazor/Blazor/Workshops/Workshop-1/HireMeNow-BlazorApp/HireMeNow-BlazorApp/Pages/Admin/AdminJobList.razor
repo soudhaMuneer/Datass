@@ -1,0 +1,85 @@
+﻿@page "/admin/jobs"
+@page "/"
+@using HireMeNow_BlazorApp.Interfaces
+@using HireMeNow_BlazorApp.Models
+@using HireMeNow_BlazorApp.Services;
+@layout AdminLayout
+@inject IJobService Jobservices
+@inject StorageService storageService
+<link href="~/adminlogin/css/adminstyle.css" rel="stylesheet" />
+<PageTitle>jobs</PageTitle>
+<style>
+    .providerList{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        color: black;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+        .card:hover {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            box-shadow: 1px 1px 13px 0px #00000047;
+        }
+</style>
+
+
+<h3>Jobs</h3>
+<div class="col-md-6 m-4">
+    <div class="input-group rounded-pill  bg-light">
+        <button type="button" class="btn " @onclick="GetJobs">
+            <i class="bi bi-search"></i>
+        </button>
+        <div class="form-outline bg-light col-md-10">
+            <input type="search" @bind=Search id="form1" class="form-control bg-light border-0" placeholder=" Search by Title, Company or any jobs keyword... " />
+        </div>
+    </div>
+</div>
+@if (Joblist is null)
+{
+    <p><em>NO JOBS FOUND...</em></p>
+}
+else
+{
+    <div class="row bg-white">
+
+   
+  @foreach(var jobs in Joblist)
+    {
+       
+                    <AdminJobComponent job="@jobs"></AdminJobComponent>
+    }
+    </div>
+}
+
+
+@code {
+    List<Job> Joblist;
+    [Parameter]
+    public string Search{ get; set; }
+
+    protected override void OnInitialized()
+    {
+        storageService.pageTitle = "Jobs";
+        Joblist = Jobservices.GetJobs();
+      
+    }
+    public void GetJobs()
+    {
+        if (String.IsNullOrWhiteSpace(Search))
+            Joblist = Jobservices.GetJobs();
+            else
+        Joblist = Jobservices.getByTitle(Search);
+    }
+}

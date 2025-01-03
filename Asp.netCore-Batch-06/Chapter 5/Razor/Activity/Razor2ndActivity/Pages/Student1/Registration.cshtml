@@ -1,0 +1,39 @@
+﻿@page
+@model Razor2ndActivity.Pages.Student1.RegistrationModel
+<form method="post">
+    <input type="text" asp-for="Student.Name" />
+    <input type="text" asp-for="Student.Email" />
+    <input type="file" asp-for="Student.Image" class="form-control-file" />
+    <input type="submit" text="Add"/>
+</form>
+<table  border="1">
+    <thead>
+        <th>
+            Name
+        </th>
+    <th>
+        Email
+    </th>
+    <th>
+        Image
+    </th>
+    </thead>
+    <tbody>
+        @foreach (var st in Model.Students1)
+        {
+            <tr>
+                <td>
+                    @st.Name
+                </td>
+                <td>
+                    @st.Email
+                </td>
+                <td>
+                    @st.Image
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@{
+}

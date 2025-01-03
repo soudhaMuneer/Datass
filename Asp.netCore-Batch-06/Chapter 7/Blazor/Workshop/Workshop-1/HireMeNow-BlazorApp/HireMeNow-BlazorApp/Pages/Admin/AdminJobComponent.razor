@@ -1,0 +1,70 @@
+﻿@using HireMeNow_BlazorApp.Models;
+
+<style>
+	.card{
+		font-family: "Poppins";
+		height: 100%;
+	}
+
+	.card-header-pills {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.JobTitle{
+		font-size:20px;
+
+	}
+
+	.card-header-pills p {
+		color: #797979;
+		margin-bottom: 0px;
+	}
+
+	.salary {
+		color: #40189D;
+		margin-bottom: 0px;
+		align-self: stretch;
+	}
+
+	.greay{
+		color: #797979;
+	}
+
+	.remove{
+		color: #40189D;
+	}
+</style>
+
+<div class="col-md-4  bg-white p-4 ">
+	<div class="card p-2">
+		<div class="card-header-pills col-md-12">
+			<div class="col-md-10">
+				<p class="greay">@job.CompanyName</p>
+				<b class="JobTitle"> @job.Title</b><br />
+				
+			</div>
+			
+			<img src="PublicAssets/images/Aitrich_logo.jpg" width="70px" align="right"/>
+
+		</div>
+		<b class="salary pl-4"> @job.Salary</b>
+		<div class="card-body greay">
+			@job.Description
+		</div>
+		<div class="card-header-pills col-md-12">
+		
+			<a class="remove">REMOVE</a>
+
+			<p class="greay">@job.Location</p>
+			</div>
+		
+	
+	</div>
+	
+</div>
+
+@code {
+	[Parameter]
+	public Job job{ get; set; }
+}

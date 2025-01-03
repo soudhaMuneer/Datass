@@ -1,0 +1,130 @@
+.main{
+    position: relative;
+    height: 610px;
+}
+.find{
+    color: rgb(0, 187, 255);
+    position: relative;
+    left: 60px;
+}
+.whiteb{
+    position: relative;
+    background-color: white;
+    border-left:1px;
+    border-radius: 50px;
+}
+.copy{
+    position: relative;
+    left: 20px;
+    background-color:white;
+    height: 25px;
+}
+.search{
+    position: relative;
+    left: 60px;
+    height: 40px;
+    width: 770px;
+    background-color:white;
+    border:none;
+}
+.filter{
+    position: relative;
+    left: 190px;
+    height: 40px;
+    background-color: white;
+}
+.buttons{
+    position: relative;
+    height: 100px;
+}
+.btn1{
+    position: relative;
+    background-color:rgb(0, 187, 255);
+    left:50px ;
+    top: 30px;
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    border:none;
+
+}.btn2{
+    position: relative;
+    background-color: rgb(0, 187, 255);
+    left:60px ;
+    top: 30px;
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    border:none;
+
+}
+.btn3{
+    position: relative;
+    background-color: rgb(0, 187, 255);
+    left:70px ;
+    top: 30px;
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    border:none;
+
+}
+.btn4{
+    position: relative;
+    background-color:  rgb(0, 187, 255);
+    left:80px ;
+    top: 30px;
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    border:none;
+
+}
+.imag1{
+    position: relative;
+    background-color:rgb(0, 187, 255);
+    width: 300px;
+    height: 60px;
+    left: 50px;
+    border-radius: 5px;
+}
+.imag2{
+    position: relative;
+    background-color:rgb(0, 187, 255);
+    width: 300px;
+    height: 60px;
+    left: 60px;
+    border-radius: 5px;
+}
+
+.imag3{
+    position: relative;
+    background-color: rgb(0, 187, 255);
+    width: 300px;
+    height: 60px;
+    left: 69px;
+    border-radius: 5px;
+}
+.para1{
+    position: relative;
+    left:30px;
+    color: white;
+    
+}
+
+.icon1{
+    position: relative;
+    top: 10px;
+}
+.num1{
+    position: relative;
+    top:10px;
+    left: 70px;
+}
+.smiling{
+    position: relative;
+    height:300px;
+    width:900px ;
+    left: 50px;
+    top: 30px;
+}

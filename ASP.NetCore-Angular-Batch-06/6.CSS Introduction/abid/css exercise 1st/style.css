@@ -1,0 +1,694 @@
+#sidea{
+   
+    width: 30%;
+    height: 550px;
+    float: left;
+    
+}
+#hiremenow{
+    width: 97%;
+    margin-left: 100px;
+    font-size: x-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(18, 18, 117);
+   
+}
+.inputtext{
+    border: none;
+    width: 320px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(232, 239, 241);
+    
+}
+
+.inputbutton{
+    position: absolute;    
+    background-color: rgb(82, 162, 232);
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius:5px;
+    color: white;
+   
+  
+}
+#inputbt{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#greentriangle{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(68, 235, 174);
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 8px;
+    margin-top: 30px;
+    float: left;
+    margin: 3px;
+    border-radius: 5px;
+    color: white;
+
+}
+#idealfont{
+    color: black;
+}
+#sideb{
+    background-color: #31a5ee;
+    margin-left: 100px;
+    float: left;
+    width: 900px;
+    height: 435px;
+    border-radius: 30px;
+}
+#sidebmenu{
+    
+    margin-top: 80px;
+    margin-left: 10px;
+    color: white;
+    width: 72%;
+    float: left;
+}
+#sidebmenu2{
+    float: left;
+    margin-top: 70px;
+}
+#sidebbutton{
+    background-color: rgb(66, 144, 254);
+    width: 90px;
+    height: 40px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+}
+#sidebimage{
+   
+    width: 600px;
+    height: 285px; 
+    background-image: url(placement.png);
+    background-size: 500px 285px;
+    background-repeat: no-repeat;
+    margin-top: 150px;
+    margin-left: 180px;
+    
+}
+#sidec{
+    float: inline-start;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 320px;
+    text-align: center;
+    margin-top: 90px;
+    margin-left: 170px;
+    color: rgb(18, 18, 117);
+
+}
+#sidecp{
+    color: black;
+}
+#sided{
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 120px;
+    width: 1250px;
+    height: 450px;
+}
+#sidedina{ 
+    width: 290px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+    background-color: #eff8ff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#sidedinz{
+    width: 290px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+    background-color: #31a5ee;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+#sidedd{
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+    margin-left: 110px;
+    background-color: #4AE9A6;
+    border-radius: 6px;
+}
+#sideda{
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+    margin-left: 110px;
+    background-color: #31a5ee;
+    border-radius: 6px;
+    
+}
+#sidedb{
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+    margin-left: 110px;
+    background-color: #ECD715;
+    border-radius: 6px;
+}
+#sidedc{
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+    margin-left: 110px;
+    background-color: purple;
+    border-radius: 6px;
+}
+#sidede{
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+    margin-left: 110px;
+    background-color: #FFA800;
+    border-radius: 6px;
+}
+#sidedf{
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+    margin-left: 110px;
+    background-color: rgb(126, 209, 241);
+    border-radius: 6px;
+}
+#sidedg{
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+    margin-left: 110px;
+    background-color: #155EEC;
+    border-radius: 6px;
+}
+#logod{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+#sidedfont{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+#sidedp{
+    font-size: 12px;
+}
+#sidedfonta{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif ;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: x-large;
+    
+    width: 250px;
+    height: 90px;
+}
+#arrow{
+    
+    width: 64px;
+    height: 64px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 6px;
+
+}
+#sidee{
+    position: absolute;
+    margin-top: 1200px;
+    margin-left: 120px;
+    width: 1250px;
+    height: 580px;
+    
+    
+}
+#sideeimage{
+    
+    width: 420px;
+    height: 540px;
+    border-radius: 10px;
+    float: left;
+    background-image: url(a2-ouvanu4eledrsj1238bi5k4bkr9ly8203s2xb123og.jpg);
+    background-size: cover;
+}
+#sideeimage2{
+    
+    width: 150px;
+    height: 180px;
+    border-radius: 10px;
+    margin-left: 320px;
+    margin-top: 400px;
+    background-color: #f0ebef;
+    position: absolute;
+}
+#sideeimage21{
+   
+    width: 114px;
+    height: 130px;
+    margin-top: 10px;
+    margin-left: 30px;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+}
+#sideeimage212{
+    font-size: 14px;
+}
+#verify{
+    
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+    background-image: url(verified.png);
+    background-size: cover;
+}
+#sidee2{
+    
+    width: 500px;
+    height: 450px;
+    margin-left: 600px;
+    margin-top: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 45px;
+    color:  rgb(18, 18, 117);
+    
+}
+#sideelogo{
+    
+    height: 80px;
+    width: 80px;
+    background-color:  #f0ebef;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+#sideelogoimage{
+    width: 50px;
+    height: 50px;
+    margin-top: 13px;
+    margin-left: 15px;
+    
+}
+#sideelogofefinition{
+    
+    height: 80px;
+    width: 300px;
+    float: left;
+    margin-left: 100px;
+    margin-top:  30px;
+    position: absolute;
+    font-size: 17px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sideelogoparagraph{
+    color: rgb(107, 106, 106);
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sideelogofefinition1{
+    
+    height: 80px;
+    width: 300px;
+    float: left;
+    margin-left: 100px;
+    margin-top:  130px;
+    position: absolute;
+    font-size: 17px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sideelogofefinition2{
+    
+    height: 80px;
+    width: 300px;
+    float: left;
+    margin-left: 100px;
+    margin-top:  240px;
+    position: absolute;
+    font-size: 17px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#sidef{
+   
+    margin-left: 120px;
+    margin-top: 1900px;
+    position: absolute;
+    width: 1250px;
+    height: 900px;
+    
+}
+#sidefheading{
+     
+    width: 600px;
+    height: 150px;
+    margin-left: 320px;
+    color: rgb(18, 18, 117);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+#sidefparagraph{
+    font-size: 18px;
+    color: rgb(107, 106, 106);
+}
+#sidef2{
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 314px;
+    width: 343px;
+   background-color: rgba(241, 249, 254, 1);
+   border-radius: 10px;
+   margin-top: 40px;
+   margin-left: 40px;
+float: left;
+}
+#google{
+    
+    height: 48px;
+    width: 48px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+    
+#googlelogo{
+   
+    width: 32px;
+    height: 32px;
+    margin-top: 7px;
+    margin-left: 7px;
+    float: left;
+}
+#googlename{
+    
+    width: 68px;
+    height: 25px;
+    margin-left: 60px;
+    margin-top: 0px;
+    margin-top: 12px;
+    position: absolute;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(18, 18, 117);
+}
+#development{
+    
+    width: 107px;
+    height: 35px;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 200px;
+    background-color: rgba(21, 158, 236, 0.15);
+    border-radius: 4px;
+
+}
+#word{
+    
+    width: 91px;
+    height: 19px;
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(21, 158, 236, 1);
+    
+}
+#frontend{
+   
+    width: 250px;
+    height: 38px;
+    position: absolute;
+    margin-top: 80px;
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:  rgb(18, 18, 117);
+}
+#location{
+   
+    width: 120px;
+    height: 35px;
+    margin-top: 75px;
+    margin-left: 1cqw;
+    float: left;
+    
+}
+#locationsize{
+    width: 22px;
+    height: 22px;
+    margin-top: 4px;
+    
+}
+#newyork{
+    margin: auto;
+    padding: 5px;
+    padding-bottom: 10px;
+    position: absolute;
+    color:  rgb(107, 106, 106);
+}
+   #horizontal{
+    width: 300px;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 20px;
+   }
+#about{
+    
+    width: 288px;
+    height: 44px;
+    margin-top: 170px;
+    margin-left: 20px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:  rgb(107, 106, 106);
+}
+#word2{
+    
+    width: 91px;
+    height: 19px;
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:  rgba(236, 163, 21, 1);
+
+}
+#development2{
+    
+    width: 107px;
+    height: 35px;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 200px;
+    background-color: rgba(236, 163, 21, 0.15);
+    ;
+    border-radius: 4px;
+
+}
+#word3{
+    
+    width: 91px;
+    height: 19px;
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:  rgba(206, 21, 236, 1);
+
+
+}
+#development3{
+    
+    width: 107px;
+    height: 35px;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 200px;
+    background-color: rgba(206, 21, 236, 0.15);
+    border-radius: 4px;
+
+}
+
+
+#sideg{
+   
+    margin-left: 120px;
+    margin-top: 2800px;
+    position: absolute;
+    width: 1250px;
+    height: 900px;
+   
+}
+#viewalljobs{
+   width: 220px; 
+   height: 51px;
+   border-radius: 10px;
+   background-color: rgba(21, 158, 236, 1);
+   color: white;
+   font-size: 20px;
+   border: none;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#jobsarrow{
+    width: 20px;
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 3px;
+   
+   
+}
+#gethired{
+  
+    width: 504px;
+    height: 335px;
+    margin-top: 130px;
+    margin-left: 30px;
+    font-size: 44px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:  rgb(18, 18, 117);
+    float: left;
+}
+#paragraph{
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#lastbutton{
+    background-color: rgba(21, 158, 236, 1);
+    height: 51px;
+    width: 153px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+#learn{
+    font-size: 20px;
+}
+#photos{
+   
+    width: 506px;
+    height: 584px;
+    margin-left: 650px;
+    margin-top: 40px;
+}
+#photos1{
+   
+    width: 224px;
+    height: 161px;
+    border-radius: 8px;
+    margin-top: 20px;
+    float: left;
+    background-image: url(smiling-business-leader-greeting-partner-min-1536x1024.jpeg);
+    background-size: cover;
+}
+#photos2{
+   
+    width: 224px;
+    height: 341px;
+    border-radius: 8px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 20px;
+    background-image: url(person-working-desk-vintage-90-s-style-office\ \(1\).jpg);
+    background-size: cover;
+}
+#photos3{
+   
+    width: 224px;
+    height: 341px;
+    border-radius: 8px;
+    position: absolute;
+    margin-top: 200px;
+    float: left;
+    background-image: url(649f4cf9d38fe7a5927959cb_high-angle-people-working-office-1-p-500.jpg);
+    background-size: cover;
+}
+#photos4{
+    
+    width: 224px;
+    height: 161px;
+    border-radius: 8px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 250px;
+    background-image: url(person-front-computer-working-html.jpg);
+    background-size: cover;
+}
+#google1{
+    
+    height: 70px;
+    width: 70px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 420px;
+    margin-top: 350px;
+    position: absolute;
+    transform: rotate(-20deg);
+    box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 5px;
+}
+#googlelogo1{
+   
+    width: 52px;
+    height: 52px;
+    margin-top: 7px;
+    margin-left: 7px;
+    float: left;
+    
+}
+#twitter{
+    
+    height: 55px;
+    width: 55px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 210px;
+    margin-top: 500px;
+    position: absolute;
+    transform: rotate(20deg);
+    box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 5px;
+}
+#twitter1{
+   
+    width: 40px;
+    height: 40px;
+    margin-top: 7px;
+    margin-left: 7px;
+    float: left;
+    
+}
+#facebook{
+    
+    height: 55px;
+    width: 55px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 425px;
+    margin-top: 10px;
+    position: absolute;
+    transform: rotate(20deg);
+    box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 5px;
+}
+#facebook1{
+   
+    width: 40px;
+    height: 40px;
+    margin-top: 7px;
+    margin-left: 7px;
+    float: left;
+    
+}

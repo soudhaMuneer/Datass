@@ -1,0 +1,68 @@
+.side-nav{
+    width: 20%;
+    height: 600px;
+    background-color: dodgerblue;
+    margin-top: -20px;
+}
+
+.connected-footer{
+    width: 100%;
+    height: 200px;
+    background-color: dodgerblue;
+    margin-top: -39px;
+}
+.main-body{
+    width: 80%;
+    height: 586px;
+    float: right;
+    margin-top: -600px;
+}
+.box1{
+    width: 30%;
+    height: 260px;
+    border-style: groove;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.box2{
+    width: 30%;
+    height: 200px;
+    border-style: groove;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.box3{
+    width: 60%;
+    height: 150px;
+    border-style: groove;
+    float: right;
+    margin-top: -488px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.box4{
+    width: 60%;
+    height: 150px;
+    border-style: groove;
+    float: right;
+    margin-top: -320px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.box5{
+    width: 60%;
+    height: 150px;
+    border-style: groove;
+    float: right;
+    margin-top: -150px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.button{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 800px;
+   
+}

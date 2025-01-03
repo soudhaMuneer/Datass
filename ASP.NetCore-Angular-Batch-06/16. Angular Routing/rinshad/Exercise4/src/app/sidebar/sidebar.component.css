@@ -1,0 +1,46 @@
+.firstimage {
+
+    height: 10%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+   
+    
+}
+
+.name {
+    text-align: center;
+}
+.space{
+    height: 150px;
+}
+h1{
+    position:absolute;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.firstimages{
+    margin-left: 25px;
+    border-radius: 50px;
+}
+.opentowork{
+    position: relative;
+    margin-left: 70px;
+    background-color: green;
+    margin-top: -25px;
+    width: 95px;
+    text-wrap: nowrap;
+    border-radius: 10px;
+}
+ul {
+    list-style: none;
+    line-height: 50px;
+
+}
+li img {
+    padding-right: 10px;
+    width: 20px;
+   
+}

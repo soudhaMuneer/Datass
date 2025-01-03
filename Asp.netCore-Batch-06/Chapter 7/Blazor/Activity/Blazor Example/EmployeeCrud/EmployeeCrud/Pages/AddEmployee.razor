@@ -1,0 +1,53 @@
+﻿@page "/AddEmployee"
+@using EmployeeCrud.Data;
+@inject EmployeeService employeeService;
+@inject NavigationManager NavigationManager;
+<h3>AddEmployee</h3>
+<hr>
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="for-group">
+                <label for="Name"class="control-label">FirstName</label>
+                <input form="FirstName" class="form-control" @bind ='@obj.FirstName'>
+            </div>
+            <div class="for-group">
+                <label for="Name"class="control-label">MiddleName</label>
+                <input form="MiddleName" class="form-control" @bind ='@obj.MiddleName'>
+            </div>
+             <div class="for-group">
+                <label for="Name"class="control-label">LastName</label>
+                <input form="LastName" class="form-control" @bind ='@obj.LastName'>
+            </div>
+                 <div class="for-group">
+                <label for="Name"class="control-label">Postalcode</label>
+                <input form="Postalcode" class="form-control" @bind ='@obj.PostalCode'>
+            </div>
+              <div class="for-group">
+                <label for="Name"class="control-label">Address</label>
+                <input form="Address" class="form-control" @bind ='@obj.Address'>
+            </div>
+            <div class="for-group">
+                <label for="Name"class="control-label">EmailAddress</label>
+                <input form="EmailAddress" class="form-control" @bind ='@obj.EmailAddress'>
+            </div>
+        </div>
+        <div class="row"><div class="col-md-4"><div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@Add" value="SAVE EMPLOYEE">
+                        <input type="button" class="btn btn-danger" @onclick=@Cancel value="cancel">
+
+        </div></div></div>
+    </div>
+</form>
+
+@code {
+    Employee obj = new Employee();
+    protected void Add(){
+        employeeService.AddEmployee(obj);
+        NavigationManager.NavigateTo("Employees");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Employees");
+    }
+}

@@ -1,0 +1,64 @@
+.search-container{
+    position: relative;
+    display: inline-block;
+}
+input[type="text"]{
+    padding-right: 40px;
+    width: 875px;
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+}
+
+.find-button {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    border-radius: 15px;
+    top: 50%;
+    left: 800px;
+    background-color: rgb(41, 41, 111);
+    color: white;
+    transform: translateY(-50%);
+}
+
+.All{
+    background-color:slateblue;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+}
+.Pending{
+    background-color:slateblue;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 80px;
+    margin-top: -20px;
+}
+.On-Hold{
+    background-color:slateblue;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 150px;
+    margin-top: -20px;
+}
+.Candidate{
+    background-color:slateblue;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 250px;
+    margin-top: -20px;
+}

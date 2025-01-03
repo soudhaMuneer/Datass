@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 650px;
+            height: 550px;
+            border: 2px solid black;
+            margin: auto;
+            padding-top: 15px;
+        }
+
+        .profile {
+            position: absolute;
+            border: 2px solid black;
+            border-radius: 30px;
+            top: 20px;
+            left: 420px;
+        }
+
+        .carlie {
+            position: absolute;
+            left: 510px;
+
+
+        }
+
+        .horizontal {
+            position: absolute;
+            color: brown;
+            top: 90px;
+            width: 630px;
+            left: 400px;
+        }
+
+        .text {
+            position: absolute;
+            top: 100px;
+            left: 430px
+        }
+
+        .textbox {
+            position: absolute;
+            left: 430px;
+            top: 200px;
+        }
+
+        .box {
+            height: 30px;
+            width: 250px;
+            border-radius: 5px;
+        }
+
+        .textbox1 {
+            position: absolute;
+            left: 740px;
+            top: 200px;
+        }
+
+        .form {
+            position: absolute;
+            top: 280px;
+            left: 430px;
+        }
+
+        .textarea {
+            position: absolute;
+            top: 30px;
+            left: 430;
+            width: 575px;
+            border-radius: 5px;
+            height: 150px;
+        }
+
+        .save {
+            position: absolute;
+            top: 220px;
+            background-color: rgb(140, 32, 241);
+            color: aliceblue;
+            height: 40px;
+            width: 160px;
+            border-radius: 6px;
+            border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="profile" src="./image/profilePicture.png">
+        <h3 class="carlie">Carlie John</h3>
+        <br>
+        <hr class="horizontal">
+        <p class="text"><b> Basic Information</b>
+            <br>
+            Lorem Ipsum is simply dummy text.
+        </p>
+        <form class="textbox"><label>Full Name</label><br>
+            <input class="box" type="text" name="text" placeholder="Your Name">
+        </form>
+        <form class="textbox1"><label>Email Address</label><br>
+            <input class="box" type="email" name="email" placeholder="Example@gmail.com">
+        </form>
+        <form class="form">
+            <label>About Biography</label><br>
+            <textarea class="textarea" placeholder="say something about you ..."></textarea>
+            <input class="save" type="button" value="Save Changes">
+    </div>
+</body>
+
+</html>

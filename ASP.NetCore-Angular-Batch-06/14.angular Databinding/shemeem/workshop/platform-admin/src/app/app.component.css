@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+.container {
+    display: flex;
+    background: #edeaea;
+}
+
+.main-content {
+    flex-grow: 1;
+    margin-left: 350px;
+    background: #edeaea;
+=======
+.container {
+    display: flex;
+    background: #edeaea;
+}
+
+.main-content {
+    flex-grow: 1;
+    margin-left: 350px;
+    background: #edeaea;
+>>>>>>> a06a0ef73be60bc575a99990d3b212d1bc8ee36f
+}

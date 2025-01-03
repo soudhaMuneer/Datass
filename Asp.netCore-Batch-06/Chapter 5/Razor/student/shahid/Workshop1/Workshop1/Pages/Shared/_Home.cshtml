@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <br /><br /><br /><br />
+                <ul>
+                    <li><a asp-page="/Home">Home</a></li>
+                    <li><a asp-page="/InterviewShedule">Interview</a></li>
+                    <li><a asp-page="/Sheduledinterview">Sheduled interview</a></li>
+                </ul>
+            </div>
+            <div class="col-10">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

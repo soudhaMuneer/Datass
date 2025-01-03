@@ -1,0 +1,128 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Company
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #3e8e41;
+            }
+
+    .text-danger {
+        color: #red;
+    }
+
+    a {
+        text-decoration: none;
+        color: #337ab7;
+    }
+
+        a:hover {
+            color: #23527c;
+        }
+</style>
+
+
+
+<form asp-controller="Company" asp-action="Registration" method="post">
+    <div class="container">
+        <h2>Company Registration</h2>
+        <table>
+            <tr>
+                <td>
+                    <b>Company Name</b><br>
+                    <input asp-for="CompanyName" type="text" class="form-control" placeholder="Enter Company Name" required>
+                    <span asp-validation-for="CompanyName" class="text-danger"></span>
+                </td>
+                <td>
+                    <b>Email</b><br>
+                    <input asp-for="CompanyEmail" type="email" class="form-control" placeholder="Enter Company Email" required>
+                    <span asp-validation-for="CompanyEmail" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Website</b><br>
+                    <input asp-for="CompanyWebsite" type="url" class="form-control" placeholder="Enter Company Website">
+                    <span asp-validation-for="CompanyWebsite" class="text-danger"></span>
+                </td>
+                <td>
+                    <b>Phone Number</b><br>
+                    <input asp-for="CompanyPhoneNumber" type="tel" class="form-control" placeholder="Enter Company Phone Number" required>
+                    <span asp-validation-for="CompanyPhoneNumber" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Location</b><br>
+                    <input asp-for="CompanyLocation" type="text" class="form-control" placeholder="Enter Company Location">
+                    <span asp-validation-for="CompanyLocation" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Vision</b><br>
+                    <textarea asp-for="Vision" class="form-control" rows="3" placeholder="Enter Company Vision"></textarea>
+                    <span asp-validation-for="Vision" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>About</b><br>
+                    <textarea asp-for="About" class="form-control" rows="5" placeholder="Enter About Company"></textarea>
+                    <span asp-validation-for="About" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit" class="btn btn-outline-primary">Register</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+

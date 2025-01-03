@@ -1,0 +1,216 @@
+.t4 {
+    background-color: #9FE2BF;
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    border: 0px;
+    top: 140px;
+    left: 260px;
+    border-radius: 14px;
+}
+
+h1 {
+    position: relative;
+    left: 420px;
+    top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.la {
+    top: 90px;
+    right: 410px;
+    position: absolute;
+}
+
+#fullname {
+    position: absolute;
+    top: 120px;
+    width: 400px;
+    border-radius: 20px;
+    border: 0px;
+    height: 30px;
+    right: 80px;
+    background-color: white;
+
+
+}
+
+.la1 {
+    top: 170px;
+    right: 410px;
+    position: absolute;
+}
+
+#username {
+    position: absolute;
+    top: 200px;
+    width: 400px;
+    border-radius: 20px;
+    border: 0px;
+    height: 30px;
+    right: 80px;
+    background-color: white;
+
+
+}
+
+.la2 {
+    top: 250px;
+    right: 430px;
+    position: absolute;
+}
+
+#email {
+    position: absolute;
+    top: 280px;
+    width: 400px;
+    border-radius: 20px;
+    border: 0px;
+    height: 30px;
+    right: 80px;
+    background-color: white;
+
+
+}
+
+.la3 {
+    top: 330px;
+    right: 410px;
+    position: absolute;
+}
+
+#phone {
+    position: absolute;
+    top: 360px;
+    width: 400px;
+    border-radius: 20px;
+    border: 0px;
+    height: 30px;
+    right: 80px;
+    background-color: white;
+}
+
+.bt {
+    top: 430px;
+    height: 50px;
+    width: 130px;
+    left: 440px;
+    position: absolute;
+    color: white;
+    background-color: #9fe2bfa5;
+    border-radius: 10px;
+    border: 0px;
+
+    border-radius: 20px;
+    background-color: aquamarine;
+
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.bt {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.bt {
+    background-color: white;
+    color: black;
+}
+
+.bt:hover {
+    background-color: #9fe2bfa5;
+    color: black;
+}
+
+.bt:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn {
+    top: 430px;
+    height: 50px;
+    width: 130px;
+    left: 670px;
+    position: absolute;
+    color: white;
+    background-color: #9fe2bfa5;
+    border-radius: 10px;
+    border: 0px;
+
+    border-radius: 20px;
+    background-color: aquamarine;
+
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+}
+
+.btn:hover {
+    background-color: #9fe2bfa5;
+    color: black;
+}
+
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#t5 {
+    position: absolute;
+    background-color: white;
+    height: 280px;
+    width: 440px;
+    top: 340px;
+    left: 550px;
+    visibility: hidden;
+    border-radius: 5px;
+}
+
+.cancel {
+    position: absolute;
+    left: 200px;
+    top: 240px;
+
+}
+
+#output {
+    position: absolute;
+    left: 70px;
+    width: 700px;
+
+}
+
+.blur1 {
+    opacity: .3;
+}

@@ -1,0 +1,34 @@
+.firsttext{
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: 15px;
+    color: gray;
+
+
+}
+.secondtext{
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 200px;
+    margin-top: -28px;
+    color: gray;
+}
+h3{
+    margin-left: 810px;
+    margin-top: -45px;
+    color: gray;
+}
+.profilepic{
+    margin-left: 750px;
+    border-radius: 50%;
+    margin-top: -80px;
+}
+.bell{
+    position: absolute;
+    margin-left: 700px;
+    margin-top: -25px;
+}
+
+    li a{text-decoration: none;
+        color: white;}

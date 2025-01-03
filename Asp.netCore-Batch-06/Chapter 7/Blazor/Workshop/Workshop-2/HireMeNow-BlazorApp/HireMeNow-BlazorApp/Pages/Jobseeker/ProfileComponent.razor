@@ -1,0 +1,287 @@
+﻿
+@using AutoMapper;
+@using HireMeNow_BlazorApp.Dtos;
+@using HireMeNow_BlazorApp.Interfaces;
+@layout JobSeekerLayout
+@inject IUserService _userService
+@inject NavigationManager NavManager
+@using HireMeNow_BlazorApp.Models;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ProtectedSessionStorage ProtectedSessionStore
+@inject IMapper _mapper;
+
+<style>
+    .personal-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+
+
+    .aboutMeDiv {
+       width:inherit;
+    }
+
+    .fillDiv{
+        width: -webkit-fill-available;
+    }
+
+ 
+
+    .skillsDiv {
+        min-width: 350px;
+        min-height: 100px;
+    }
+
+  
+
+    .experienceDiv {
+        min-width: 350px;
+        min-height: 100px;
+    }
+
+
+    .educationDiv {
+        min-width: 350px;
+        min-height: 100px;
+    }
+
+ 
+    .hidden {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    #DetailsView{
+        width:90%;
+    }
+
+    .education-table {
+        width: 100%;
+        color: gray;
+        font-family: serif;
+    }
+    .profileContent{
+        color: gray;
+        font-family: serif;
+    }
+
+    .proImg{
+        width:150px;
+        height:150px;
+        border-radius:50%;
+    }
+</style>
+@if (UserModel!=null){
+<form method="post" id="profileForm">
+    <div id="content" class="">
+        <div class="row">
+            <div class="col-md-6 personal-details">
+                <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" @onclick="ChangePersonalDetailsEditable" />
+                @if (!IsPersonalDetailsEditable)
+                {
+                    <PersonalDetailsComponent userModel="UserModel" />
+                }else{
+                    <EditPersonalDetailsComponent userModel="UserModel" OnButtonClick="ChangePersonalDetailsEditable" />
+                }
+               
+               
+
+            </div>
+            <div class="col-md-6">
+                <div class="mb-5">
+                    <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" @onclick="ToggleIsSkillAdd" />
+                    <h4 align="left"><img src="jobseekerassets/images/bulb.png" width="25px"> Skills</h4>
+                    <blockquote>
+                     
+
+                        <ul id="skillsList">
+                            @foreach (var item in UserModel?.Skills)
+                            {
+                                <li>@item </li>
+                               
+                            }
+                        </ul>
+                        @if (IsSkillAdd)
+                        {
+                        
+                            <input type="text" class="form-control skill" id="skillInput" @bind="Skill" />
+                        <input type="button" class="btn btn-sm btn-primary btnSaveChanges" id="btnAddSkill" value="Add Skill" @onclick="AddSkill"/>
+
+                        }
+                    </blockquote>
+                </div>
+
+                <div class="mb-5">
+                    <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" @onclick="ToggleIsEducation" />
+
+                    <h4 align="left">
+                        <img src="jobseekerassets/images/graduation.png" width="25px"> Education
+                    </h4>
+                    <blockquote>
+                        <table class="education-table">
+                            <tbody>
+                                <tr>
+                                    <th>Course </th>
+                                    <th>From </th>
+                                    <th>Year </th>
+                                    <th>Mark </th>
+                                </tr>
+                                @foreach (var item in UserModel?.Educations)
+                                {
+                                    <tr>
+                                        <td><b>@item.Course </b> </td>
+                                        <td><i>@item.University</i> </td>
+                                        <td>@item.Year</td>
+                                        <td>@item.Mark</td>
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                        @if (IsEducationEditable)
+                        {
+                            <AddEducationComponent userModel="UserModel" OnButtonClick="ToggleIsEducation" />
+                        }
+                        
+                    </blockquote>
+                </div>
+                <div class="mb-5">
+                    <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" @onclick="ToggleIsExperienceAdd" />
+                    <h4 align="left"> <img src="jobseekerassets/images/job.png" width="25px"> Experience</h4>
+                    <blockquote>
+                        <table class="education-table">
+                            <tbody>
+                                <tr>
+                                    <th>Designation </th>
+                                    <th>Company </th>
+                                    <th>Year </th>
+                                    <th>Duration </th>
+                                </tr>
+                                @foreach (var item in UserModel?.Experiences)
+                                {
+                                    <tr>
+                                        <td><b>@item.JobTitle </b> </td>
+                                        <td><i>@item.Company</i> </td>
+                                        <td>@item.Year</td>
+                                        <td>@item.Duration</td>
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                        @if (IsExperienceAdd)
+                        {
+                            <div id="experience-form" class="experience-form" >
+                              
+                                <input type="text" @bind="Experience.JobTitle" class="form-control " placeholder="JobTitle" required /><br>
+                                    <input type="text" @bind="Experience.Company" class="form-control " placeholder="Company" required /><br>
+                                    <input type="text" @bind="Experience.Duration" class="form-control " placeholder="Duration" /><br>
+                                    <input type="text" @bind="Experience.Year" class="form-control " placeholder="Year" required /><br>
+                                    <input type="button" class="btn btn-sm btn-primary btnSaveChanges" value="Add Experience" @onclick="AppExperience" />
+                                    <input type="button" class="btn btn-sm btn-danger " value="Cancel" @onclick="ToggleIsExperienceAdd"/>
+                                
+                            </div>
+                        }
+                    </blockquote>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </form>
+}
+else
+{
+    <h1>User Not Found</h1>
+}
+@code {
+    [Parameter]
+    public bool IsPersonalDetailsEditable { get; set; } = false;
+    [Parameter]
+    public bool IsEducationEditable { get; set; } = false;
+    [Parameter]
+    public bool IsSkillAdd { get; set; } = false;
+    [Parameter]
+    public bool IsExperienceAdd { get; set; } = false;
+    [Parameter]
+    public string Skill { get; set; }
+    [Parameter]
+    public Experience Experience { get; set; } = new();
+    [Parameter]
+    public UserDto UserModel { get; set; } = new();
+    [Parameter]
+    public Guid UserId { get; set; }
+    public void ChangePersonalDetailsEditable()
+    {
+        IsPersonalDetailsEditable = !IsPersonalDetailsEditable;
+    }
+    public void ToggleIsEducation()
+    {
+        IsEducationEditable = !IsEducationEditable;
+    }
+    public void ToggleIsSkillAdd()
+    {
+        IsSkillAdd = !IsSkillAdd;
+    }
+    public void ToggleIsExperienceAdd()
+    {
+        IsExperienceAdd = !IsExperienceAdd;
+    }
+    public void AddSkill()
+    {
+        if (!String.IsNullOrEmpty(Skill))
+        {
+            UserModel.Skills.Add(Skill);
+            _userService.Update(_mapper.Map<User>(UserModel));
+            Skill = "";
+        }
+
+        ToggleIsSkillAdd();
+    }
+
+    public void AppExperience()
+    {
+
+        UserModel.Experiences.Add(Experience);
+        _userService.Update(_mapper.Map<User>(UserModel));
+        Experience = new();
+
+
+        ToggleIsExperienceAdd();
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        User CurrentUser = new();
+        if (UserId == null || UserId.Equals(new Guid()))
+        {
+            try
+            {
+                var result = await ProtectedSessionStore.GetAsync<Guid>("userId");
+                CurrentUser = result.Success ? _userService.getById(result.Value) : new();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            
+        }
+        else
+        {
+            CurrentUser = _userService.getById(UserId);
+        }
+        UserModel = _mapper.Map<UserDto>(CurrentUser);
+       
+    }
+}

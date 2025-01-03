@@ -1,0 +1,78 @@
+<nav class="navbar">
+    <div class="navbar-left">
+        <ul class="nav-items">
+            <h2>
+                <li><a>New registration</a></li>
+            </h2>
+
+        </ul>
+    </div>
+    <div class="navbar-center">
+        <ul class="nav-items">
+            <li><a>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search something here...">
+                        <button type="button">
+                            <img src="../../assets/images/search.png">
+                        </button>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="navbar-right">
+        <ul class="nav-items">
+            <li>
+                <a href="#"><img src="../../assets/images/ic_chat.png"></a>
+            </li>
+            <li><a><img src="../../assets/images/ic_bell.png"></a></li>
+            <li><a><img src="../../assets/images/profilePicture.png" align="center"><b>Oda Link</b></a></li>
+        </ul>
+    </div>
+</nav>
+<div class="row m-3">
+    <div class="col d-flex">
+        <h5>Showing {{TotalNewReg}} applications</h5>
+        <div class="suggestion-container">
+            <div class="inline-div" [style.background-color]="bgcolor1" 
+        (mouseout)="resetBackground(1)" (mouseover)="hoverbg(1)" (click)="filter('All')">All</div>
+
+        <div class="inline-div" [style.background-color]="bgcolor2" 
+        (mouseout)="resetBackground(2)" (mouseover)="hoverbg(2)"(click)="filter('Pending')">Pending</div>
+
+        <div class="inline-div" [style.background-color]="bgcolor3" 
+        (mouseout)="resetBackground(3)" (mouseover)="hoverbg(3)" (click)="filter('On-Hold')">On-Hold</div>
+
+        <div class="inline-div" [style.background-color]="bgcolor4" 
+        (mouseout)="resetBackground(4)" (mouseover)="hoverbg(4)" (click)="filter('Candidate')">Candidate</div>
+
+        </div>
+        
+    </div>
+</div>
+<div class="row m-4 bg-light">
+    <div class="col border rounded">
+        <div class="row pt-3 px-3">
+            <div class="col"><h5>             ID</h5></div>
+            <div class="col"><h5>Date Applied</h5></div>
+            <div class="col"><h5>companey</h5></div>
+            <div class="col"><h5>type</h5></div>
+            <div class="col"><h5>position</h5></div>
+            <div class="col"><h5>contact</h5></div>
+            <div class="col"><h5>status</h5></div>
+        </div>
+        <hr>
+        <div *ngFor="let x of tempNewRegistration">
+            <div class="row pb-3 m-3">
+                <div class="col">
+                    <input class="mx-3" type="checkbox" name="" id="">{{x.id}}</div>
+                <div class="col">{{x.Dateapplied}}</div>
+                <div class="col">{{x.company}}</div>
+                <div class="col">{{x.type}}</div>
+                <div class="col">{{x.position}}</div>
+                <div class="col text-center"> <a href="#"><img [src]="x.contactph" height="20px" alt=""></a>&nbsp;&nbsp;&nbsp;<a href="#"><img [src]="x.contactmsg" height="25px" alt=""></a></div>
+                <div class="col"><button class="btn-sm" [class]="x.color">{{x.status}}</button></div>
+            </div>
+        </div>
+
+    </div>
+</div>

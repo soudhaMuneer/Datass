@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Exercise_1.styles.css" asp-append-version="true" />
+</head>
+<style>
+    .sidebar{
+        background-color : steelblue;
+        height: 700px;
+    }
+</style>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 sidebar p-5">
+                @* sidebar *@
+                <ul class="nav navbar text-center">
+                    <li class="nav-item"><a class="text-white fw-bold fs-5 text-decoration-none" asp-page="/Manager/Joblisting">Job list</a></li>
+                    <li class="nav-item"><a class="text-white fw-bold fs-5 text-decoration-none" asp-page="/Manager/Appliedjoblisting">Applied job</a></li>
+                    <li class="nav-item"><a class="text-white fw-bold fs-5 text-decoration-none" asp-page="/Login">Logout</a></li>
+                </ul>
+            </div>
+            <div class="col-10">
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

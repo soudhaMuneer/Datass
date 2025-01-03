@@ -1,0 +1,83 @@
+.content{
+    display: flex;
+  justify-content: space-evenly;
+    background-color: rgb(246, 242, 242);
+    margin-left: 240px;
+    margin-top: -400px;
+}
+.left{
+  position: absolute;
+  left: 270px;
+}
+.fulltab{
+    background-color:  rgb(246, 242, 242);
+   
+}
+.my-buttons {
+    background-color: rgb(31, 220, 122); /* Green */
+    border: none;
+    color: black;
+  
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .my-buttons:hover {
+    background-color: #a89ca2; /* Darker green */
+  }
+  .my-button1 {
+    
+    background-color: rgb(255, 255, 255);
+    color: black; 
+    border: 2px solid black;
+    border-radius:10px
+}
+.my-button2 {
+    
+    background-color: rgb(255, 255, 255); 
+    color: rgb(197, 232, 72); 
+    border: 2px solid rgb(197, 232, 72);
+    border-radius:10px
+}
+.my-button3 {
+  
+    background-color: rgb(255, 255, 255);
+    color: rgb(37, 29, 67); 
+    border: 2px solid rgb(37, 29, 67); 
+    border-radius:10px
+}
+.my-button {
+    background-color: rgb(209, 117, 168); /* Green */
+    border: none;
+    color: black;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .my-button:hover {
+    background-color: #a89ca2; /* Darker green */
+  }
+  .underline{
+    position: absolute;
+    left: 250px;
+    margin-top: -500px;
+  }
+  .button{
+    position: absolute;
+    left: 430px;
+    margin-top: -492px;
+  }
+  
+  
+

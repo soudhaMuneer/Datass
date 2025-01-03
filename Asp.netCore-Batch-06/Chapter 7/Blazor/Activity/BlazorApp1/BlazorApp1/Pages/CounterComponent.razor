@@ -1,0 +1,41 @@
+﻿<h3>CounterComponent</h3>
+@page "/CounterComponent/{myparam:int}"
+@page "/CounterComponent"
+<h1>Counter</h1>
+<p>initialized at : @DateTime.Now</p>
+<p>count : @mycount</p>
+<p> Params : @myparam</p>
+
+<button @onclick=AddCount >Add</button>
+
+<h2>table x`</h2>
+<ul>
+@foreach(var item in students)
+{
+    <li>@item</li>
+}
+</ul>
+
+@code {
+    public int mycount { get; set; } 
+    [Parameter]
+    public int myparam{ get; set; }
+    public List<string> students;
+
+    protected override void OnInitialized()
+    {
+        mycount = 1;
+        students = new(){"suhail","rajisha"};
+    }
+    protected override void OnParametersSet()
+    {
+       mycount = myparam;
+        base.OnParametersSet();
+    }
+
+    public void AddCount()
+    {
+        mycount=mycount+myparam;
+    }
+
+}

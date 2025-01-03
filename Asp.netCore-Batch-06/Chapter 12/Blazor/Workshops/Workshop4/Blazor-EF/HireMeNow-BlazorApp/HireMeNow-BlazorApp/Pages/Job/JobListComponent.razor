@@ -1,0 +1,58 @@
+﻿@page "/Job/JobList"
+@using HireMeNow_BlazorApp.Interfaces
+@using HireMeNow_BlazorApp.Models
+@layout JobComponentLayout
+@inject IJobService Jobservices
+<link href="publicassets/css/home.css" rel="stylesheet" />
+    <div>
+          <div class="row jobListDiv">
+
+    <h1 align="center">
+        <font size="6" face="system-ui" color="black" align="center">
+            <b>Find your </b>
+        </font>
+        <font size="6" face="system-ui" color="#20a6fc" align="center">
+            <b>dream job </b>
+        </font>
+    </h1>
+    <p align="center">
+        <font face="arial">Find your next career at companies like HubSpot, Nike, and Dropbox</font>
+    </p>
+    <h2 align="center" color="#3487bf">All Jobs</h2>
+@if(Joblist is null)
+{
+    <p><em>...............................................Loading!</em></p>
+}
+else
+{
+
+            <div class="left col-md-8">
+    @foreach(var jobs in Joblist)
+    {
+        <ListJob job="@jobs"></ListJob>
+    }
+            </div>
+}
+ <div class="center">
+
+              @*  <div class="pagination">
+                <a href="Job/JobListComponent">&laquo;</a>
+                <a href="Job/JobListComponent" class="active">1</a>
+                <a href="Job/JobListComponent">2</a>
+                <a href="Job/JobListComponent">3</a>
+                <a href="Job/JobListComponent">4</a>
+                <a href="Job/JobListComponent">5</a>
+                <a href="Job/JobListComponent">6</a>
+                <a href="Job/JobListComponent">&raquo;</a>
+                </div>*@
+            </div>
+
+        </div>
+</div>
+@code {
+    List<Job> Joblist;
+    protected override void OnInitialized()
+    {
+        Joblist = Jobservices.GetJobs();
+    }
+}

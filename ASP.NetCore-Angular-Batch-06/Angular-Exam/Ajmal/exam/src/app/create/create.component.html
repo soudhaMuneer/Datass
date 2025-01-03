@@ -1,0 +1,24 @@
+
+<div class="p-5 mt-5 bg-light rounded" style="box-shadow: 0px 0 10px;">
+    <form [formGroup]="formlist" (ngSubmit)="formlist.valid && submit()">
+        <div class="text-center">
+            <h2>Create Fruits List</h2>
+        </div>
+       
+        <br>
+        <div>
+            <label>Item Name :</label><br>
+            <input type="text"  formControlName="name"  id="name" class="form-control" placeholder="Enter Item Name"/><br/>
+            
+        </div>
+        <div>
+            <label>Item Quantity :</label><br>
+            <input type="number" formControlName="Quantity" id="qty" class="form-control" placeholder="Enter Quantity"><br/>
+        </div>
+        <div>
+            <label>Item Price :</label><br>
+            <input type="number" formControlName="Price" id="price"class="form-control" placeholder="Enter Item Price"/><br/>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Item</button>
+    </form>
+</div>

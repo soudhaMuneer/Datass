@@ -1,0 +1,25 @@
+<div class="content bg-light">
+    <br>
+    <p><b>My Application</b></p>
+<div class="cardscroll">
+    <div class="card w-75  mt-3 ms-2"  *ngFor="let list of filterdjobs">
+        <img [src]="list.companylogo"  style="float: left;" width="60rem" src="" alt="">
+        <h6 class="post">{{list.post}} <br></h6>
+           <small class="location" style="font-size: .5rem;"><b> {{list.companyname}}{{list.location}}
+        </b></small>
+        <div>
+            <p style="font-size: 1rem;">{{list.details}}</p>
+        </div>
+
+        <div>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">Full Time</button>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">Mid Level</button>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">$3000-$5000</button>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">Indonesia</button>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">Onsite</button>
+            <input type="submit" value="Apply" class="bg-primary text-white border-0 rounded ms-3">
+        </div>
+    </div>
+</div>
+<br><br>
+</div>

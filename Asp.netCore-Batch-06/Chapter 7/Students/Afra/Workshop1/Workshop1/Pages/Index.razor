@@ -1,0 +1,55 @@
+﻿@page "/Index"
+@using Workshop1.Service
+@using Workshop1.Model
+@using Workshop1.Repository
+@inject JobService jobService
+<style>
+    
+    .card{
+        
+        float:left;
+        width:25%;
+        margin:5%;
+        padding:3%;
+        background-color:lightgrey;
+        border-radius:20px;
+        color:#fff;
+    }
+   .btn{
+       color:blueviolet;
+   } 
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn" href="/Add">Add New Job</a>
+                <h3>JobList</h3>
+                <p style="color:blueviolet">Showing @jobList.Count jobs</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        @foreach(Job job in jobList)
+                        {
+                            <div class="card">
+                            <h6>@job.CompanyName<span><img src="/Images/Aitrich new Favicon.jpeg" width="50px"/></span></h6>
+                            <h4>@job.Title</h4>
+                            <p>@job.Location</p>
+                            <p><b>@job.Salary</b></p>
+                            <p style="text-align:center">@job.Description</p><br />
+                            <a  class="btn" href="/Remove/@job.Id">REMOVE</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@code{
+    List<Job> jobList = new List<Job>();
+    protected override void OnInitialized()
+    {
+        jobList = jobService.GetJobList();
+    }
+}
+

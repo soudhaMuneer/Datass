@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img {
+            width: 100%;
+            height: auto
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: rgb(3, 3, 104);
+        }
+
+        h5 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            /* color: rgb(96, 9, 16); */
+        }
+
+        a {
+            color: rgb(24, 35, 159);
+            font-weight: bold;
+        }
+
+        .demo-amimation {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: myfirst 5s;
+            -moz-animation: myfirst 5s;
+            /* Firefox */
+            -webkit-animation: myfirst 5s;
+            /* Safari and Chrome */
+            -o-animation: myfirst 5s;
+            /* Opera */
+            margin-top: 100px;
+        }
+
+        @keyframes myfirst {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @-moz-keyframes myfirst {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @-webkit-keyframes myfirst {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @-o-keyframes myfirst {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .demo-animation-iteration {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: iteration 5s;
+            animation-iteration-count: 5;
+            /* Or infinite */
+        }
+
+        @keyframes iteration {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .demo-animation-direction {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: iteration 5s;
+            /* animation-direction:normal; */
+            animation-direction: alternate;
+            animation-iteration-count: 5;
+            /* Or infinite */
+        }
+
+        @keyframes direction {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a href="main.html"><i class="fa fa-angle-double-left" style="font-size:20px;"></i>Back</a>
+        <div class="row ">
+            <div class="col-md-12 d-flex justify-content-center p-5">
+                <h2>CSS3 ANIMATION</h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>1.Animation is an effect that lets an element gradually change from one style to another.</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/animation/1.png">
+            </div>
+            <div class="col-md-6">
+                <div class="demo-amimation"></div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>2.animation-iteration-count property specifies the number of times an animation is played. Default
+                    1.</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/animation/2.png">
+            </div>
+            <div class="col-md-6">
+                <div class="demo-animation-iteration"></div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>3.The animation-direction property in CSS specifies whether an animation should play forwards,
+                    backwards, or alternate between both. </h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/animation/3.png">
+            </div>
+            <div class="col-md-6">
+                <div class="demo-animation-direction"></div>
+            </div>
+        </div>
+    </div>
+    <a href="main.html"><i class="fa fa-angle-double-left" style="font-size:20px;"></i>Back</a>
+    </div>
+</body>
+</html>

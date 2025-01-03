@@ -1,0 +1,54 @@
+﻿@page "/Remove/{Id}"
+@using Workshop1.Model
+@using Workshop1.Repository
+@using Workshop1.Service
+@inject JobService jobService
+@inject NavigationManager navigationManager
+<style>
+    .btn{
+        background-color:blueviolet;
+        color:#fff;
+        margin:2%;
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color:blueviolet">Are you sure to Delete?</h3>
+                <div class="row">
+                    <div class="col-md-8">
+                        <form @onsubmit="Delete">
+                            <label for="Id" class="control-label">Employee Id:@job.Id</label><br />
+                            <label for="FirstName" class="control-label">First Name:@job.Title</label><br />
+                            <label for="LastName" class="control-label">Last Name:@job.CompanyName</label><br />
+                            <label for="Email" class="control-label">Email:@job.Location</label><br />
+                            <label for="Phone" class="control-label">Phone:@job.Salary</label><br />
+                            <button class="btn" type="submit">Delete</button>
+
+                            <a class="btn" href="/Index">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+@code {
+    [Parameter]
+    public string Id{ get; set; }
+    public Job job;
+    protected override void OnInitialized()
+    {
+        job = jobService.GetJobById(Convert.ToInt32(Id));
+
+    }
+    protected void Delete()
+    {
+        jobService.DeleteJobList(job);
+        navigationManager.NavigateTo("/Index");
+    }
+}

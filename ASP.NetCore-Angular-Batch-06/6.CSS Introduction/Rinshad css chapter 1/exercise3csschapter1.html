@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>execrice3</title>
+</head>
+<style>
+.aside{
+   
+    background: #40189D;
+      position: absolute;
+      width: 360px;
+      height: 1500px;
+      /* height: 963px; */
+      left: 0px;
+      top: 0px;
+    
+}
+ul{
+    
+}
+.company-icon{
+    width: 50px;
+    position: relative;
+    top: 40px;
+    left: 40px;
+}
+.company-name{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+color: white;
+font-size: 30px;
+position: relative;
+left: 100px;
+top: -10px;
+
+}
+.contents{
+    font-size: 10px;
+    color: white;
+    margin-top: 100px;
+    line-height: 20px;
+    
+}
+.dashboard{ 
+    width: 15px;
+    position: absolute;
+   
+    
+    
+}
+.job-provider{
+    width: 15px;
+    position: absolute;
+  
+}
+.new-registration{
+    width: 15px;
+    position: absolute;
+
+}
+.job-seeker{ 
+    width: 15px;
+    position: absolute;
+}
+.jobs{
+    width: 15px; 
+    position: absolute;
+}
+.profile{
+    width: 15px;
+    position: absolute;
+}
+.Message{
+    width: 15px;
+    position: absolute;
+}
+.settings{
+    width: 15px;
+    position: absolute;
+}
+.logout{
+    width: 15px; 
+    position: absolute;
+}
+h4{
+    padding: 0 30px;
+    color: white;
+    text-decoration: none;
+    
+}
+.center{
+    border: 1px solid black;
+    width: 1062px;
+    background-color: lightgray;
+    margin-left: 200px;
+    height: 1500px;
+    margin-top: -540px;
+    border-radius: 40px 0 0 40px;
+    white-space: nowrap;
+
+    
+    
+
+
+}
+.search{
+
+    position: absolute;
+    border: 0;
+    margin-top: -40px; 
+    margin-left: 350px;
+    height: 35px;
+    width: 400px; 
+    border-radius: 20px;
+    font-size: smaller;
+
+
+}
+.my-profile{
+    color: black;
+    margin-left: 180px;
+    margin-top: 30px;
+}
+.icon-mail{
+   
+   
+    position: absolute;
+   margin-top: -35px;
+    margin-left: 90px;
+}
+.search-icon{
+    position: absolute; 
+    margin-top: -32px; 
+    margin-left: 700px; 
+    height: 20px; 
+    width: 20px;
+
+}
+.chat{ 
+    height: 30px;
+    margin-left: 860px;
+   position: absolute;
+   margin-top: -40px;
+  
+   
+
+}
+.notification{
+    height: 30px;
+    margin-left: 900px;
+   position: absolute;
+   margin-top: -40px;
+   
+
+} 
+.oda-pic{
+   position: absolute;
+    height: 40px;
+    margin-left: 95em;
+    margin-top: -45px;
+    
+}
+.oda-text{
+    color: black;
+    position: absolute;
+    margin-left:985px ;
+    margin-top:-45px;
+    white-space: nowrap;
+    
+}
+  
+.admin-text{ 
+    color: gray;
+    position: absolute;
+    margin-left:985px ;
+    margin-top:-25px;
+    white-space: nowrap;
+    
+
+}
+    .account-icon{
+        position: absolute;
+        height: 20px;
+        margin-left: 180px;
+        margin-top: 80px;
+        
+    }
+    .account-text{
+        position: absolute;
+        color: gray;
+        margin-left: 210px;
+        margin-top: 80px;
+
+    }
+    hr{
+        width: 300px;
+        height: 3px;
+        background-color: gray;
+        position: absolute;
+        margin-left: 180px;
+        margin-top: 120px;
+     }
+     
+
+
+    .registrations{
+     
+     margin-left: 100px;
+     margin-top: 50px;
+
+    }
+
+   
+    .oda-pic1{
+        position: absolute;
+        margin-left: -75px;
+        margin-top: 20px;
+    }
+    .Full-name{
+        color: gray;
+        font-size: 20px;
+        margin-left: -50px;
+        margin-top: 40px;
+    }
+    .Fullname-box{
+        position: absolute ;
+        margin-left: -50px;
+        margin-top: px;
+        width: 400px;
+        height: 30px;
+        border: 0;
+        border-radius: 5px;
+        text-align: top ;
+        font-size: 10px;
+        font-weight: 600;
+        background-color: lightgrey;
+        
+
+    }
+    .user-name{
+        color: gray;
+        font-size: 20px;
+        margin-left: -50px;
+        margin-top: 20px;
+        
+    }
+
+    .username-box{
+        position: absolute ;
+        margin-left: -50px;
+        margin-top: px;
+        width: 400px;
+        height: 30px;
+        border: 0;
+        border-radius: 5px;
+        text-align: top ;
+        font-size: 10px;
+        font-weight: 600;
+        background-color: lightgrey;
+        
+    }
+    .email{
+        color: gray;
+        font-size: 20px;
+        margin-left: -50px; 
+    }
+.email-box{
+    position: absolute ;
+        margin-left: -50px;
+        margin-top: px;
+        width: 400px;
+        height: 30px;
+        border: 0;
+        border-radius: 5px;
+        text-align: top ;
+        font-size: 10px;
+        font-weight: 600;
+        background-color: lightgrey;
+        
+
+}
+.Phone-number{
+    color: gray;
+        font-size: 20px;
+        margin-left: -50px; 
+
+}
+.Phonenumber-box{
+    position: absolute ;
+        margin-left: -50px;
+        margin-top: px;
+        width: 400px;
+        height: 30px;
+        border: 0;
+        border-radius: 5px;
+        text-align: top ;
+        font-size: 10px;
+        font-weight: 600;
+        background-color: lightgrey;
+
+}
+.fullname-textbox{
+    position: absolute;
+    margin-top: 80px
+}
+.username-textbox{
+    position: absolute;
+    margin-top: 140px;
+
+
+}
+.email-textbox{ position: absolute;
+    margin-top: 200px;
+
+
+}
+.number-textbox{ position: absolute;
+    margin-top: 260px;
+
+
+}
+.container{ 
+
+    
+    background-color: white;
+    margin-top: 170px;
+    margin-bottom: 500px;
+    margin-left: 150px;
+    margin-right: 200px; 
+    height: 500px ;
+    border-radius: 10px;
+    
+
+}
+.Update{
+    height: 50px;
+    width: 130px; 
+    background-color: #40189D;
+    margin-left: 100px;
+    margin-top: 340px;
+    border-radius: 10px;
+    color: white;
+    border: 0;
+    
+}
+     
+</style>
+<body>
+    <div class="aside">
+        <img class="company-icon" src="./images/Group 8.png"> 
+<div class="company-name"> Jobie</div>
+<div class="contents">
+    <ul type="none">
+        <li>
+            <a href="#"> <img  class="dashboard" src="./images/icons8-home-50.png"><h4> Dashboard</h4></a>
+        </li>
+        
+        <li>
+            <a href="#"> <img  class="job-provider" src="./images/icons8-permanent-job-50.png"> <h4>Job Providers</h4></a>
+        </li>
+        
+        <li>
+            <a href="#"><img class="new-registration" src="./images/icons8-registration-50.png"><h4>New Registrations</h4></a>  
+        </li>
+        
+        <li>
+            <a href="#"> <img class="job-seeker" src="./images/icons8-opportunity-48.png"><h4>Job Seekers</h4></a> 
+        </li>
+      
+        <li>
+            <a href="#"><img class="jobs" src="./images/icons8-jobs-58.png"><h4>Jobs</h4> </a> 
+        </li>
+        
+        <li>
+            <a href="#"><img class="profile" src="./images/icons8-add-administrator-50.png"><h4>My Profile</h4></a>
+        </li>
+        
+        <li>
+            <a href="#"><img class="Message" src="./images/icons8-messages-50.png"> <h4>Messages</h4></a>
+        </li>
+       
+        <li>
+            <a href="#"> <img class="settings" src="./images/icons8-settings-50.png"><h4> Settings</h4></a>
+        </li>
+       
+        <li>
+            <a href="#"> <img class="logout" src="./images/icons8-logout-50.png"> <h4>Logout</h4></a>
+        </li>
+        <br><br>
+    </ul>
+
+<div class="center">
+    <h2 class=" my-profile">My Profile</h2>
+    <img  class="icon-mail" src="./images/ic_menu.png" alt="icon">
+        <input type="search" placeholder="     search something here..." class="search" >  
+        <img  class="search-icon" src="./images/Icon (2).png">
+    <a href="#"><img class="chat" src="./images/notification.png"></a>
+   <a href="#"> <img class="notification" src="./images/notification (1).png"></a>
+    <img class="oda-pic" src="./images/profilePicture.png">
+    <h3 class="oda-text">Oda dink</h3>
+    <h3 class="admin-text">Super Admin</h3>
+    <img class="account-icon" src="./images/icons8-male-user-50.png">
+    <h3 class="account-text"> Account</h3>
+    <hr>
+    <div class="container">
+        
+     <div class="registrations">
+        <img class="oda-pic1" src="./images/profilePicture.png">
+     <div class=fullname-textbox><label class="Full-name">Full Name</label><br>
+     <input type="name" placeholder="Please enter your Full name" class="Fullname-box"></div> <br>
+     <div class=username-textbox><label class="user-name">User Name</label><br>
+        <input type="uname" placeholder="Please enter your User Name" class="username-box"></div> <br>
+            <div class=email-textbox> <label class="email">Email</label><br>
+     <input type="Email" placeholder="Please enter Email" class="email-box"></div><br>
+     <div class=number-textbox><label class="Phone-number">Phone No</label><br>
+     <input type="number" placeholder="Please enter your Phone No" class="Phonenumber-box"></div> <br>
+     <input type="button" value="Update Details" class="Update" >
+</div>
+
+
+
+    </div>
+
+             
+       
+              
+         
+        
+
+    </div>
+    
+</div>
+</body>
+</html>

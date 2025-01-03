@@ -1,0 +1,56 @@
+.job-list{
+    width: 20%;
+    height: 150px;
+    background-color: cornflowerblue;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 15px;
+    transition: width 2s, height 2s, transform 2s;
+    
+}
+.job-list:hover{
+  width: 300px;
+  height: 300px;
+  transform: rotate(100deg);
+    
+}
+
+.job-list2{
+  width: 20%;
+  height: 150px;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 400px;
+  animation-name: example;
+  animation-duration: 7s;
+  
+  
+}
+@keyframes example {
+  from {background-color:lightcoral;}
+  to {background-color:palegoldenrod;}
+}
+
+.job-list3{
+  width: 20%;
+  height: 150px;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 800px;
+  animation-name: move;
+  animation-duration: 4s;
+  
+}
+
+@keyframes move {
+  0%   { top:0px; bottom:0px;}
+  25%  { top:200px; bottom:0px;}
+  50%  { top:200px; bottom:200px;}
+  75%  { top:0px; bottom:200px;}
+  100% { top:0px; bottom:0px;}
+}

@@ -1,0 +1,21 @@
+
+<div class="row">
+    <div class="col-6">
+        <div class="grid-form">
+            <ul>
+                <li *ngFor="let member of registeredMembers; let i = index">
+                   
+                    <h5>Job title</h5> {{ member.jobTitle }}<br>
+                    <h5>Date</h5>{{ member.date }}<br>
+                    <h5>Time</h5>{{ member.time }}<br>
+                    <h5>Location</h5>{{ member.location }}<br>
+                  
+
+                
+                </li>
+                
+            </ul>
+            
+        </div>
+    </div>
+</div>

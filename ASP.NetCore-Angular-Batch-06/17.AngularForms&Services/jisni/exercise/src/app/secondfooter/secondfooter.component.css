@@ -1,0 +1,84 @@
+.header{
+    margin-left: 150px;
+    margin-top: 70px;
+}
+.firstimage{
+    position: absolute;
+    width: 60px;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+
+.first{
+    color: gray;
+  margin-left: 50px;
+  margin-top: 60px;
+}
+.second{
+    color: gray;
+    margin-top: -10px;
+    margin-left: 50px;
+    
+}
+.third{
+    color: gray;
+    margin-left: 50px;
+    margin-top: -10px;
+} 
+.images{
+    margin-left: 10px;
+}
+.mainimage{
+   margin-left: 40px;
+   margin-top: 50px;
+}
+.firstrow{
+    margin-left: 400px;
+    margin-top: -220px;
+    list-style-type: none;
+color: gray;
+
+}
+.bold{
+    font-size: larger;
+    color: black;
+    font-weight: 400;
+}
+.secondrow{
+    margin-left: 550px;
+    margin-top: -200px;
+    list-style-type: none;
+color: gray;
+
+}
+.thirdrow{
+    margin-left: 700px;
+    margin-top: -200px;
+    list-style-type: none;
+color: gray;
+
+}
+.fourthrow{
+    margin-left: 850px;
+    margin-top: -165px;
+    list-style-type: none;
+color: gray;
+
+}
+.line{
+    margin-top: 150px;
+    width:1100px;
+    height: 2px;
+    background-color:gray;
+}
+.terms{
+    color: gray;
+    font-size: large;
+    margin-left: 50px;
+}
+.copy{
+    color: gray;
+    font-size: large;
+    margin-left: 900px;
+    margin-top: -20px;
+}

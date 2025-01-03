@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 11</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 1 auto;
+    }
+    h1 {
+      color: #333;
+      text-align: center; 
+    }
+    h5 {
+        color: rgb(155, 9, 9);
+        
+    }
+    .back-btn-container {
+      text-align: center;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #030326;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .back-btn:hover {
+      background-color: #34ac21;
+    }
+    .description{color:#68404F; text-align:justify; margin-top:10px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:14px; margin-top:5px; padding-bottom:10px;}
+    .description span{font-weight:bold; color:#903; padding-right:10px}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>New Attributes</h1>
+  <div class="description"><span>Output:</span>The output tag represents the result of a calculation (like one performed by a script).</div>
+  <img src="images/attributes1.png" height="150px" width="500px">
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+    <input type="range" name="a" value="50" />100
+    +<input type="number" name="b" value="50" />
+    =<output name="x" for="a b"></output>
+  </form>   
+<br>
+<div class="description"><span>Contenteditable:</span>The contenteditable attribute specifies whether the content of an element is editable or not</div>
+<img src="images/attributes2.png" height="80px" width="500px">
+<div class="preview">
+  <p contenteditable="true">This is an editable paragraph.</p>
+</div>
+<br>
+<div class="description"><span>Hidden:</span>Browsers should not display elements that have the hidden attribute specified</div>
+<img src="images/attributes3.png" height="80px" width="500px">
+<div class="preview">
+  <p hidden="hidden">This is a hidden paragraph.</p>
+  <p>This is a visible paragraph.</p>
+</div>
+</div>
+<div class="back-btn-container">
+  <a href="HTML5.html" class="back-btn">&larr; Back to Main Page</a>
+</div>
+</body>
+</html>

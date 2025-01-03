@@ -1,0 +1,17 @@
+.div-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: steelblue;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.uldiv{
+    display: flex;
+    list-style: none;
+    
+}
+.uldiv>li{
+    padding: 5px;
+}

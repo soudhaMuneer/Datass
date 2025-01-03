@@ -1,0 +1,915 @@
+body{
+    position: relative;
+}
+.hireMeNow{
+    width: 230px;
+    height: 1250px;
+    background-color: #5cb4f4;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    color: white;
+    
+}
+.hireMeNow h3{ 
+    text-align: center;
+}
+.box{
+    position: relative;
+    border: 3px solid green;
+    background-color: green;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 80px;
+    margin-top: 50px;
+}
+.hireMeNow p{
+    position: relative;
+    
+    margin-left: 40px;
+    margin-top: 5px;
+
+    
+}
+.secondtext{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: -15px;
+}
+.s1{
+    position: absolute;
+    width: 179px;
+    height: 31px;
+    left: 60px;
+    top: 180px;
+    
+    
+    
+    
+    font-size: 15px;
+    line-height: 26px;
+    
+    color: #FFFFFF;
+}
+.s2{
+    position: absolute;
+    width: 179px;
+    height: 31px;
+    left: 60px;
+    top: 230px;
+    
+    
+    
+    font-size: 15px;
+   
+    line-height: 26px;
+    
+    color: #FFFFFF;
+    }
+.s3{
+    position: absolute;
+    width: 179px;
+    height: 31px;
+    left: 60px;
+    top: 280px;
+    
+    
+    
+    font-size: 15px;
+   
+    line-height: 26px;
+    
+    color: #FFFFFF;
+    }
+.s4{
+   position: absolute;
+    width: 179px;
+    height: 31px;
+    left: 60px;
+    top: 330px;
+    
+    
+    
+    font-size: 15px;
+   
+    line-height: 26px;
+    
+    color: #FFFFFF;
+    }
+.s5{
+    position: absolute;
+    width: 179px;
+    height: 31px;
+    left: 60px;
+    top: 380px;
+    
+    
+    
+    
+    font-size: 15px;
+    line-height: 26px;
+    
+    color: #FFFFFF;
+    }
+
+
+
+    .s6{
+        position: absolute;
+        width: 179px;
+        height: 31px;
+        left: 60px;
+        top: 440px;
+        
+        
+        
+        font-size: 15px;
+       
+        line-height: 26px;
+        
+        color: #FFFFFF;
+        }
+        .s7{
+            position: absolute;
+            width: 179px;
+            height: 31px;
+            left: 60px;
+            top: 500px;
+            
+            
+            
+            
+            font-size: 15px;
+            line-height: 26px;
+            
+            color: #FFFFFF;
+            }
+            .s8{
+                position: absolute;
+                width: 179px;
+                height: 31px;
+                left: 60px;
+                top: 560px;
+                
+                
+                
+                
+                font-size: 15px;
+                line-height: 26px;
+                
+                color: #FFFFFF;
+                }
+                .s9{
+                    position: absolute;
+                    width: 179px;
+                    height: 31px;
+                    left: 60px;
+                    top: 620px;
+                    
+                    
+                    
+                    font-size: 15px;
+                   
+                    line-height: 26px;
+                    
+                    color: #FFFFFF;
+                    }
+                    .s10{
+                        position: absolute;
+                        width: 179px;
+                        height: 31px;
+                        left: 60px;
+                        top: 680px;
+                        
+                        font-size: 15px;
+                        
+                        
+                        line-height: 26px;
+                        
+                        color: #FFFFFF;
+                        }
+                        .table2{
+                            position: absolute;
+                            margin-bottom:30px;
+                            
+                        }
+                        .editprefernce{
+                            position: absolute;
+                         
+                            margin-top: 750px;
+                            margin-left: 20px;
+                            border-color: black;
+                            
+                        }
+                        .nav{
+                            position: absolute;
+                            left: 500px;
+                            top: 20px;
+
+                        }
+                        .alljobs{
+                            position:absolute;
+                            color: black;
+                            margin-left: -250px;
+
+                        }
+                        .savedjobs
+                        {position:absolute;
+                            color: black;
+                            margin-left: -150px;
+
+                        }
+                        .lesliealexender2{
+                            position:absolute;
+                            color: black;
+                           margin-left: 600px;
+                            white-space: nowrap;
+                            margin-top: -5px;
+                        }
+                        .content{
+                            position: absolute;
+                            left: 250px;
+                            margin-top: -110px;
+                          
+                            width: 1030px;
+                            height: 1000px;
+                            margin-left: -20px;
+                            background-color: lightgray;
+                        }
+                        .searchjob{
+                            margin-left: 40px;
+                            width: 200px;
+                            height: 35px;
+                            margin-top: 20px;
+                            border-radius: 10px;
+                            border-color: transparent;
+                            text-align: center;
+                        }
+                        .location{
+                            margin-left: 20px;
+                            width: 150px;
+                            height: 40px;
+                            margin-top: 20px;
+                            border-radius: 10px;
+                            border-color: transparent;
+                            text-align: center;
+                        }
+                        .good{
+                            position: relative;
+                            color: black;
+                            left: 850px;
+                            bottom: 35px;
+                            
+                        }
+                        .dropdowntwo{position: absolute;
+                           
+                            
+                           
+                            margin-top: -50px;
+                            
+                            
+                            text-align: center;
+                            margin-left: 930px;
+
+                        }
+                        .box1{position: absolute;
+                            border: 1px solid black;
+                            width: 950px;
+                            height: 200px;
+                            position: absolute;
+                            margin-left: 50px;
+                            margin-top: -14px;
+
+                        }
+                        .heading1{
+                            position: absolute;
+                            margin-left: 80px;
+                            color: black;
+                            font-weight:bold;
+                            margin-top: 5px;
+                        }
+                        .bluetext{
+                            position: absolute;
+                            margin-left: 80px;
+                            color: #5cb4f4;
+                            font-weight:bold;
+                            margin-top: 40px;
+                        }
+                        .blacktext{
+                            position: absolute;
+                            margin-left: 20px;
+                            color: black;
+                            font-weight:bold;
+                            margin-top: 90px; 
+                        }
+                        .fulltime{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left: 20px;
+                            width: 100px;
+                            text-align: center;
+
+                        }
+                        .midlevel{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left: 140px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .salary2{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:260px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .place{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:380px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .site{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:500px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .job{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: #5cb4f4;
+                            margin-left:840px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        
+
+
+
+
+
+
+
+                        .box2{position: absolute;
+                            border: 1px solid black;
+                            width: 950px;
+                            height: 200px;
+                            position: absolute;
+                            margin-left: 50px;
+                            margin-top: 300px;
+
+                        }
+                        .heading1{
+                            position: absolute;
+                            margin-left: 80px;
+                            color: black;
+                            font-weight:bold;
+                            margin-top: 5px;
+                        }
+                        .bluetext{
+                            position: absolute;
+                            margin-left: 80px;
+                            color: #5cb4f4;
+                            font-weight:bold;
+                            margin-top: 40px;
+                        }
+                        .blacktext{
+                            position: absolute;
+                            margin-left: 20px;
+                            color: black;
+                            font-weight:bold;
+                            margin-top: 90px; 
+                        }
+                        .fulltime{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left: 20px;
+                            width: 100px;
+                            text-align: center;
+
+                        }
+                        .midlevel{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left: 140px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .salary2{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:260px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .place{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:380px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .site{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:500px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .job{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color:#5cb4f4;
+                            margin-left:840px;
+                            width: 100px;
+                            text-align: center;
+                        }
+
+
+
+
+
+                        .box3{position: absolute;
+                            border: 1px solid black;
+                            width: 950px;
+                            height: 200px;
+                            position: absolute;
+                            margin-left: 50px;
+                            top: 280px;
+
+                        }
+                        .heading1{
+                            position: absolute;
+                            margin-left: 80px;
+                            color: black;
+                            font-weight:bold;
+                            margin-top: 5px;
+                        }
+                        .bluetext{
+                            position: absolute;
+                            margin-left: 80px;
+                            color:#5cb4f4;
+                            font-weight:bold;
+                            margin-top: 40px;
+                        }
+                        .blacktext{
+                            position: absolute;
+                            margin-left: 20px;
+                            color: black;
+                            font-weight:bold;
+                            margin-top: 90px; 
+                        }
+                        .fulltime{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left: 20px;
+                            width: 100px;
+                            text-align: center;
+
+                        }
+                        .midlevel{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left: 140px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .salary2{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:260px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .place{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:380px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .site{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:500px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .job{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: #5cb4f4;
+                            margin-left:620px;
+                            width: 100px;
+                            text-align: center;
+                        }
+
+
+
+
+
+
+
+
+                        .box3{position: absolute;
+                            border: 1px solid black;
+                            width: 950px;
+                            height: 200px;
+                            position: absolute;
+                            margin-left: 50px;
+                            margin-top: 415px;
+
+                        }
+                        .heading1{
+                            position: absolute;
+                            margin-left: 80px;
+                            color: black;
+                            font-weight:bold;
+                            margin-top: 5px;
+                        }
+                        .bluetext{
+                            position: absolute;
+                            margin-left: 80px;
+                            color:#5cb4f4;
+                            font-weight:bold;
+                            margin-top: 40px;
+                        }
+                        .blacktext{
+                            position: absolute;
+                            margin-left: 20px;
+                            color: black;
+                            font-weight:bold;
+                            margin-top: 90px; 
+                        }
+                        .fulltime{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left: 20px;
+                            width: 100px;
+                            text-align: center;
+
+                        }
+                        .midlevel{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left: 140px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .salary2{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:260px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .place{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:380px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .site{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: gray;
+                            margin-left:500px;
+                            width: 100px;
+                            text-align: center;
+                        }
+                        .job{
+                            position: absolute;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            margin-top: 150px;
+                            color: black;
+                            background-color: #5cb4f4;
+                            margin-left:840px;
+                            width: 100px;
+                            text-align: center;
+                        }
+
+
+
+
+
+
+                        
+                        .secondfooter
+    {
+        background-image: url("images/Decoration.png");
+        background-position:center top; ;
+        background-color: #5cb4f4;
+        position: absolute;
+        height: 350px;
+        width: 1260px;
+
+        text-align: center;
+        margin-top: 875px;
+        
+        
+        color: white;
+    }
+    .secondfooter h1{
+        margin-top: 50px;
+        font-weight: bold;
+    }
+    .footer p
+    {
+        position: absolute;
+        margin-top: 20px;
+        
+        word-spacing: 2px;
+        line-height: 25px;
+        color: grey;
+    }
+
+   
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+
+}
+    
+
+.footer{
+    position: absolute;
+        bottom: -1600px;
+   
+    
+
+
+}
+
+.footer-col{ 
+    width: 115px;
+    padding: 0 60px;
+    
+    
+
+}
+.footer-col h4{
+    
+    text-transform: capitalize;
+    bottom: 2px;
+    right: -30px;
+   position:relative
+}
+
+
+    
+
+.l-icon{ 
+    margin-bottom: -15px;
+    height: 30px;
+    position: relative;
+    left: -25px;
+    top: -10px;
+    
+}
+
+    .footer-col ul li a{
+        font-size: 16px;
+        color: #747474;
+        text-decoration: none;
+        font-weight: 300;
+
+
+    }
+    .footer-col ul li a:hover{
+        color: #747474;
+        padding-left: 10px;
+        
+    }
+    
+
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+    
+.social-links{
+    
+    margin-left: 1px;
+    
+   position: absolute;
+}
+.Subtract{
+    margin-right: 20px;
+    height: 20px;
+    
+    
+}
+.instagram{
+    margin-right: 20px;
+    height: 20px;
+    
+}
+.twitter{
+    margin-right: 20px;
+    height: 20px;
+    
+}
+.facebook{
+    margin-right: 20px;
+    height: 20px;
+    
+}
+.linkedin{
+    margin-right: 20px;
+    height: 20px;
+    
+}
+.line{ 
+    width: 70em;
+}
+.copy{
+    color: #747474; 
+    
+}
+.copy2{ 
+    position: relative;
+    left: 890px;
+    bottom: 19px;
+    
+}
+.s1:hover{
+     color: #747474;
+    padding-left: 10px;
+
+}
+.s2:hover{
+    color: #747474;
+    padding-left: 10px;
+
+}
+.s3:hover{
+    color: #747474;
+    padding-left: 10px;
+
+}
+                
+.s4:hover{
+    color: #747474;
+    padding-left: 10px;
+
+}.s5:hover{
+    color: #747474;
+    padding-left: 10px;
+
+}
+.s6:hover{
+    color: #747474;
+    padding-left: 10px;
+
+}
+.s7:hover{
+    color: #747474;
+    padding-left: 10px;
+
+}
+.s8:hover{
+    color: #747474;
+    padding-left: 10px;
+
+}
+.s9:hover{
+    color: #747474;
+    padding-left: 10px;
+
+}
+.s10:hover{
+  
+    padding-left: 10px;
+
+}
+.hello{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.job{
+    border-color: transparent;
+    height: 25px;
+    text-align: center;
+    
+
+}
+.fulltime:hover{ 
+    color: white;
+    background-color:#5cb4f4 ;
+}
+.midlevel:hover{ 
+    color: white;
+    background-color:#5cb4f4 ;
+}
+.salary2:hover{ 
+    color: white;
+    background-color:#5cb4f4 ;
+}
+.place:hover{ 
+    color: white;
+    background-color:#5cb4f4 ;}
+    .site:hover{ 
+        color: white;
+        background-color:#5cb4f4 ;}
+
+
+
+                        

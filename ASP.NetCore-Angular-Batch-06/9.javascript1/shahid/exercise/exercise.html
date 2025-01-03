@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercise.css">
+</head>
+<body>
+    <div class="side-bar">
+        <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: azure; position: relative; top: 30px;"><i>Jobie</i></h1> 
+        <br><br>
+        <br><br>
+        
+        <div class="list">
+            <ul type="none">
+                <li style="margin-left: -25px;"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828791.png" width="20px" height="20px">&nbsp;&nbsp;<a>Dashboard</a></li>
+                <br>
+                <li style="margin-left: -25px;"><img src="https://cdn-icons-png.flaticon.com/128/7170/7170401.png" width="20px" height="20px">&nbsp;&nbsp;<a>Job Providers</a></li>
+                <br>
+                <li style="margin-left: 15px;"><img src="https://cdn-icons-png.flaticon.com/128/3803/3803965.png" width="20px" height="20px">&nbsp;&nbsp;<a>New registration</a></li>
+                <br>
+                <li style="margin-left: -18px;"><img src="https://cdn-icons-png.flaticon.com/128/3135/3135680.png" width="20px" height="20px">&nbsp;&nbsp;<a>Job Seeker</a></li>
+                <br>
+                <li style="margin-left: -58px;"><img src="https://cdn-icons-png.flaticon.com/128/2910/2910791.png" width="20px" height="20px">&nbsp;&nbsp;<a>Jobs</a></li>
+                <br>
+                <li style="margin-left: -25px;"><img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" width="20px" height="20px">&nbsp;&nbsp;<a>My Profile</a></li>
+                <br>
+                <li style="margin-left: -35px;"><img src="https://cdn-icons-png.flaticon.com/128/542/542638.png" width="20px" height="20px">&nbsp;&nbsp;<a>Message</a></li>
+                <br>
+                <li style="margin-left: -40px;"><img src="https://cdn-icons-png.flaticon.com/128/3524/3524659.png" width="20px" height="20px">&nbsp;&nbsp;<a>Settings</a></li>
+                <br>
+                <li style="margin-left: -40px;"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png" width="20px" height="20px">&nbsp;&nbsp;<a>Logout</a></li>
+                <br>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+       <div class="header">
+        <img src="https://cdn-icons-png.flaticon.com/128/10337/10337146.png" width="25px" height="25px" style="margin-left: 50px; margin-top: 20px;">
+        <h2 style="margin-left: 150px; margin-top: -30px;">My Profile</h2> 
+        <input  class="input" type="text" placeholder="Search something here...." style="width: 40%; height: 40px;">
+        <img src="https://cdn-icons-png.flaticon.com/128/9195/9195102.png" width="25px" height="25px" style="  position: absolute;  margin-left: 800px; margin-top: -50px;">
+        <img src="https://cdn-icons-png.flaticon.com/128/1182/1182718.png" width="25px" height="25px" style="  position: absolute;  margin-left: 850px; margin-top: -50px;">
+        <img src="https://cdn-icons-png.flaticon.com/128/6997/6997662.png" width="30px" height="30px" style="  position: absolute;  margin-left: 900px; margin-top: -50px;">
+        <h6 style="position: absolute; margin-left: 930px; margin-top: -50px;">Oda Dink</h6>
+        <h6 style="position: absolute; margin-left: 930px; margin-top: -30px;">Super Admin</h6>
+    </div>
+
+    <div class="main">
+        <img src="https://cdn-icons-png.flaticon.com/128/1458/1458201.png" width="25px" height="25px" style="position: absolute;margin-left: 150px; margin-top: 40px;">
+        <p style="position: absolute;margin-left: 185px; margin-top: 45px;">Account</p>
+        <hr style="margin-top: 80px; width: 30%; margin-left: 100px;">
+
+        <div class="form">
+            <img src="https://cdn-icons-png.flaticon.com/128/6997/6997662.png" width="30px" height="30px" style="position: absolute; margin-left: 30px; margin-top: 30px;">
+
+            <form id="myForm">
+                <label style="position: absolute; margin-top: 90px; margin-left: 10px; ">Fullname</label>
+                <input type="text" name="Fullname" style=" width: 40%; height: 35px;  position: absolute; margin-left: 10px; margin-top: 120px; border-radius: 10px; border-style: none; background-color: rgb(233, 233, 245);" required>
+                            
+                <label style="position: absolute; margin-top: 180px; margin-left: 10px; ">Username</label>
+                <input type="text" name="Username" style=" width: 40%; height: 35px;  position: absolute; margin-left: 10px; margin-top: 200px; border-radius: 10px; border-style: none; background-color: rgb(222, 220, 244);" required>
+                            
+                <label style="position: absolute; margin-top: 260px; margin-left: 10px; ">Email</label>
+                <input type="email" name="Email" style=" width: 40%; height: 35px;  position: absolute; margin-left: 10px; margin-top: 290px; border-radius: 10px; border-style: none; background-color: rgb(225, 223, 246);" required>
+                            
+                <label style="position: absolute; margin-top: 350px; margin-left: 10px; ">Phone</label>
+                <input type="tel" name="Phone" style=" width: 40%; height: 35px;  position: absolute; margin-left: 10px; margin-top: 380px; border-radius: 10px; border-style: none; background-color: rgb(218, 215, 242);" required> 
+            
+                <button  type="button" class="btn" id="submit-btn" onclick="showPopup(event)">UpdateDetails</button>
+            </form>
+            
+
+            <div class="popup" id="popup">
+                <p>Submitted details:</p>
+                <p>Fullname: <span id="popup-Fullname"></span></p>
+                <p>Username: <span id="popup-Username"></span></p>
+                <p>Email: <span id="popup-Email"></span></p>
+                <p>Phone: <span id="popup-Phone"></span></p>
+
+                <button type="submit" class="botn" id="close-btn" onclick="hidePopup()">Close</button>
+            </div>
+            
+             
+        </div>
+    </div>
+    </div>
+    
+    <script src="exercise.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.table0{
+    background-color: rgb(40, 97, 147);
+    height: 730px;
+    width: 220px;
+}
+.table1{
+    border: 3px solid rgb(40, 97, 147);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+.table2{
+    background-color: aliceblue;
+    border: 3px solid rgb(40, 97, 147);
+    text-align: center;
+    color: rgb(40, 97, 147);
+    font-size: 25px;
+    font-weight: bold;
+}
+.table3{
+    position: absolute;
+    right: 310px;
+    left: 230px;
+    background-color: gray;
+    bottom: 20px;
+    height: 730px;
+    width: 1200px;
+}
+.table4{
+    border: 1px solid white;
+    text-align: center;
+    color:rgb(159, 69, 69);
+    font-size: 25px;
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+}

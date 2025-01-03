@@ -1,0 +1,31 @@
+<form class="form" [formGroup]="reactiveForm" (ngSubmit)="sendForm()">
+    <label for="jobTitle">Job Title:</label><br>
+    <input type="text" id="jobTitle" name="jobTitle" formControlName="jobTitle" required><br>
+    <small *ngIf="reactiveForm.get('jobTitle').invalid && reactiveForm.get('jobTitle').touched">*Job title required</small>
+    
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" formControlName="date" required><br>
+    <small *ngIf="reactiveForm.get('date').invalid && reactiveForm.get('date').touched">*Date required</small>
+    
+    <label for="time">Time:</label><br>
+    <input type="time" id="time" name="time" formControlName="time" required><br>
+    <small *ngIf="reactiveForm.get('time').invalid && reactiveForm.get('time').touched">*Time title required</small>
+    
+    <label for="location">Location:</label><br>
+    <input type="text" id="location" name="location" formControlName="location" required><br>
+    <small *ngIf="reactiveForm.get('location')?.invalid && reactiveForm.get('location').touched">*Location title required</small>
+    
+    <label for="notification">Notification:</label><br>
+    <input type="radio" id="pushNotification" name="notification" value="push" formControlName="notification" required>
+    <label for="pushNotification">Push Notification</label><br>
+    <input type="radio" id="emailNotification" name="notification" value="email" formControlName="notification" required>
+    <label for="emailNotification">Email Notification</label><br>
+    
+    <input type="submit" [disabled]="!reactiveForm?.valid"  value="Send">
+
+  </form>
+
+
+
+
+

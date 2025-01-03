@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    background-color: rgb(244, 244, 244);
+    margin-left: ;
+   
+}
+.main-content{
+    flex-grow: 1;
+  margin-left: 90px; 
+}

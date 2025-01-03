@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 6</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 1 auto;
+    }
+    h1 {
+      color: #333;
+      text-align: center; 
+    }
+    h5 {
+        color: rgb(155, 9, 9);
+        
+    }
+    .back-btn-container {
+      text-align: center;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #030326;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .back-btn:hover {
+      background-color: #34ac21;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>HTML Forms</h1>
+  <img src="images/form1.png" height="120px" width="700px">
+  <h5>Single line Text input controls</h5>
+  <img src="images/form2.png" height="90px" width="500px">  
+    <div class="code">       
+    <pre name="code" class="brush:html"> 
+    Name: <input type="text" name="usrname">
+    </pre>
+    </div>   
+  <h5>Multiple line Text input controls</h5>
+      <div class="description"><span>Textarea:</span></div>
+      <div class="preview">
+          <textarea ROWS="3" COLS="40">
+          A textarea input field,
+          with 3 rows and 40 columns.
+          </textarea>
+      </div>
+  <h5>Password input controls</h5>
+      <div class="code">       
+      <pre name="code" class="brush:html"> 
+      Password: <input type="password" name="pwd">
+      </pre>
+      </div>
+  <h5>Checkbox Controls</h5>
+  <img src="images/form4.png" height="100px" width="500px"> 
+      <div class="preview">
+      <input type="checkbox" name="vehicle"> Car
+      <input type="checkbox" name="vehicle"> Bike
+      </div> 
+
+  <img src="images/form6.png" height="100px" width="500px"> 
+      <div class="preview">
+      <input type="checkbox" name="vehicle" checked> Car
+      <input type="checkbox" name="vehicle"> Bike
+      </div> 
+  <h5>Radio Button Controls</h5> 
+  <img src="images/form5.png" height="100px" width="500px"> 
+      <div class="code">       
+      <input type="radio" name="gender"> Male
+      <input type="radio" name="gender"> Female
+      </div>
+  <h5>Create drop down list</h5> 
+  <img src="images/form7.png" height="120px" width="500px"> 
+  <div class="code">       
+    <pre name="code" class="brush:html"> 
+    <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    </pre>
+    </div>
+  
+  <img src="images/form8.png" height="170px" width="500px"> 
+  <div class="code">       
+        <form>
+          <fieldset>
+            <legend>Personalia:</legend>
+            Name: <input type="text"><br>
+            Email: <input type="text"><br>
+            Date of birth: <input type="text">
+          </fieldset>
+        </form>
+  </div>
+  <br>
+  <img src="images/form9.png" height="100px" width="500px"> 
+  <div class="code">         
+        <input type="submit" value="Submit">
+  </div>
+  <img src="images/form10.png" height="90px" width="400px"> 
+  <div class="preview">
+    <input type="reset" value="Reset">
+  </div>
+  <h5>File Upload</h5>
+  <img src="images/form11.png" height="60px" width="400px"> 
+  <div class="preview">
+    <input type="file" value="file upload">
+  </div>
+  <br>
+  <img src="images/form12.png" height="100px" width="500px"> 
+  <div class="preview">
+    Name: <input type="text" name="usrname" value="Read Only" readonly>
+  </div>
+</div>
+<div class="back-btn-container">
+  <a href="index.html" class="back-btn">&larr; Back to Main Page</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager NavManager
+@using HireMeNow_BlazorApp.Interfaces;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ProtectedSessionStorage ProtectedSessionStore
+@inject IUserService _userService
+    <div>
+        <div class="container-fluid">
+            <div  class="row">
+                <JobproviderSideMenu></JobproviderSideMenu>
+                <div class="col-md-10">
+ 				<div class="row">
+ 					<div class="col-md-12  mb-3 border-bottom">
+                        <button style=" float: right;" class="btn btn-outline-primary mt-2" @onclick=Logout>
+                            <img class="img-fluid float-right " src="publicassets/images/group 239625.png" height="20px" />
+                        </button>
+ 						<img class="img-fluid float-right m-2 pt-4" src="postjob/images/arrow-down.png">
+ 						<span class="float-right pt-3 m-2"><strong>Olivia</strong></span>
+                        <img class="img-fluid float-right pt-2 m-2" src="PublicAssets/images/gray-user.png" width="30" height="30">
+ 						<img class="img-fluid float-right pt-2 m-2 " src="postjob/images/Group 5689.png" width="30" height="30">
+                      
+ 					</div>
+ 				</div>@Body
+                <div class="row">
+                    <div class="col-md-12 navbarDiv  ">
+                        <img class="img-fluid float-left" src="postjob/images/Decoration (3).png">
+                        <div class="col-6 position-absolute ">
+
+                            <h2 class="h3-fluid text-white mt-5 font-italic ">Get Your Dream Job......</h2>
+                            <img class="img-fluid float-right p-5" src="postjob/images/calendar (2) 2.png">
+                            <img class="img-fluid  float-right p-5 imgHome " src="postjob/images/home-button 4.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div></div>
+        @code {
+    public async void Logout()
+    {
+        await ProtectedSessionStore.DeleteAsync("userId");
+        _userService.Logout();
+        NavManager.NavigateTo("/login", forceLoad: true);
+    }
+        }
+

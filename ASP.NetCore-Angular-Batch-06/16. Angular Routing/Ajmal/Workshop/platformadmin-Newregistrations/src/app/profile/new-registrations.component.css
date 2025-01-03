@@ -1,0 +1,228 @@
+/* content */
+
+.data-table {
+    width: 95%;
+    height: 90%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  
+   background-color: #fff;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 8px;
+    border: 1px solid #ffffff;
+  }
+  
+  .data-table th {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cfcfcf ;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .data-table input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  .company-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .company-logo img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin-right: 10px;
+  }
+  
+  .company-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .company-text h5,
+  .company-text h6 {
+    margin: 0;
+  }
+
+  .contact-images {
+    display: flex;
+  }
+  
+  .contact-images img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 5px;
+  }
+  
+  .status-button {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid;
+    border-radius: 30px;
+  }
+
+  /* second-header */
+
+  .main-heading{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:500px;
+  }
+ 
+  .heading-info h3 {
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  .heading-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+  }
+
+  .pill {
+    display: inline-block;
+    background-color: #c7a9e1; /* Set your desired background color */
+    color: #000000; /* Set the text color */
+    padding: 6px 12px; /* Adjust the padding to your liking */
+    border-radius: 20px; /* Control the roundness of the pill shape */
+  }
+
+  .pill.active {
+    background-color: #c7a9e1;
+    color: #000000;
+  }
+
+  .pill.hover {
+    background-color: #220838;
+    color: #ffffff;
+  }
+ 
+  .status-button.pending {
+    background-color: #ffffff;
+    color: #b0adad;
+    border-color: #b0adad;
+  }
+  
+  .status-button.on-hold {
+    background-color: #ffffff;
+    color: #f48947;
+    border-color:#f48947;
+  }
+  
+  .status-button.candidate {
+    background-color: #079b11;
+    color: #ffffff;
+    border-color: #079b11;
+  }
+
+  .status-button:hover{
+    background-color: #3813cb;
+    color: #ffffff;
+    border-color: #3813cb;
+  }
+  
+  /* header */
+
+  .navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:962px;
+  }
+  
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-center {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .nav-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-items li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .nav-items li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-items a {
+    text-decoration: none;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #e7e7e7;
+    border-radius: 20px;
+    padding: 5px;
+    width: 300px;
+  }
+  
+  .search-bar input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .search-bar button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-info h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .profile-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  
+  
+  
+  
+
+
+ 
+
+ 

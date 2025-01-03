@@ -1,0 +1,137 @@
+﻿@using HireMeNow_BlazorApp.Interfaces;
+@using HireMeNow_BlazorApp.Models;
+@inject IUserService userservice
+@inject NavigationManager NavManager
+
+<style>
+	.navbarDiv {
+		background-color: #117EBD;
+	}
+
+	.sidebar a {
+		color: white;
+		text-decoration: none;
+	}
+
+		.sidebar a :hover {
+			color: black;
+			text-decoration: none;
+		}
+
+	.proPicDiv {
+		display: flex;
+		max-width: 95px;
+		/*background-image: linear-gradient(to bottom right, #0c6c95, #0bbaed);*/
+		justify-content: center;
+	}
+
+	.propic {
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+	}
+
+	.profileNav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+</style>
+
+
+
+<div class=" navbarDiv col-md-2 text-nowrap ">
+	<nav class="  navbar-expand-md sidebar navbar-dark">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon bg-dark"></span>
+		</button>
+		<div class="collapse  navbar-collapse sidebar " id="collapsibleNavbar">
+			<ul class="list-group text-white list-unstyled">
+				<li class="  border-0  pt-5 pb-5 ">
+					<h4 class="h4-fluid">HireMe Now</h4>
+				</li>
+				<li class="  border-0 ">
+					<NavLink class="profileNav mb-3" href="/JobProvider/profile">
+						<div class="proPicDiv rounded">
+							@if (loggedUser.Image!=null)
+							{
+								<img src="PublicAssets/images/gray-user.png" alt="@loggedUser.FirstName" class="propic">
+							}
+							else
+							{
+								<img src="PublicAssets/images/gray-user.png" alt="@loggedUser.FirstName" class="propic">
+							}
+						</div>
+						<p class="mb-0">@loggedUser.FirstName</p>
+						<i>@loggedUser.Email</i>
+
+					</NavLink>
+				</li>
+
+				<li class="  border-0 ">
+					<NavLink class="">
+
+						<p><img src="postjob/images/dashboard 1 (2).png">  Dash Board</p>
+
+					</NavLink>
+				</li>
+				<li class="  border-0 ">
+					<NavLink class="" href="Jobprovider/JobList">
+						<p><img src="postjob/images/suitcase 2 (1).png">  Jobs</p>
+					</NavLink>
+				</li>
+				<li class="  border-0 ">
+					<NavLink class="" href="JobProvider/applications">
+						<p><img src="postjob/images/application (1) 1 (2).png">  Applications</p>
+					</NavLink>
+				</li>
+				<li class="  border-0 ">
+					<NavLink class="" href="SheduledinterviewList">
+						<p><img src="postjob/images/question (1) 1 (2).png"> Interviews</p>
+					</NavLink>
+				</li>
+				<li class="  border-0 ">
+					<NavLink class="" >
+						<p><img src="postjob/images/message 1 (2).png"> Messages</p>
+					</NavLink>
+				</li>
+
+				<li class="  border-0 ">
+					<NavLink class="" >
+						<p><img src="postjob/images/settings 1 (1).png">  Settings</p>
+					</NavLink>
+				</li>
+				<li class="  border-0 ">
+					<NavLink class="" href="memberListing">
+						<img class="img-fluid" src="postjob/images/add-group (1) 1 (2).png"><br>
+						<span class="text-white">Add New</span>
+					</NavLink>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+
+
+@code {
+	User loggedUser { get; set; } = new User();
+	private bool collapseNavMenu = true;
+
+	private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+	private void ToggleNavMenu()
+	{
+		collapseNavMenu = !collapseNavMenu;
+	}
+	protected override void OnInitialized()
+	{
+		loggedUser = userservice.getLoggedUser();
+		if (loggedUser == null)
+			NavManager.NavigateTo("/", true);
+		else if (loggedUser.Role!=Enums.Roles.JobProvider)
+			NavManager.NavigateTo("/", true);
+	}
+
+}
+	

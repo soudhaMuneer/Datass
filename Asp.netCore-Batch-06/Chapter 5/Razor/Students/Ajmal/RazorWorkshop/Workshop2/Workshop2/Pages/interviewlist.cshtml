@@ -1,0 +1,50 @@
+﻿@page "/interview"
+@model Workshop2.Pages.InterviewlistModel
+@{
+    Layout = "home";
+}
+<body>
+    <button class="btn btn-primary mt-3"><a asp-page="/ScheduleInterview" class="text-decoration-none text-white">Schedule Interview</a> </button>
+    <div class="row bg-white  mt-3 d-flex">
+        
+        <div class="col-xl-6 p-2">
+            <div class="row">
+                <div class="col-xl-12 pb-3 pt-3">
+                    <img class="img-fluid float-left pb-5" src="~/interview/images/Company Logo.png">
+                    
+                        <h4 class="h4-fluid">Social Media Assistent</h4>
+                        <p>
+                            Date Of Interview : 02/03/23<br>
+                            Location/Online:Online<br>
+                            Time:10.30AM
+                        </p>
+                        <button class="btn bg-primary text-white mx-auto d-block">View</button>
+                   
+                </div>
+                @foreach (var interview in Model.Interviews)
+                {
+                    <div class="row">
+                        <div class="col-md-12 pb-3 pt-3 ">
+                            <img class="img-fluid float-left pb-5" src="~/interview/images/Company Logo (2).png">
+                            
+                            <h4 class="h4-fluid">@interview.Job</h4>
+                            <p>
+                                Date Of Interview : @interview.date
+                                Location/Online:@interview.Location / offline<br>
+                                Time:@interview.time
+                            </p>
+                            <button class="btn bg-primary text-white mx-auto d-block">View</button>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+
+        <div class="col-xl-6">
+            <img src="~/interview/images/nice-meeting-businessmen 1.png" alt="Alternate Text" />
+        </div>
+    </div>
+</body>
+

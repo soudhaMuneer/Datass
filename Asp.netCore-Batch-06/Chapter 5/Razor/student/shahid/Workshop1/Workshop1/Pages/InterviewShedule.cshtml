@@ -1,0 +1,15 @@
+﻿@page
+@model Workshop1.Pages.InterviewSheduleModel
+@{
+    Layout = "_home";
+}
+<body>
+    <form class="m-5" method="post">
+        <lable>job title</lable><input asp-for="input.Post" type="text" />
+        <lable>Date</lable><input asp-for="input.Date" type="text" />
+        <lable>Time</lable><input asp-for="input.Time" type="text" />
+        <lable>Location</lable><input asp-for="input.Location" type="text" />
+        <input type="submit" name="name" value="Send" />
+        </form>
+        
+</body>

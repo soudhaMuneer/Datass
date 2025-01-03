@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let item of itemss">
+    Id:{{item.id}} Name:{{ item.name }} price: {{ item.age }} 
+      <button class="btn"(click)="removeitem(item.id)">Remove</button><br>
+      
+    </li>
+  </ul>

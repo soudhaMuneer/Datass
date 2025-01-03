@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Template</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            color: #ccc;
+        }
+        .navbar .brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar .dropdown {
+            position: relative;
+        }
+        .navbar .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="brand">Logo</a>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Dropdown</a>
+            <div class="dropdown-menu">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
+
+

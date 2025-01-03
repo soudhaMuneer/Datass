@@ -1,0 +1,66 @@
+﻿@using AutoMapper;
+@using HireMeNow_BlazorApp.Dtos;
+@using HireMeNow_BlazorApp.Interfaces;
+@using HireMeNow_BlazorApp.Models;
+@inject IMapper _mapper;
+@inject IUserService _userService
+
+<h4>Add Education</h4>
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form >
+            <div class="text-danger"></div>
+            @*  <div class="form-group">
+            <label @bind="education.Id" class="control-label"></label>
+            <input @bind="education.Id" class="form-control" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label class="control-label"> Course</label>
+                <input @bind="education.Course" class="form-control" />
+                <span asp-validation-for="Course" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Mark</label>
+                <input @bind="education.Mark" class="form-control" />
+                <span asp-validation-for="Mark" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Year</label>
+                <input @bind="education.Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> University</label>
+                <input @bind="education.University" class="form-control" />
+                <span asp-validation-for="University" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="button" value="Create" class="btn btn-primary" @onclick="AddEducation" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+</div>
+
+
+@code {
+
+    [Parameter]
+    public Education education { get; set; } = new();
+    [Parameter]
+    public UserDto userModel { get; set; } = new();
+    [Parameter]
+    public EventCallback OnButtonClick { get; set; } = new();
+
+
+    public async void AddEducation()
+    {
+        userModel.Educations.Add(education);
+        _userService.Update(_mapper.Map<User>(userModel));
+        await OnButtonClick.InvokeAsync();
+    }
+}

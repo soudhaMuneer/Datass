@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+</head>
+<style>
+    .imgadd{
+    margin-left: 40px;
+    margin-top: 20px;
+} 
+ .add{
+    margin-left: 30px;
+} 
+ .name{
+    margin-left: 50px;
+} 
+.email{
+    margin-left: 20px;
+    margin-top: -20px;
+}
+ 
+
+
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 min-vh-100 text-white bg-primary ">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button> 
+                  
+                <img class="img-fluid rounded-circle  mt-4 w-50 h-5"
+                    src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?size=626&ext=jpg&ga=GA1.1.689369773.1698849807&semt=ais">
+                <p class="name text-white">Olivia</p>
+                <p class="email text-white ">olivia@gmail.com</p>
+                
+                    <!-- sidebar content -->
+
+                    <ul class="nav flex-column">
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light">
+                                <i class="bi bi-house-check-fill text-black"></i>
+                                <span class="ms-4 d-none d-sm-inline">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item py-1" id="listitems">
+                            <a href="#" class=" nav-link link-light">
+                                <i class="bi bi-window-sidebar text-black"></i>
+                                <span class="ms-4 d-none d-sm-inline">Jobs</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item py-1" id="listitems">
+                            <a href="#" class=" nav-link align-middle link-light">
+                                <i class="bi bi-envelope-paper-fill text-black"></i>
+                                <span class="ms-4 d-none d-sm-inline">Applications</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item py-1" id="listitems">
+                            <a href="#" class="nav-link align-middle link-light">
+                                <i class="bi bi-wechat text-black"></i>
+                                <span class="ms-4 d-none d-sm-inline">Interview</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item py-1" id="listitems">
+                            <a href="#" class="nav-link  align-middle link-light">
+                                <i class="bi bi-chat-left-text-fill text-black"></i>
+                                <span class="ms-4 d-none d-sm-inline">Messages</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item py-1" id="listitems">
+                            <a href="#" class="nav-link  align-middle link-light ">
+                                <i class="bi bi-gear-fill text-black"></i>
+                                <span class="ms-4 d-none d-sm-inline">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <img class="imgadd img-fluid" src="https://cdn-icons-png.flaticon.com/128/8867/8867438.png"
+                        width="25%" height="25%">
+                    <h6 class="add">Add New</h6>
+
+                </nav>
+                <!-- sidebar close -->
+            
+            <!-- header -->
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="nav col-md-12">
+                        <a class="  navbar-brand mx-auto px-3" href="#">List Jobs</a>
+                        <a class="  navbar-brand mx-auto px-3" href="#">Post Jobs</a>
+                        <a class="  navbar-brand mx-auto px-3" href="#">Update</a>
+                        <i class="bi bi-bell-fill align-baseline"></i>
+                        <i class="bi bi-box-arrow-right align-baseline"></i>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class=" col-md-12">
+                        <a class="navbar-brand text-decoration-underline" href="#">Find Jobs</a>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="input">
+                            <input type="text" class="form-control  form-control-sm w-100 rounded-bottom" placeholder="Search by Job Title,Qualification,Industry" >
+                        </div> 
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="nav col-md-7">
+                        <p class="fw-bold ms-5">Showing 106 Jobs</p>
+                        <p class="p">Sort by: <span class="fw-bold">Newest Jobs</span></p>
+                    </div>
+                </div>
+                
+
+            
+            <!-- header close -->
+            <!-- main start -->
+            
+            <br>
+            <div class="row">
+            <div class="col-md-7">
+
+            <div class="row" id="card1">
+               <div class="col-md-10 col-sm-12 border-start border-top border-bottom border-dark rounded-start ">
+                  <img  class="img-fluid mt-3" src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="logo" width="30px" height="30px" >
+                  <h3 class="ms-5">UI/UX Designer</h3>
+                  <p class="ms-5">Shope.Location</p>
+                  <p>We are looking for a UI/UX to turn our software in easy to use products for our clients.</p>
+                  <p>
+                  <span class="bg-secondary w-25 border rounded text-center">FullTime</span>
+                  <span class="bg-secondary w-25 border rounded text-center">$3000-$4000</span>
+                  <span class="bg-secondary w-25 border rounded text-center">Indonasia</span>
+                  <span class="bg-secondary w-25 border rounded text-center">Onsite</span>
+                  <span class="bg-secondary w-25 border rounded text-center">Remove</span>
+                  </p>
+               </div>
+               <div class="col-md-2 col-sm-12 border-end border-top border-bottom rounded-end border-dark">
+                <img class="img-fluid ms-5" src="https://cdn-icons-png.flaticon.com/128/11462/11462844.png" width="25px" height="25px">
+               </div>
+            </div>
+
+            <div class="row" id="card2">
+                <div class="col-md-10 border-start border-top border-bottom border-dark rounded-start ">
+                   <img class="img-fluid mt-4" src="https://cdn-icons-png.flaticon.com/128/0/747.png" alt="logo" width="25px" height="25px">
+                   <h3 class="ms-5">Product Designer</h3>
+                  <p class="ms-5">Apple.Location</p>
+                  <p>We are looking for a UI/UX to turn our software in easy to use products for our clients.</p>
+                  <p>
+                    <span class="bg-secondary w-25 border rounded text-center">FullTime</span>
+                    <span class="bg-secondary w-25 border rounded text-center">$3000-$4000</span>
+                    <span class="bg-secondary w-25 border rounded text-center">Indonasia</span>
+                    <span class="bg-secondary w-25 border rounded text-center">Onsite</span>
+                    <span class="bg-secondary w-25 border rounded text-center">Remove</span>
+                    </p>
+               </div>
+               <div class="col-md-2 border-end border-top border-bottom rounded-end border-dark">
+                <img class="img-fluid ms-5" src="https://cdn-icons-png.flaticon.com/128/11462/11462844.png" width="25px" height="25px">
+               </div>
+            </div>
+
+            <div class="row" id="card3">
+                <div class="col-md-10 border-start border-top border-bottom border-dark rounded-start">
+                   <img class="img-fluid mt-4" src="https://cdn-icons-png.flaticon.com/128/6033/6033716.png" alt="logo" width="25px" height="25px">
+                   <h3 class="ms-5">Software Engineer</h3>
+                  <p class="ms-5">meta.Location</p>
+                  <p>We are looking for a UI/UX to turn our software in easy to use products for our clients.</p>
+                  <p>
+                    <span class="bg-secondary w-25 border rounded text-center">FullTime</span>
+                    <span class="bg-secondary w-25 border rounded text-center">$3000-$4000</span>
+                    <span class="bg-secondary w-25 border rounded text-center">Indonasia</span>
+                    <span class="bg-secondary w-25 border rounded text-center">Onsite</span>
+                    <span class="bg-secondary w-25 border rounded text-center">Remove</span>
+                </p>
+               </div>
+               <div class="col-md-2 border-end border-top border-bottom rounded-end border-dark">
+                <img class="img-fluid ms-5" src="https://cdn-icons-png.flaticon.com/128/11462/11462844.png" width="25px" height="25px">
+               </div>
+            </div>
+        
+        </div> 
+        <div class="col-md-5">
+            <img class="img-fluid" src="https://img.freepik.com/free-photo/portrait-female-lawyer-formal-suit-with-clipboard_23-2148915799.jpg?size=626&ext=jpg&ga=GA1.1.503219789.1705594467&semt=sph" width="100%" height="100%">
+        </div>
+        </div>   
+
+        </div><!-- row wrap close -->
+        </div><!-- container close -->
+        
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>

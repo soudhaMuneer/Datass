@@ -1,0 +1,86 @@
+﻿@page
+@model RazorWorkshop4.Pages.JobListModel
+@{
+    Layout = "_JobListLayout";
+}
+
+<div>
+    <h1 align="center">
+        <font face="arial" color="#3487bf">Find your dream job</font>
+    </h1>
+    <p align="center">
+        <font face="arial">Find your next career at companies like HubSpot, Nike, and Dropbox</font>
+    </p>
+    <h2 align="center" color="#3487bf">All Jobs</h2>
+    <div class="row jobListDiv" >
+
+        <div class="left col-md-8 scroll">
+            @foreach (var job in Model.jobs)
+            {
+                    <div class="job-card" style="">
+                    <div width="" class="JobWrapper">
+                            <div align="center" class="col-md-2 logoDiv">
+
+                                <img src="~/publicassets/images/google symbol.png" width="50px" alt="Google" title="Google" height="50px">
+                        </div>
+                        <div class="col-md-8 jobData">
+                            <b >
+                                <font size="5px" color="#3487bf">@job.Title </font>
+                            </b>
+                            <br>
+
+                            <div>
+                                  company: <b>@job.Company</b> <br>
+                                    Location: <b>@job.Location</b> <br>
+                               salary : <b>@job.Salary</b>
+
+                            </div>
+                            <br>
+                            <div class="end-row">
+
+                                <div class="row tags">
+                                    <div class="fulltime"> Full Time </div>
+                                    <div class="marketing"> <b>Marketing</b> </div>
+                                    <div class="design"> Designing </div>
+                                </div>  
+
+                            </div>
+                            <br>
+
+                        </div>
+                        <div class="col-md-2 applySection"> 
+                          
+                   <form method="post" asp-page-handler="RemoveJob" asp-route-id="@job.Id">
+                            @* <input type="hidden" name="id" value="@job.Id" />*@
+                            <button class="btn btn-apply"type="submit">
+                                Remove
+                            </button>
+                             </form> 
+                                <progress id="progressBar" value=70 max=100></progress>
+                                <span>50 applied of 15 capacity</span>
+                        </div>
+                    </div>
+                    </div>
+            }
+
+            <div class="center">
+
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+</div>
+</div>

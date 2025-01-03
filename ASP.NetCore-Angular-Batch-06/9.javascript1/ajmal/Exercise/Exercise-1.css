@@ -1,0 +1,143 @@
+body{
+    position: relative;
+}
+.main{position: absolute;
+    top: 50px;
+    left: 120px;
+    display: flex;
+    box-shadow: 1px 1px 10px rgb(230, 228, 228);
+    border-radius: 10px;
+}
+.one{
+    position: relative;
+    top: 0px;
+    width: 500px;
+    height: 480px;
+    left: 0px;
+    overflow: hidden;
+    text-align: center;
+    transform: translateX(-50%,-50%);
+    background-color: aliceblue;
+}
+.second{
+        position: relative;
+        top: 0px;
+        width: 500px;
+        height: 480px;
+        left: 0px;
+        text-align: center;
+        
+        
+        
+        
+    }
+
+.frame1{
+    width: 500px;
+    
+    background-color: aliceblue;
+    border-radius: 10px;
+    
+
+}
+.frame1 h1{
+    color: darkblue;
+    position: absolute;
+    top: -19px;
+    left: 220px;
+    
+    font-size: 40px;
+    font-style: italic;
+}
+.logo{
+    position: absolute;
+    left: 140px;
+    top: 6px;
+}
+.frame2{
+    width: 500px;
+    height: 480px;
+    text-align: left;
+    
+}
+.imgframe{
+    
+    margin-top: 75px;
+    left: 4.5px;
+    animation: slide 3s infinite;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(-0%);
+    }
+    50%{
+        transform: translateX(-95%);
+    }
+    
+    100%{
+        transform: translateX(-200%);
+    }
+}
+.im1{
+    margin-left: 490px;
+}
+
+
+
+.imgframe img{
+    
+    background-color: aliceblue;
+    
+}
+.frame2 h2{
+    position: absolute;
+    top: 60px;
+    left: 110px;
+}
+.inp1{
+    position: absolute;
+    top: 170px;
+    width: 290px;
+    left: 110px;
+    height: 20px;
+    border-radius: 8px;border:1.5px solid darkblue;
+}
+
+.inp2{
+    position: absolute;
+    top: 245px;
+    width: 290px;
+    height: 20px;
+    left: 110px;
+    border-radius: 8px;border:1.5px solid darkblue;
+}
+.eye{position: absolute;
+    top: 248px;
+    left: 380px;
+    width: 20px;
+}
+.inp3{
+    position: absolute;
+    top: 355px;
+    width: 290px;
+    height: 40px;
+    left: 110px;
+    border-radius: 8px;border:1.5px solid darkblue;
+    background-color: darkblue;color: white;
+}
+.p1{
+    position: absolute;
+    top: 180px;
+    width: 290px;
+    height: 20px;
+    left: 110px;
+    visibility: hidden;
+}
+.p2{
+    position: absolute;
+    top: 260px;
+    width: 290px;
+    height: 20px;
+    left: 110px;
+    visibility: hidden;
+}

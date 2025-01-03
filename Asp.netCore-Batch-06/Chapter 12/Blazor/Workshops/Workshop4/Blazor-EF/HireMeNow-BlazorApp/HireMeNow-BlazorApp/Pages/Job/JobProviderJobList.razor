@@ -1,0 +1,281 @@
+﻿@page "/Jobprovider/JobList"
+@using HireMeNow_BlazorApp.Interfaces
+@using HireMeNow_BlazorApp.Models
+@layout JobProviderLayoutComponent
+@inject IJobService Jobservices
+@inject IUserService userService
+<link href="publicassets/css/home.css" rel="stylesheet" />
+<style>
+    .jobData {
+        /*width: 80%;*/
+    }
+
+    .btn-apply {
+        width: -webkit-fill-available;
+        height: 40px;
+    }
+
+    .job-card {
+        /*width: 60%;*/
+        margin: auto;
+        margin-bottom: 13px;
+        padding: 10px;
+        box-shadow: 3px 4px 17px 0px #504d4d7d;
+    }
+
+    /* .job-card :hover {
+
+                box-shadow: 3px 4px 17px 0px #504d4d7d;
+            }*/
+    .applySection {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logoDiv {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .jobListDiv {
+        justify-content: center;
+    }
+
+    progress {
+        width: 100%;
+        height: 8px;
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+        progress::-webkit-progress-bar {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+    .JobWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tags {
+        flex-wrap: wrap
+    }
+
+    .progressSpan {
+        font-size: small;
+    }
+
+    .right img {
+        max-width: 406px;
+    }
+
+    .nav {
+        justify-content: space-evenly;
+    }
+
+    .scroll {
+        min-height: 300px;
+    }
+
+    .confirmation-box {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background: #40189d;
+        padding: 20px;
+        margin: 10px;
+        color: white;
+        background-image: linear-gradient(175deg, #744ad4, #08011ac7);
+        font-family: popins;
+        font-size: medium;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px 1px #3a3939e8;
+    }
+
+    .overlay {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+</style>
+
+<div>
+
+    <div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <b>
+                    <a href="/Job/PostJob" style=" color: black;">Post Job  </a>
+                </b>
+            </li>
+            <li class="nav-item">
+                <b>
+                    <a href="/Jobprovider/JobList" style="
+    color: black;
+"> List Job </a>
+                </b>
+            </li>
+            <li class="nav-item"><b> Update Jobs </b></li>
+        </ul>
+    </div>
+
+    <h2 align="center" color="#3487bf">All Jobs</h2>
+    <div class="row jobListDiv">
+        @if (showConfirmationOverlay)
+        {
+            <div class="col-md-12" style="
+    z-index: 10;
+">
+                <div class="overlay">
+                    <div class="confirmation-box">
+                        <h4>Are you sure you want to Remove  ?</h4>
+                        <div class="buttons">
+                            <button class="btn btn-outline-danger" @onclick="Remove">Yes</button>
+                            <button class="btn btn-outline-primary " @onclick="HideConfirmation">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="left col-md-8" style="overflow:scroll">
+            @if (jobs.Count<=0)
+            {
+                <h2>No Jobs Found... </h2>
+                <br />
+
+                <br />
+            }
+
+            @foreach (var job in jobs)
+            {
+                <div class="job-card" style="">
+                    <div width="" class="JobWrapper">
+                        <div align="center" class="col-md-2 logoDiv">
+
+                            <img src="publicassets/images/aitrich_logo.jpg" width="75px" alt="Google" title="Aitrich" height="75px">
+                        </div>
+                        <div class="col-md-8 jobData">
+                            <b>
+                                <font size="5px" color="#3487bf">@job.Title </font>
+                            </b>
+                            <br>
+
+                            <div>
+                                <b>@job.Description</b> <br>
+
+                            </div>
+
+                            <br>
+                            <div>
+                                <b>@job.Experience</b> <br>
+
+                            </div>
+                            <div class="">
+
+                                <div class="row tags">
+                                    <div class="fulltime"><b>@job.TypeOfWorkPlace </b></div>
+                                    <div class="marketing"> <b>@job.Salary</b> </div>
+                                    <div class="design"> @job.Location </div>
+                                </div>
+
+                            </div>
+                            <br>
+
+                        </div>
+                        <div align="center" class="col-md-2 logoDiv">
+                            <button class=" btn btn-primary" @onclick="@(()=>selectId(job.Id))">Remove </button>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @*  <div class="center">
+
+            <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+            </div>
+            </div>*@
+
+        </div>
+
+        <div class="right col-md-4">
+            @*    <img src="jobprovider/images/professional1.png" />*@
+        </div>
+
+
+
+
+
+    </div>
+</div>
+@code {
+    public List<Job> jobs { get; set; } = new List<Job>();
+    public User loggerUser { get; set; }
+    bool showConfirmationOverlay = false;
+    private Guid selectedId;
+    protected override void OnInitialized()
+    {
+        //this is the original code when complete application is using . that is when a job provider is logged in and redirected to this page
+        loggerUser = userService.getLoggedUser();
+        if (loggerUser!=null && loggerUser.CompanyId!=null)
+        jobs = Jobservices.GetJobsByCompany(loggerUser.CompanyId.Value);
+
+
+    }
+    public void Remove()
+    {
+        Jobservices.DeleteItemById(selectedId);
+        HideConfirmation();
+        jobs= Jobservices.GetJobsByCompany(loggerUser.CompanyId.Value);
+        selectedId = new();
+       
+    }
+
+    private void selectId(Guid id)
+    {
+        selectedId = new();
+        selectedId = id;
+        ShowConfirmation();
+    }
+
+    private void ShowConfirmation()
+    {
+        showConfirmationOverlay = true;
+    }
+
+    private void HideConfirmation()
+    {
+        showConfirmationOverlay = false;
+    }
+}

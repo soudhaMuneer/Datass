@@ -1,0 +1,27 @@
+<div class="content bg-light">
+    <br>
+    <input type="search"  placeholder=" search for jobs" class="ms-3 border-0 rounded " size="25rem" (input)="filterJobs($event)">
+    <input type="button" class="ms-3 w-25 bg-white border-0 rounded" value="Location">
+    <img src="../../assets/image/icon filter.png" class="bg-white ms-2 " width="30rem" alt="">
+<div class="cardscroll">
+    <div class="card w-75  mt-3 ms-2"  *ngFor="let list of filterdjobs">
+        <img [src]="list.companylogo"  style="float: left;" width="60rem" src="" alt="">
+        <h6 class="post">{{list.post}} <br></h6>
+           <small class="location" style="font-size: .5rem;"><b> {{list.companyname}}{{list.location}}
+        </b></small>
+        <div>
+            <p style="font-size: 1rem;">{{list.details}}</p>
+        </div>
+
+        <div>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">Full Time</button>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">Mid Level</button>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">$3000-$5000</button>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">Indonesia</button>
+            <button class="rounded ms-2" style="border: 0; background-color: bisque  ;">Onsite</button>
+            <input type="submit" value="Apply" class=" text-white border-0 rounded ms-3" style="background-color: rgb(66, 194, 245);">
+        </div>
+    </div>
+</div>
+<br><br>
+</div>

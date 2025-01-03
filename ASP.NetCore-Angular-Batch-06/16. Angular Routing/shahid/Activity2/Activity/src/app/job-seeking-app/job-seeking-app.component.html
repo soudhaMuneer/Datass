@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+       body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar {
+    background-color: #444;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.active {
+    background-color:darkgrey;
+    color: #fff;
+    border-radius: 10px;
+  }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h2>Logo</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+                    <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
+                    <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
+                    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+    <aside class="sidebar">
+        <ul>
+          
+          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/joblist" routerLinkActive="active">Job Listings</a></li>
+          <li><a routerLink="/userprofile" routerLinkActive="active">User Profile</a></li>
+          <li><a routerLink="/logout" routerLinkActive="active">Logout</a></li>
+        </ul>
+    </aside>
+      
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</body>
+</html>

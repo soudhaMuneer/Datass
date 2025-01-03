@@ -1,0 +1,113 @@
+﻿@using AutoMapper;
+@using HireMeNow_BlazorApp.Dtos;
+@using HireMeNow_BlazorApp.Interfaces;
+@using HireMeNow_BlazorApp.Models;
+@inject IMapper _mapper;
+@inject IUserService _userService
+@inject IWebHostEnvironment _webHostEnvironment
+<hr/>
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="EditDetailsView" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label class="control-label">Image</label>
+                <InputFile OnChange="HandleFileUpload" class="form-control" />
+                @*<input type="file" @bind="userModel.ImageFile" class="form-control" />*@
+                <span asp-validation-for="FormFile" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">FirstName</label>
+                <input @bind="userModel.FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">LastName</label>
+                <input @bind="userModel.LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+          
+            @* <div class="form-group">
+            <b>
+            <input class="form-check-input" type="radio" @bind="userModel.Gender" value="male" id="male-radio" required>
+            <label class="form-check-label" for="male-radio">Male</label>
+            <input class="form-check-input" type="radio" @bind="userModel.Gender" value="female" id="female-radio" required>
+            <label class="form-check-label" for="female-radio">Female</label>
+            <input class="form-check-input" type="radio" @bind="userModel.Gender" value="other" id="other-radio" required>
+            <label class="form-check-label" for="other-radio">Other</label>
+            </b>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label  class="control-label">Location</label>
+                <input @bind="userModel.Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Phone</label>
+                <input @bind="userModel.Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">About</label>
+                <input @bind="userModel.About" class="form-control" />
+                <span asp-validation-for="About" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Designation</label>
+                <input @bind="userModel.Designation" class="form-control" />
+                <span asp-validation-for="Designation" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="button" value="Save" class="btn btn-primary" @onclick="UpdateDetails" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public UserDto userModel { get; set; } = new();
+    [Parameter]
+    public EventCallback OnButtonClick { get; set; } = new();
+    private IBrowserFile file;
+    public IFormFile? ImageFile { get; set; }
+    private async Task HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        file = e.File;
+    }
+    public async void UpdateDetails()
+    {
+
+        if (file!=null)
+        {
+            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads");
+
+            if (!Directory.Exists(uploadsFolder))
+            {
+                // Create the "Uploads" folder if it doesn't exist
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.Name);
+            string filePath = Path.Combine(uploadsFolder, fileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.OpenReadStream().CopyToAsync(fileStream);
+            }
+            userModel.Image = fileName;
+        }
+        
+        var user = _mapper.Map<User>(userModel);
+        _userService.Update(user);
+      await OnButtonClick.InvokeAsync();
+
+    }
+}

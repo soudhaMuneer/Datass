@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc_Pet_App_StoredProcedure", "Mvc_Pet_App_StoredProcedure\Mvc_Pet_App_StoredProcedure.csproj", "{63D70927-CF8F-4634-963A-23EF1868E790}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63D70927-CF8F-4634-963A-23EF1868E790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D70927-CF8F-4634-963A-23EF1868E790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D70927-CF8F-4634-963A-23EF1868E790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D70927-CF8F-4634-963A-23EF1868E790}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4C862EB-5CC1-4292-A475-E21E36C524F0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: #117EBD;
+    color: white;
+    padding-bottom:50%;
+
+}
+
+.footer {
+    background-color: #117EBD;
+    position: absolute;
+    top: 124%;
+    padding-right: 7%;
+    width: 1120px;
+    height: 500px;
+}
+
+.secondfooter{
+    position: absolute;
+    background-color: gainsboro;
+    width: 1205px;
+    height: 500px;
+    top: 206%;
+}
+.content{
+    position: absolute;
+    background-color: gainsboro;
+    width: 965px;
+    height:662px;
+    top: 12%;
+    left: 255px;
+}

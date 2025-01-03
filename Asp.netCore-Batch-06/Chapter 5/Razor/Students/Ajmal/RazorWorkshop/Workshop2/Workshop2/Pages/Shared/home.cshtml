@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+   
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2  bg-primary">
+				<nav class="navbar  navbar-expand-md sidebar navbar-dark">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon bg-dark"></span>
+					</button>
+					<div class="collapse  navbar-collapse sidebar " id="collapsibleNavbar">
+						<ul class="list-group text-white list-unstyled">
+							@* <li class="list-group-item border-0 bg-primary"> *@
+							<div class="w-60 mt-5 pb-2 pt-2 bg-secondary rounded-circle">
+								<img class="img-fluid mx-auto d-block" src="~/images/cheerful-curly-business-girl-wearing-glasses 1.png">
+							</div>
+							@* </li> *@
+							<li>
+								<p class="text-center">Olivia<br>olivia@gmail.com</p>
+							</li>
+							<li class="list-group-item border-0 bg-primary">
+								<p><img src="~/images/dashboard 1 (1).png">  Dash Board</p>
+							</li>
+							
+						
+					<li class="list-group-item border-0 bg-primary">
+								<p><img src="~/images/application (1) 1.png">Applications</p>
+							</li>
+							<li class="list-group-item border-0 bg-primary">
+								<a class="text-decoration-none text-white" asp-page="/interviewlist"><p><img src="~/images/question (1) 1.png"> Interviews</p></a>
+							</li>
+							<li class="list-group-item border-0 bg-primary">
+								<p><img src="~/images/message 1.png"> Messages</p>
+							</li>
+
+							<li class="list-group-item border-0 bg-primary">
+								<p><img src="~/images/settings 1.png">  Settings</p>
+							</li>
+							<li class="list-group-item border-0 bg-primary">
+								<img class="img" src="~/images/add-group (1) 1 (1).png"><br>
+								<span class="text-white">Add New</span>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 bg-light">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 bg-white">
+						<img class="img-fluid float-right" src="~/images/Group 33999.png" width="50" height="50" />
+						<img class="img-fluid float-right" src="~/images/notification-bing.png" width="50" height="50" />
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 min-vh-100 ml-5 mt-2 ">
+						
+						<h3>Welcome To JobPortal</h3>
+						<div class="rounded-pill d-flex p-1 bg-white">
+							<img src="~/images/search copy 2 (1).png" class="mt-1 ml-2" width="40px" height="30px" alt="Alternate Text" />
+							<input type="search" class="form-control border-0 small" name="name" value="" />
+							<img src="~/images/icon filter.png" width="40px" height="30px" class="mt-1 mr-2" alt="Alternate Text" />
+						</div>
+
+						<div class="row">
+							<div class=" col-xl-12">
+								@RenderBody()
+							</div>
+						</div>
+
+
+					</div>
+						</div>
+						
+
+
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+   
+</body>
+</html>

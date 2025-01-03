@@ -1,0 +1,76 @@
+<div class="all">
+    <div class="left">
+        <img src="../../assets/images/register.png">
+    </div>
+    <div class="right">
+        <div class="right-inner-main">
+            <div class="right-inner">
+                <h1>Registration</h1>
+                <div class="line"></div>
+                <form (ngSubmit)="registerUser()" #registrationForm="ngForm">
+                    <div class="all-inputs">
+                    
+                        <div class="inputs-and-labels">
+                            <label>First Name</label>
+                            <input type="text" id="firstName" name="firstName" ngModel required placeholder="Please enter your First name">
+                            <small *ngIf="registrationForm.controls['firstName'].invalid && registrationForm.controls['firstName'].touched">*First name is required</small>
+                        </div>
+
+                        <div class="inputs-and-labels">
+                            <label>Last Name</label>
+                            <input type="text" id="lastName" name="lastName" ngModel required placeholder="Please enter your Last name">
+                            <small *ngIf="registrationForm.controls['lastName'].invalid && registrationForm.controls['lastName'].touched">*last name is required</small>
+                        </div>
+
+                        <div class="inputs-and-labels">
+                            <label>Email</label>
+                            <input type="email" id="email" name="email" ngModel required  placeholder="Email">
+                            <small *ngIf="registrationForm.controls['email'].invalid && registrationForm.controls['email'].touched">*email name is required</small>
+                        </div>
+
+                      <div class="inputs-and-labels">
+                            <label>PhoneNumber</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" ngModel required placeholder="PhoneNumber">
+                            <small *ngIf="registrationForm.controls['phoneNumber'].invalid && registrationForm.controls['phoneNumber'].touched">*number name is required</small>
+                        </div>
+
+                        <div class="inputs-and-labels">
+                            <label>Password</label>
+                            <input type="password" id="password" name="password" ngModel required placeholder="Password">
+                            <small *ngIf="registrationForm.controls['password'].invalid && registrationForm.controls['password'].touched">*please enter your password</small>
+                        </div>
+
+                        <div class="inputs-and-labels">
+                            <label>Confirm Password</label>
+                            <input type="password" id="confirmpassword" name="confirmpassword" ngModel required placeholder="Confirm Password">
+                            <small *ngIf="registrationForm.controls['confirmpassword'].invalid && registrationForm.controls['confirmpassword'].touched">*Confirm Password is required</small>
+                        </div>
+
+                    </div>
+
+                    <div class="gender-container">
+                        <h3>Gender</h3>
+                        <div class="radio-container">
+
+                            <input type="radio" name="gender" id="male" value="male" ngModel required>
+                            <label for="male">Male</label>
+
+                            <input type="radio" name="gender" id="female" value="female" ngModel required>
+                            <label for="female">Female</label>
+
+                            <input type="radio" name="gender" id="other" value="other" ngModel required>
+                            <label for="other">Other</label>
+
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" value="Register">Register</button>
+                    </div>
+                </form>
+                <div class="sign-in">
+                    <p>Already have an account? <a [routerLink]="['/login']">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

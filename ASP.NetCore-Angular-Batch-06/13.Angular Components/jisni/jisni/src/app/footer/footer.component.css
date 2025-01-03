@@ -1,0 +1,36 @@
+/* footer.component.css */
+
+.footer {
+    background-color:  #6995fd;;
+    color: #fff;
+    padding: 50px 0;
+    margin-top: 300px;
+    margin-left: 190px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-info p {
+    margin: 0;
+    margin-left: 100px;
+  }
+  
+  .footer-info a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-info a:hover {
+    text-decoration: underline;
+    
+  }
+  
+  .contact-info p {
+    margin: 0;
+   
+  }
+  

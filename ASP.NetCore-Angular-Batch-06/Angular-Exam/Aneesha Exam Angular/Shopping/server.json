@@ -1,0 +1,46 @@
+{
+  "Products": [
+    {
+      "id": "0",
+      "name": "Redmi",
+      "Price": "$300",
+      "Quantity": "10",
+      "color": "Lavender"
+    },
+    {
+      "id": "1",
+      "name": "Poc",
+      "Price": "$300",
+      "Quantity": "10",
+      "color": "Lavender"
+    },
+    {
+      "id": "3",
+      "name": "Redmi",
+      "Price": "$300",
+      "Quantity": "10",
+      "color": "Lavender"
+    },
+    {
+      "id": "4",
+      "name": "Poc",
+      "Price": "$300",
+      "Quantity": "10",
+      "color": "Lavender"
+    },
+    {
+      "id": "5",
+      "name": "Redmi",
+      "Price": "$300",
+      "Quantity": "10",
+      "color": "Lavender"
+    },
+    {
+      "id": "6",
+      "name": "Poc",
+      "Price": "$300",
+      "Quantity": "10",
+      "color": "Lavender"
+    }
+  ]
+}

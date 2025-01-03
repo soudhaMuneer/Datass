@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activity chapter 3 rinshad</title>
+
+    <style>
+        .main{
+            position: absolute;
+            margin: auto;
+            border: 1px solid black;
+            width: 400px;
+            height: 150px;
+            border-top: 50px solid rgb(243, 161, 54);
+            border-bottom: 50px solid rgb(243, 161, 54);
+            transition:2s;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+       
+.Engineer1{
+    position: absolute;
+border: 1px solid black;
+    background-color: rgb(217, 248, 248);
+    
+
+    left: 150px;
+    top: 30px;
+   
+    
+}
+.main:hover{
+   transform: scale(1.1);
+   
+   
+   scale: 1,15;
+}
+.button{
+   position: absolute;
+   height: 25px;
+   width: 50px;
+   top: 162px;
+   left: 300px;
+   border-color: transparent;
+   transition:    3s, 3ss;
+}
+.button:hover{
+    transform: rotateX('angle');
+    background-color:  #3498db;
+    color:white;
+}
+.main2{ 
+    
+    position: absolute;
+            margin: auto;
+            border: 1px solid black;
+            width: 400px;
+            height: 150px;
+            border-top: 50px solid rgb(243, 161, 54);
+            border-bottom: 50px solid rgb(243, 161, 54);
+            left: 50px;
+            top: 600px;
+             animation-name: slide-in ;
+           animation-duration: 2s;
+         
+          animation-iteration-count: 3;
+          animation-direction: normal;
+          
+}
+@keyframes slide-in{
+ from{ width:0px;
+ left: 0;
+   
+ }
+ to{ width:400px ;
+    left: 50px;
+   
+  
+ }
+ 
+
+}
+
+
+
+.Engineer2{
+    position: absolute;
+border: 1px solid black;
+    background-color: rgb(217, 248, 248);
+    width:200px ;
+height: 100px;
+  bottom: -220px;
+  left: 200px;
+    animation-duration: 2s;
+   animation-name: slide-in1;
+          animation-iteration-count: 3;
+          animation-direction: normal;
+          transition: 2s, 2s;
+          
+
+       
+          
+
+   
+}
+@-webkit-keyframes slide-in1{
+    from{ width: 0px;
+    height: 0;}
+    to{width: 200px;
+    height: 100px;}
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+ 
+    <div class="main">
+        
+      
+            <img src="./images/WhatsApp Image 2023-10-24 at 20.49.29_5c9d1790.jpg" style="position: absolute; height: 100px; left: 50px; top: 30px; ">
+        <span class="Engineer1">
+            Job name: Software Engineer <br><br>
+                name:  Rinshad<br><br>
+                Company: Aitrich
+        </span>
+<form action="">
+        <input type="button" value="Edit" class="button">
+    </form></div>
+    </div>
+    
+<div class="main2">
+    
+    <img src="./images/WhatsApp Image 2023-10-24 at 20.49.29_5c9d1790.jpg" style="position: absolute; height: 100px; left: 50px; top: 30px;
+      animation-duration: 2s;
+         
+         animation-iteration-count: 3;
+         animation-direction: normal;">
+         </div>
+    <span class="Engineer2">
+        Job name: Software Engineer <br><br>
+            name:  Rinshad <br><br>
+            Company: Aitrich <br><br>
+    </span>
+
+</ol>
+</body>
+</html>

@@ -1,0 +1,70 @@
+create database sql_asssesment1
+use sql_asssesment1
+create table users(user_id int primary key,username varchar(50) not null , email varchar(100) not null);
+create table products(product_id int primary key,product_name varchar(100) not null,price Decimal(10,2) not null ,stock int not null);
+create table orders(order_id int primary key,user_id int ,product_id int,quantity int,foreign key(user_id) references users(user_id),foreign key (product_id) references products(product_id));
+
+insert into users values(1,'Ajmal','Ajmal@gmail.com');
+insert into users values(2,'Aneesha','Aneesha@gmail.com');
+insert into users values(3,'shameem','shameem@gmail.com');
+select * from users
+
+insert into products values(01,'T-shirt','499',100);
+insert into products values(02,'Pants','799',89);
+select * from products
+
+insert into orders values(001,1,01,3);
+insert into orders values(002,2,02,2);
+select * from orders
+delete from orders
+
+update products set stock=(select p.stock - o.quantity from products p
+join orders o on o.product_id = p.product_id )
+where product_id=(select o.product_id from products p
+join orders o on o.product_id = p.product_id)
+
+
+update products set stock=100 where product_id=01;
+insert into orders values(3,2,01,4)
+
+
+
+
+delete from orders where order_id=002
+
+select o.order_id,u.username,u.email,p.product_name from orders o
+join users u on o.user_id = u.user_id
+join products p on p.product_id = o.product_id
+
+drop trigger orderinsert
+create trigger orderinsert on orders for insert
+as
+begin
+declare 
+@p_id int,
+@p_qn int
+
+select @p_id =(select product_id from inserted)
+select @p_qn =(select quantity from inserted)
+
+update products set stock=(select stock - @p_qn from products) where product_id=@p_id;
+end
+go
+
+select * from products
+
+insert into orders values(006,2,02,2);
+
+create proc orderinsertproc 
+(
+ @id int ,
+ @usr int,
+ @pdt int,
+ @qnt int
+)
+as
+begin
+insert into Orders values(@id,@usr,@pdt,@qnt)
+update Products set stock= stock-@qnt where product_id=@pdt
+end
+exec orderinsertproc 002,2,02,2

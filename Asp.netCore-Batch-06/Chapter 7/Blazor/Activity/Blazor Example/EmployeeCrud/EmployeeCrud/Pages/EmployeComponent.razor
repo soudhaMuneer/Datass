@@ -1,0 +1,27 @@
+﻿@using EmployeeCrud.Data;
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    @*<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>*@
+    <h3>@employee.FullName</h3>
+    <h3>@employee.FirstName</h3>
+    <h3>@employee.LastName</h3>
+    <h3>@employee.Address</h3>
+    <h3>@employee.EmailAddress</h3>
+
+     <a class="nav-link btn btn-primary" href="Edit/@employee.Id">
+        <span class="oi oi-pencil" aria-hidden="true" >Edit</span>
+    </a>
+  </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string id{ get; set; }
+      [Parameter]
+    public Employee employee { get; set; }
+     
+
+}

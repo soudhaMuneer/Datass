@@ -1,0 +1,26 @@
+.list{
+    width: 5cm;
+    height: 4cm;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 10px;
+    position: relative;
+    animation-name: right;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    margin: auto;
+    margin-top: 5cm;
+}
+.list:hover{
+  transform: scale(1.5);
+}
+
+.button:hover{
+    transform: scale(1.5);
+    transition: 1s;
+}
+@keyframes right {
+  0% {left: 0px;top: 0px;}
+  50% {left: 200px;top: 0px;}
+  100% {left: 0px;top: 0px;}
+}

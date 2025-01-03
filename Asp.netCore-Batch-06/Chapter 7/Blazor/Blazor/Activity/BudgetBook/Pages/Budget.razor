@@ -1,0 +1,71 @@
+﻿@page "/"
+@page "/budget"
+@using BudgetBook.Data
+@inject BudgetBookServices budgetBookService
+
+
+<h3>Budget</h3>
+<table class="table table-striped table-bordered">
+<thead class="table-dark">
+    <tr>
+        <th>
+            Description 
+        </th>
+        <th>
+            Amount
+
+        </th>
+
+    </tr>
+</thead>
+<tbody>
+    @foreach(Entry entry in allEntries)
+    {
+        <tr>
+            <td>
+                @entry.Description
+            </td>
+            <td>
+                @entry.Amount
+            </td>
+        </tr>
+        
+    }
+
+</tbody>
+</table>
+<form>
+    <div class="row"
+        <div class="col"
+            <label class="control-Label">Description</label>
+            <input class="form-control" @bind="@newEntry.Description"/>
+            </div>
+            <div class="col">
+                <label class="control-Label">Amount</label>
+            <input class="form-control" @bind="@newEntry.Amount"/>
+
+            </div> 
+
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <button class="btn-primary" @onclick="@CreateEntry">Add</button>
+                </div>
+            </div>
+</form>
+
+@code {
+    List<Entry> allEntries=new List<Entry>();
+    Entry newEntry = new Entry();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        allEntries = await budgetBookService.GetAllEntries();
+
+    }
+    protected async void CreateEntry()
+    {
+        await budgetBookService.AddEntry(newEntry);
+    }
+}

@@ -1,0 +1,156 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 9</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 1 auto;
+    }
+    h1 {
+      color: #333;
+      text-align: center; 
+    }
+    h5 {
+        color: rgb(155, 9, 9);
+        
+    }
+    .back-btn-container {
+      text-align: center;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #030326;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .back-btn:hover {
+      background-color: #34ac21;
+    }
+    .description{color:#68404F; text-align:justify; margin-top:10px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:14px; margin-top:5px; padding-bottom:10px;}
+    .description span{font-weight:bold; color:#903; padding-right:10px}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>New Input Types</h1>
+  <img src="images/input1.png" height="150px" width="550px">
+  <form action="#">
+    E-mail: <input type="email" name="usremail">
+    <br><br>
+    <input type="submit">
+  </form>
+<br>
+  <img src="images/input2.png" height="150px" width="550px">
+  <form action="#">
+    Add your homepage: <input type="url" name="homepage"><br>
+    <br>
+    <input type="submit">
+  </form>
+<br>
+  <img src="images/input3.png" height="150px" width="550px">
+  <form action="#">
+    Select your favorite color: <input type="color" name="favcolor"><br>
+    <br>
+    <input type="submit">
+  </form>
+<br>
+<div class="description"><span>Number:</span>The number type is used for input fields that should contain a numeric value.</div>
+<img src="images/input4.png" height="120px" width="550px">
+<form action="#">
+  Quantity (between 1 and 5): <input type="number" name="quantity" min="1" max="5">
+  <input type="submit">
+</form>
+<br>
+<div class="description"><span>Range:</span>The range type is used for input fields that should contain a value from a range of numbers.</div>
+<img src="images/input5.png" height="100px" width="550px">
+<form action="#" method="get">
+  Points: <input type="range" name="points" min="1" max="10">
+  <input type="submit">
+</form>
+<br>
+<div class="description"><span>Date:</span>The date type allows the user to select a date.</div>
+<img src="images/input6.png" height="100px" width="500px">     
+<form action="#">
+  Birthday: <input type="date" name="bday">
+  <input type="submit">
+</form>     
+<br>
+<div class="description"><span>Datetime:</span>The datetime-local type allows the user to select a date and time (no time zone).</div>
+<img src="images/input7.png" height="120px" width="500px">     
+<form action="https://aitrich.com/">
+  Birthday : <input type="datetime" name="bdaytime">
+  <input type="submit">
+</form>
+<br>
+<div class="description"><span>Datetime-local:</span>The datetime-local type allows the user to select a date and time (no time zone).</div>
+<img src="images/input8.png" height="120px" width="500px"> 
+<form action="#">
+  Birthday : <input type="datetime-local" name="bdaytime">
+  <input type="submit">
+</form>  
+<br>
+<div class="description"><span>Month:</span>The month type allows the user to select a month and year.</div>
+<img src="images/input9.png" height="120px" width="500px"> 
+<form action="#">
+  Birthday : <input type="month" name="bdaymonth">
+ <input type="submit">
+</form>
+<br>
+<div class="description"><span>Search:</span>The search type is used for search fields (a search field behaves like a regular text field).</div>
+<img src="images/input10.png" height="120px" width="500px"> 
+<form action="#">
+  Search Google: <input type="search" name="googlesearch"><br>
+ <input type="submit">
+ </form>
+ <br>
+ <div class="description"><span>Tel:</span>Define a field for entering a telephone number:</div>
+ <img src="images/input11.png" height="120px" width="500px"> 
+ <form action="#">
+  Telephone: <input type="tel" name="usrtel"><br>
+  <input type="submit">
+</form>
+<br>
+<div class="description"><span>Week:</span>The week type allows the user to select a week and year.</div>
+<img src="images/input12.png" height="120px" width="500px"> 
+<form action="demo_form.asp">
+  Select a week: <input type="week" name="year_week"><br>
+  <input type="submit">
+</form>
+<br>
+<div class="description"><span>Datalist :</span>The HTML datalist tag is used for providing an "autocomplete" feature on form elements. It enables you to provide a list of predefined options to the user as they input data</div>
+<img src="images/input13.png" height="180px" width="600px">
+Select Subject: <input type="text" id="favub" list="favsub">
+            <datalist id="favsub">
+                <select>
+                <option value="Physics">
+                <option value="Chemistry">
+                <option value="Maths">
+                <option value="Biology">
+                </select>
+            </datalist>
+<br>
+<div class="description"><span>Speech :</span>The speech input API aims to provide an alternative input method for web applications, without using a keyboard or other physical device.</div>
+<img src="images/input14.png" height="130px" width="500px">
+<form name="speechtest" method="GET" action="http://www.google.com/search">
+  <input type="text" name="q" x-webkit-speech />
+  <input type="submit" value="Search" />
+</form> 
+</div>
+<div class="back-btn-container">
+  <a href="HTML5.html" class="back-btn">&larr; Back to Main Page</a>
+</div>
+</body>
+</html>

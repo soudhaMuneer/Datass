@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>smile ball</h1>
+    <style>
+        #smile {
+            background-color: yellow;
+            height: 400px;
+            width: 450px;
+            border-radius: 100%;
+
+        }
+
+        #eye1 {
+            background-color: aliceblue;
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            position: relative;
+            left: 100px;
+            top: 120px;
+
+        }
+
+        #eye2 {
+            background-color: aliceblue;
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            position: absolute;
+            left: 260px;
+            top: 195px;
+        }
+
+        #blackball1 {
+            background-color: black;
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            position: relative;
+            top: 35px;
+            left: 35px;
+        }
+
+        #blackball2 {
+            background-color: black;
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            position: relative;
+            top: 35px;
+            left: 35px;
+        }
+
+        #mouth {
+            background-color: rgb(133, 5, 5);
+            width: 35%;
+            height: 5px;
+            position: relative;
+            top: 150px;
+            left: 150px;
+
+        }
+
+        #mouth:hover {
+            height: 30px;
+            border-bottom-right-radius: 100%;
+            border-bottom-left-radius:100%;
+            transform: scale(1.5);
+
+
+        }
+
+
+        #eye1:hover {
+            animation: eyeball 1s infinite;
+        }
+
+        #eye2:hover {
+            animation: eyeball 1s infinite;
+        }
+
+        @keyframes eyeball {
+
+            0% {
+                transform: rotate(10deg);
+            }
+
+            11% {
+                transform: rotate(60deg);
+            }
+
+            22% {
+                transform: rotate(70deg);
+            }
+
+            33% {
+                transform: rotate(90deg);
+            }
+
+            44% {
+                transform: rotate(110deg);
+            }
+
+            55% {
+                transform: rotate(120deg);
+            }
+
+            63% {
+                transform: rotate(125deg);
+            }
+
+            66% {
+                transform: rotate(150deg);
+            }
+
+            72% {
+                transform: rotate(165deg);
+            }
+
+            77% {
+                transform: rotate(190deg);
+            }
+
+            80% {
+                transform: rotate(220deg);
+            }
+
+            88% {
+                transform: rotate(250deg);
+            }
+
+            90% {
+                transform: rotate(260deg);
+            }
+
+            95% {
+                transform: rotate(280deg);
+            }
+
+            96% {
+                transform: rotate(300deg);
+            }
+
+            97% {
+                transform: rotate(310);
+            }
+
+            98% {
+                transform: rotate(350deg);
+            }
+
+            99% {
+                transform: rotate(355deg)
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="smile">
+
+        <div id="eye1">
+            <div id="blackball1"></div>
+        </div>
+        <div id="eye2">
+            <div id="blackball2"></div>
+        </div><br><br>
+        <div id="mouth">
+        </div>
+    </div>
+</body>
+</html>

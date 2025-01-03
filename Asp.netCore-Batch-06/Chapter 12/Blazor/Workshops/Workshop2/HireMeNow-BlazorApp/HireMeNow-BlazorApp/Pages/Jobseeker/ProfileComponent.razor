@@ -1,0 +1,247 @@
+﻿
+@using AutoMapper;
+@using HireMeNow_BlazorApp.Dtos;
+@using HireMeNow_BlazorApp.Interfaces;
+@layout JobSeekerLayout
+@inject IUserService _userService
+@inject NavigationManager NavManager
+@using HireMeNow_BlazorApp.Models;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ProtectedSessionStorage ProtectedSessionStore
+@inject IMapper _mapper;
+
+<style>
+    .personal-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+
+
+    .aboutMeDiv {
+       width:inherit;
+    }
+
+    .fillDiv{
+        width: -webkit-fill-available;
+    }
+
+ 
+
+    .skillsDiv {
+        min-width: 350px;
+        min-height: 100px;
+    }
+
+  
+
+    .experienceDiv {
+        min-width: 350px;
+        min-height: 100px;
+    }
+
+
+    .educationDiv {
+        min-width: 350px;
+        min-height: 100px;
+    }
+
+ 
+    .hidden {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    #DetailsView{
+        width:90%;
+    }
+
+    .education-table {
+        width: 100%;
+        color: gray;
+        font-family: serif;
+    }
+    .profileContent{
+        color: gray;
+        font-family: serif;
+    }
+
+    .proImg{
+        width:150px;
+        height:150px;
+        border-radius:50%;
+    }
+</style>
+@if (UserModel!=null){
+<form method="post" id="profileForm">
+    <div id="content" class="">
+        <div class="row">
+            <div class="col-md-6 personal-details">
+                <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" @onclick="ChangePersonalDetailsEditable" />
+                @if (!IsPersonalDetailsEditable)
+                {
+                    <PersonalDetailsComponent userModel="UserModel" />
+                }else{
+                    <p>Edit Personal information here</p>
+                 
+                }
+               
+               
+
+            </div>
+            <div class="col-md-6">
+                <div class="mb-5">
+                    <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" @onclick="ToggleIsSkillAdd" />
+                    <h4 align="left"><img src="jobseekerassets/images/bulb.png" width="25px"> Skills</h4>
+                    <blockquote>
+                     
+
+                        <ul id="skillsList">
+                            @foreach (var item in UserModel?.Skills)
+                            {
+                                <li>@item.Title </li>
+                               
+                            }
+                        </ul>
+                       
+                    </blockquote>
+                </div>
+
+                <div class="mb-5">
+                    <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" @onclick="ToggleIsEducation" />
+
+                    <h4 align="left">
+                        <img src="jobseekerassets/images/graduation.png" width="25px"> Education
+                    </h4>
+                    <blockquote>
+                        <table class="education-table">
+                            <tbody>
+                                <tr>
+                                    <th>Course </th>
+                                    <th>From </th>
+                                    <th>Year </th>
+                                    <th>Mark </th>
+                                </tr>
+                                @foreach (var item in UserModel?.Qualifications)
+                                {
+                                    <tr>
+                                        <td><b>@item.Title </b> </td>
+                                        <td><i>@item.University</i> </td>
+                                        <td>@item.YearOfPassout</td>
+                                        <td>@item.Mark</td>
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                     
+                        
+                    </blockquote>
+                </div>
+                <div class="mb-5">
+                    <img src="jobseekerassets/images/edit-2.png" width="15px" align="right" @onclick="ToggleIsExperienceAdd" />
+                    <h4 align="left"> <img src="jobseekerassets/images/job.png" width="25px"> Experience</h4>
+                    <blockquote>
+                        <table class="education-table">
+                            <tbody>
+                                <tr>
+                                    <th>Designation </th>
+                                    <th>Company </th>
+                                    <th>Year </th>
+                                    <th>Duration </th>
+                                </tr>
+                                @foreach (var item in UserModel?.Experiences)
+                                {
+                                    <tr>
+                                        <td><b>@item.JobTitle </b> </td>
+                                        <td><i>@item.Company</i> </td>
+                                        <td>@item.Year</td>
+                                        <td>@item.Duration</td>
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                      
+                    </blockquote>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </form>
+}
+else
+{
+    <h1>User Not Found</h1>
+}
+@code {
+    [Parameter]
+    public bool IsPersonalDetailsEditable { get; set; } = false;
+    [Parameter]
+    public bool IsEducationEditable { get; set; } = false;
+    [Parameter]
+    public bool IsSkillAdd { get; set; } = false;
+    [Parameter]
+    public bool IsExperienceAdd { get; set; } = false;
+    [Parameter]
+    public string Skill { get; set; }
+    //[Parameter]
+    //public string EXperience { get; set; }
+    [Parameter]
+    public Experience Experience { get; set; } = new();
+    [Parameter]
+    public UserProfileDto UserModel { get; set; } = new();
+    [Parameter]
+    public Guid UserId { get; set; }
+    public void ChangePersonalDetailsEditable()
+    {
+        IsPersonalDetailsEditable = !IsPersonalDetailsEditable;
+    }
+    public void ToggleIsEducation()
+    {
+        IsEducationEditable = !IsEducationEditable;
+   
+    }
+    public void ToggleIsSkillAdd()
+    {
+        IsSkillAdd = !IsSkillAdd;
+    }
+    public void ToggleIsExperienceAdd()
+    {
+        IsExperienceAdd = !IsExperienceAdd;
+
+    }
+   
+    protected override async Task OnInitializedAsync()
+    {
+
+        await loadUser();
+    }
+
+    private async Task loadUser()
+    {
+       
+        //get loggedUser information from that userid
+
+         User CurrentUser = new();
+       
+            //get userid from session
+            var LoggedUserId = await ProtectedSessionStore.GetAsync<Guid>("userId");
+            //get CurrentUser information from  LoggedUserId
+           
+       
+       
+        UserModel = _mapper.Map<UserProfileDto>(CurrentUser);
+    }
+}

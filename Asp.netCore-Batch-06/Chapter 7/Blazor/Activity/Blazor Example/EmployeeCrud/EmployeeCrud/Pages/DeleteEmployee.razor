@@ -1,0 +1,67 @@
+﻿@page "/Delete/{Id}"
+@using EmployeeCrud.Data
+@inject EmployeeService employeeservice
+@inject NavigationManager navigationmanager
+<h3>DeleteEmployee</h3>
+
+
+
+<hr>
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="for-group">
+                <label for="Id"class="control-label">EmpNo</label>
+               <label>@obj.Id</label>
+            </div>
+            <div class="for-group">
+                <label for="Name"class="control-label">FirstName</label>
+                <label>@obj.FirstName</label>
+            </div>
+            <div class="for-group">
+                <label for="Name"class="control-label">MiddleName</label>
+                  <label>@obj.MiddleName</label>
+            </div>
+             <div class="for-group">
+                <label for="Name"class="control-label">LastName</label>
+                  <label>@obj.LastName</label>
+            </div>
+                 <div class="for-group">
+                <label for="Name"class="control-label">Postalcode</label>
+                     <label>@obj.PostalCode</label>
+            </div>
+              <div class="for-group">
+                <label for="Name"class="control-label">Address</label>
+                      <label>@obj.Address</label>
+            </div>
+            <div class="for-group">
+                <label for="Name"class="control-label">EmailAddress</label>
+                     <label>@obj.EmailAddress</label>
+            </div>
+        </div>
+        <div class="row"><div class="col-md-4"><div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="() => delete(obj.Id)" value="DELETE EMPLOYEE">
+                        <input type="button" class="btn btn-danger" @onclick=@Cancel value="cancel">
+
+        </div></div></div>
+    </div>
+</form>
+
+@code {
+    [Parameter]
+    public string id{ get; set; }
+    Employee obj = new Employee();
+    protected override void OnInitialized()
+    {
+        obj = employeeservice.GetEmployeeById(Convert.ToInt32(id));
+    }
+    protected void delete(int id){
+       
+        employeeservice.DeleteEmployeeService(id);
+        navigationmanager.NavigateTo("Employees");
+    }
+    void Cancel()
+    {
+        navigationmanager.NavigateTo("Employees");
+    }
+}

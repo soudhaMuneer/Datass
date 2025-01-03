@@ -1,0 +1,297 @@
+<div class="container-fluid">
+    <div class="row flex-wrap " id="header" >
+      <div class="col ">
+        <div class="col-auto  mt-3">
+          <h3>New Registrations</h3>
+          </div>
+      </div>
+      <div class="col-md-8 col-sm-2 mt-2" id="textborder">
+        <!-- <form >
+          <input type="text" name="search" placeholder="Search by keyword..">
+          </form> -->
+      </div>
+      <div class="col-auto  mt-2">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/profile (2).png" style="height:3rem;width:3rem">
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"><i class="bi bi-bell"></i>Notification</a></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-envelope"></i>Message</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="adminlogin.html"><img class="img-fluid mx-2 " style="height:3em; width:3em"  src="images/logout-gif.gif">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="width:25vw" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Home</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="row flex-nowrap">
+        
+        <div class="col " id="main content">
+
+<div class="row mt-3  flex-wrap">
+<div class="col-auto col-6  ml-2">
+    <span class="fw-1 text-secondary"style="font-size: .9rem; ">
+        Showing 45 Applicants
+    </span>
+    <p class="text-secondary" style="font-size: .7rem;">Based Your Preferences</p>
+</div>
+
+<div class="col-md-4 col-xl-6  ">
+  
+  <nav class="navbar navbar-expand-lg navbar-light justify-content-evenly">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bg-info " ></span>
+      </button>
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary ml-5 rounded-pill px-3">All</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary rounded-pill">Pending</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary rounded-pill">OnHold</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary rounded-pill">Candidate</button>
+          </li>  
+            <li>
+              <div class="btn-group dropdown">
+                <button class="btn btn-outline-primary rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-calendar-plus"></i> NEWEST
+                </button>
+               
+              <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </li>
+        
+        </ul>
+       
+      </div> -->
+    </div>
+  </nav>
+
+</div>
+
+
+
+
+
+</div>
+<!-- -------------table------- ---------------------------------------------->
+<div class="row ">
+    <div class="table-responsive-sm   ">
+    <table id="bdrtable" class="table border border-2 rounded table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">
+                <div class="form-check">
+                    <input class="form-check-input border border-2" type="checkbox" value="" id="flexCheckDefault">
+                  </div>
+            </th>
+            <th scope="col ">ID</th>
+            <th scope="col">Date Applied</th>
+            <th scope="col">Company</th>
+            <th scope="col">Type</th>
+            <th scope="col">Position</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- <th scope="row">1</th> -->
+            <td><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onchange="toggleCheckbox(this)">
+              </div></td>
+            <td class="fw-semibold">#APL-0003</td>
+            <td>Jun 1 2020, 8.22 AM</td>
+            <td>
+              <div class="row ">
+                <div class="col-auto">
+                  <img class="img-fluid mt-2" style="height:2rem;width:2rem" src="images/companyLogo.png">
+                </div>
+                <div class="col-auto">
+                  <span class="fw-1">Funk In</span>
+                  <p>IT Department</p>
+                </div>
+                              </div>
+            </td>
+            <td>FREELANCE</td>
+            <td>Junior UI Designer</td>
+            <td>
+                <span> 
+                <div class="border w-50 text-center rounded-circle px-1 float-start" >
+                <i style="font-size:1rem" class="bi bi-telephone"></i>
+            </div>
+            <div class="border w-50 text-center rounded-circle px-1 float-end ml-3" >
+             <i style="font-size:1rem" class="bi bi-envelope-fill mt-0"></i>
+            </div>
+            </span>
+            </td>
+            <td><button type="button" class="btn btn-outline-secondary rounded-pill ">Pending</button><i class="bi bi-three-dots-vertical"></i></td>
+            
+          </tr>
+          <tr>
+            <!-- <th scope="row">2</th> -->
+            <td><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div></td>
+            <td ><span class="fw-semibold">#APL-0002</span></td>
+            <td>Jun 1 2020, 8.22 AM</td>
+            <td><div class="row ">
+              <div class="col-auto">
+                <img class="img-fluid mt-2" style="height:2rem;width:2rem" src="images/companyLogo.png">
+              </div>
+              <div class="col-auto">
+                <span class="fw-1">Funk In</span>
+                <p>IT Department</p>
+              </div>
+                            </div></td>
+            <td>PARTTIME</td>
+            <td>Junior UI Designer</td>
+            <td><i style="font-size:1.5rem" class="bi bi-whatsapp"></i></td>
+            <td><button type="button" class="btn btn-outline-warning rounded-pill ">On-Hold</button><i class="bi bi-three-dots-vertical "></i></td>
+          </tr>
+          <tr>
+            <td><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div></td>
+            <td class="fw-semibold">#APL-0003</td>
+            <td>Jun 1 2020, 8.22 AM</td>
+            <td>
+              <div class="row ">
+<div class="col-auto">
+  <img class="img-fluid mt-2" style="height:2rem;width:2rem" src="images/companyLogo.png">
+</div>
+<div class="col-auto">
+  <span class="fw-1">Funk In</span>
+  <p>IT Department</p>
+</div>
+              </div>
+              <!-- <img class="img-fluid" style="height:2rem;width:2rem" src="images/companyLogo.png">Funk In<p>IT Department</p> -->
+            </td>
+            <td>FREELANCE</td>
+            <td>Junior UI Designer</td>
+            <td>
+                <span> 
+                    <div class="border w-50 text-center rounded-circle px-1 float-start" >
+                    <i style="font-size:1rem" class="bi bi-telephone"></i>
+                </div>
+                <div class="border w-50 text-center rounded-circle px-1 float-end ml-3" >
+                 <i style="font-size:1rem" class="bi bi-envelope-fill mt-0"></i>
+                </div>
+                </span>
+            </td>
+            <td><button type="button" class="btn btn-outline-secondary rounded-pill ">Pending</button><i class="bi bi-three-dots-vertical"></i></td>
+          </tr>
+          <tr>
+            <td><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div></td>
+            <td class="fw-semibold">#APL-0002</td>
+            <td>Jun 1 2020, 8.22 AM</td>
+            <td><div class="row ">
+              <div class="col-auto">
+                <img class="img-fluid mt-2" style="height:2rem;width:2rem" src="images/companyLogo.png">
+              </div>
+              <div class="col-auto">
+                <span class="fw-1">Funk In</span>
+                <p>IT Department</p>
+              </div>
+                            </div></td>
+            <td>FULLTIME</td>
+            <td>senior UX Designer</td>
+            <td><div class="border w-50 text-center rounded-circle px-1 float-start ml-3" >
+                <i style="font-size:1rem" class="bi bi-envelope-fill mt-0"></i>
+               </div></td>
+            <td><button type="button" class="btn btn-success rounded-pill ">Candidate</button><i class="bi bi-three-dots-vertical "></i></td>
+          </tr>
+          <tr>
+            <td><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div></td>
+            <td class="fw-semibold">#APL-0003</td>
+            <td>Jun 1 2020, 8.22 AM</td>
+            <td><div class="row ">
+              <div class="col-auto">
+                <img class="img-fluid mt-2" style="height:2rem;width:2rem" src="images/companyLogo.png">
+              </div>
+              <div class="col-auto">
+                <span class="fw-1">Funk In</span>
+                <p>IT Department</p>
+              </div>
+                            </div></td>
+            <td>FREELANCE</td>
+            <td>Intern UI Designer</td>
+            <td>
+                <span> 
+                    <div class="border w-50 text-center rounded-circle px-1 float-start" >
+                    <i style="font-size:1rem" class="bi bi-telephone"></i>
+                </div>
+                <div class="border w-50 text-center rounded-circle px-1 float-end ml-3" >
+                 <i style="font-size:1rem" class="bi bi-envelope-fill mt-0"></i>
+                </div>
+                </span>    
+            </td>
+            <td><button type="button" class="btn btn-outline-warning rounded-pill ">On-Hold</button> <i class="bi bi-three-dots-vertical"></i></td>
+          </tr>
+          <tr>
+            <td><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div></td>
+            <td class="fw-semibold">#APL-0002</td>
+            <td>Jun 1 2020, 8.22 AM</td>
+            <td><div class="row ">
+              <div class="col-auto">
+                <img class="img-fluid mt-2" style="height:2rem;width:2rem" src="images/companyLogo.png">
+              </div>
+              <div class="col-auto">
+                <span class="fw-1">Funk In</span>
+                <p>IT Department</p>
+              </div>
+                            </div></td>
+            <td>FULLTIME</td>
+            <td>senior UX Designer</td>
+            <td><div class="border w-50 text-center rounded-circle px-1 float-start ml-3" >
+                <i style="font-size:1rem" class="bi bi-envelope-fill mt-0"></i>
+               </div></td>
+            <td><button type="button" class="btn btn-success rounded-pill ">Candidate</button><i class="bi bi-three-dots-vertical "></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+<div class="row ">
+<div class="col auto mt-2">
+<span class="fw-1">Showing 10 from 160 data</span>
+</div>
+<div class="col-auto mt-2">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+</div>
+        </div>
+        </div>

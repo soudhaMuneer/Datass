@@ -1,0 +1,62 @@
+<div class="border rounded-5 w-75 mt-5">
+    <br>
+    <form action="" class="form p-5" [formGroup]="reactiveForm" (ngSubmit)="OnFormSubmitted()">
+        <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Job Title</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Select Job Title" formControlName="jobtitle">
+            <small *ngIf="reactiveForm.get('jobtitle').errors?.['required'] && reactiveForm.get('jobtitle').touched">JobTitle is a required field.</small>
+            <small *ngIf="reactiveForm.get('jobtitle').errors?.['noSpaceAllowed'] && reactiveForm.get('jobtitle').touched">No Space is allowed for jobtitle.</small>
+          </div>
+        <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Date</label>
+            <input type="date" id="disabledTextInput" class="form-control" placeholder="dd-mm-yy" formControlName="date">
+            <small *ngIf="reactiveForm.get('date').invalid && reactiveForm.get('date').touched">date is a required field.</small>
+          </div>
+        <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">E-mail</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter E-mail" formControlName="email">
+            <small *ngIf="reactiveForm.get('email').errors?.['required'] && reactiveForm.get('email').touched">E-mail is a required field.</small>
+            <small *ngIf="reactiveForm.get('email').errors?.['email'] && reactiveForm.get('email').touched">Invalid Email.</small>
+          </div>
+        <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Location</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter Location" formControlName="location">
+            <small *ngIf="reactiveForm.get('location').invalid && reactiveForm.get('location').touched">Location is a required field.</small>
+          </div>
+          
+            <!-- <button [routerLink]="['/details']" type="submit" class="btn btn-primary">Send</button>  -->
+           
+            <input  type="submit" value="send" class="btn btn-primary" [disabled]="!reactiveForm?.valid">
+          
+    </form>
+    
+</div>
+
+
+<section class="user-detail-container">
+  <h3><b>JobTitle : </b>  {{formdata.jobtitle}} </h3>
+  <h3><b>Date : </b>  {{formdata.date}} </h3>
+  <h3><b>E-mail :</b>  {{formdata.email}}</h3>
+  <h3><b>Location :</b>  {{formdata.location}}</h3>
+  
+  </section>
+  <div class="row">
+    <div class="col-6">
+        <div class="grid-form">
+            <ul>
+                <li *ngFor="let member of regesteredjob">
+                    <h5>User ID</h5>
+                    {{ member.jobtitle }}<br>
+                    {{ member.date }}<br>
+                    {{ member.email }}<br>
+                    {{ member.location }}<br>
+
+                  <button class="btn btn-primary">Remove</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+  
+<router-outlet></router-outlet>

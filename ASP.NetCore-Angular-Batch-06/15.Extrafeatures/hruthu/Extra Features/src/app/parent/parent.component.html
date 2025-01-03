@@ -1,0 +1,46 @@
+<div class="container-fluid">
+<nav class="navbar navbar  ">
+    <form class="container-fluid">
+      <div class="input-group">
+        
+       <input type="text" class="form-control rounded-pill  " placeholder="Search by Name Member ID, Designation" aria-label="Username" aria-describedby="basic-addon1" size="60px" (input)="filterJob($event)" >
+        <ul type="none">
+        <li><img class="d-none d-sm-inline" src="../../assets/image/notification-bing.png">
+            <img class="d-none d-sm-inline"  src="../../assets/image/exit 1.png"></li></ul>
+      </div>
+    </form>
+  </nav>
+  <div class=" mt-5 m-5">
+    <button (click)="listJobs()" class="border-0 me-3 bg-white fw-bold ">List Jobs</button>
+    <button (click)="savedJobs(job)" class="border-0 bg-white fw-bold ">Saved Jobs</button>
+  </div>
+  <div *ngIf="clicked" >
+    <app-child [arry1]="arry1"></app-child>
+</div>
+   
+    <div class="overflow-y-scroll w-75 h-5">
+<p class="fw-bold " [hidden]="clicked"  >Showing {{filteredCompany .length}} Applicants</p>   
+    <div class="card border-0  mb-3  " style="width: 55em;" *ngFor="let item of filteredCompany "[hidden]="clicked"  >
+      <ul type="none">
+        <li class="mt-5">
+          <img [src]="item.companyLogo" style="float: left; padding-bottom: 6px;">
+          <h4>{{item.designation}}<br><small style="color: dodgerblue;">{{item.compantName}} </small><small>&#8226;</small></h4>
+    </li>
+  </ul>
+  <p>We are looking for a UI/UX Designer to turn our software into easy-to- use products for our clients.</p>
+  <ul type="none"  class="mb-3">
+    <li>
+      <button class="me-3 btnn ">{{item.text_1}}</button>
+      <button class="me-3 btnn">{{item.text_2}}</button>
+      <button class="me-3 btnn">{{item.text_3}}</button>
+      <button class="me-3 btnn">{{item.text_4}}</button>
+      <button (click)="saveFun(item)" class="me-3 btnn">{{item.text_5}}</button>
+      <button class="me-3 btnn">{{item.text_6}}</button>
+      
+  </ul>
+      
+  </div>
+  
+    </div>
+  
+  </div>

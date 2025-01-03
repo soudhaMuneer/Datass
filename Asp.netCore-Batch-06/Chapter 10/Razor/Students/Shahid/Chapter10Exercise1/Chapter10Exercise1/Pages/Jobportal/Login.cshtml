@@ -1,0 +1,24 @@
+﻿@page
+@model Chapter10Exercise1.Pages.Jobportal.LoginModel
+@{
+    Layout = "_RegisterLayout";
+}
+<style>
+    .bdcol{
+        background-color: steelblue;
+    }
+</style>
+<h1>this is login</h1>
+<div class="row m-5">
+    <div class="col-4"></div>
+
+    <div class="bgcol cols-4">
+
+<form method="post">
+    <input asp-for="Login.Email" type="text" name="Email" />
+    <input asp-for="Login.Password" type="password" name="password" />
+    <input class="btn btn-primary" type="submit" value="Login" />
+</form>
+</div>
+<div class="col-4"></div>
+</div>

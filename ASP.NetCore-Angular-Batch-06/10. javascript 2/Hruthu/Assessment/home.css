@@ -1,0 +1,106 @@
+.box {
+    position: absolute;
+    width: 1100px;
+    height: 700px;
+    left: 180px;
+    top: 20px;
+    background: #9fe2bfb6;
+    box-shadow: 0px 0px 30px lightgray;
+    border-radius: 65px;
+}
+
+.l1 {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 100px;
+    font-size: 22px;
+}
+
+.inpTitle {
+    height: 40px;
+    width: 850px;
+    margin-left: 120px;
+    margin-top: 150px;
+
+    background: linear-gradient(0deg, #EDF2F7, #EDF2F7), #FFFFFF;
+    border: 1px solid #E0E4EC;
+    border-radius: 8px;
+}
+
+.l3 {
+    position: absolute;
+    margin-left: -850px;
+    margin-top: 230px;
+    font-size: 22px;
+}
+
+.inpSalary {
+    height: 40px;
+    width: 850px;
+    margin-left: 120px;
+    margin-top: 80px;
+
+    background: linear-gradient(0deg, #EDF2F7, #EDF2F7), #FFFFFF;
+    border: 1px solid #E0E4EC;
+    border-radius: 8px;
+}
+
+.l4 {
+    position: absolute;
+    margin-left: -850px;
+    margin-top: 150px;
+    font-size: 22px;
+}
+
+.inpLocation {
+    height: 40px;
+    width: 850px;
+    margin-left: 120px;
+    margin-top: 80px;
+
+    background: linear-gradient(0deg, #EDF2F7, #EDF2F7), #FFFFFF;
+    border: 1px solid #E0E4EC;
+    border-radius: 8px;
+}
+
+.button1 {
+    position: absolute;
+    width: 850px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: aquamarine;
+    bottom: 20px;
+    right: 123px;
+
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.button1 {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+}
+
+.button1:hover {
+    background-color: #9fe2bfa5;
+    color: black;
+}
+
+.button1:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

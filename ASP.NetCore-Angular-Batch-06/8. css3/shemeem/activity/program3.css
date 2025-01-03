@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12%;
+}
+
+.job-card {
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 350px;
+    height: 300px;
+    background-color: #e0e0e0;
+    margin: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.job-card:nth-child(odd) {
+    animation: slide-in-left 0.5s ease-out forwards;
+}
+
+.job-card:nth-child(even) {
+    animation: slide-in-right 0.5s ease-out forwards;
+}
+
+@keyframes slide-in-left {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

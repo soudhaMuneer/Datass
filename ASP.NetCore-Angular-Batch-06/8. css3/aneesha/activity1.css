@@ -1,0 +1,14 @@
+.job-list{
+    width: 30%;
+    height: 300px;
+    border-style: groove;
+    border-color: darkgray;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 15px;
+    transition: transform .2s;
+}
+
+.job-list:hover{
+    transform: scale(1.5);
+}

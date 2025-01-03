@@ -1,0 +1,107 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Board</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            color: #337ab7;
+        }
+
+            .nav-link:hover {
+                color: #23527c;
+            }
+
+        .form-control {
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dash Board</h1>
+        <nav class="nav">
+            <a class="nav-link" href="#">每</a>
+            <a class="nav-link" href="#">Jobs</a>
+            <a class="nav-link" href="#">Applications</a>
+            <a class="nav-link" href="#">Interviews</a>
+            <a class="nav-link" href="#">Messages</a>
+            <a class="nav-link" href="#">Settings</a>
+            <a class="nav-link" href="#">Log out</a>
+        </nav>
+        <hr>
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Please enter first name">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Please enter Last name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="phone Number">
+            </div>
+            <div class="form-group">
+                <label for="designation">Designation</label>
+                <input type="text" class="form-control" id="designation" placeholder="Please enter Designation">
+            </div>
+            <div class="form-group">
+                <label for="companyID">Company ID</label>
+                <input type="text" class="form-control" id="companyID" placeholder="Please enter User ID">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <hr>
+        <h2>Remove Member List Of Members</h2>
+        <h2>Registration Of New Member</h2>
+        <hr>
+        <h2>EDownloader</h2>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+

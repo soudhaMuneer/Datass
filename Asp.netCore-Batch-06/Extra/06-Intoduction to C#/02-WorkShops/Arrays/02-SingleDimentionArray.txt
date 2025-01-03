@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Example
+{
+    class Program
+    {
+        public static void Main()
+        {
+		//Declation 
+            string[] name = new string[2];
+//Inintialize 
+
+            name[0]="Dibin";
+            name[1]="reshmy";
+                Console.WriteLine(name[0]);
+                Console.WriteLine(name[1]);
+            Console.ReadLine();
+        }
+    }
+}

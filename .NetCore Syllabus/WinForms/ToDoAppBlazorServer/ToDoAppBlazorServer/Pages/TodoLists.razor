@@ -1,0 +1,28 @@
+﻿@page "/index"
+@using ToDoAppBlazorServer.Services ;
+@inject TodoService todoservice;
+@using ToDoAppBlazorServer.Data
+<PageTitle>TodoLists</PageTitle>
+<div class="border"style="padding:20px; margin-top: 20px">
+    <div style="display:flex; flex-direction:column">
+        @foreach (var todo in Todos)
+        {
+            <div class="flex-center"style="margin-bottom:10px">
+                <div class="@ItemClass(todo)">@todo.Text</div>
+            </div>
+
+        }
+    </div>
+</div>
+
+@code {
+    private IList<ToDoItem> Todos { get; set; } = new List<ToDoItem>();
+    protected override void OnInitialized()
+    {
+        Todos = todoservice.GetAll().ToList();
+    }
+    public string ItemClass(ToDoItem item)
+    {
+        return item.compleated ? "item is compleated" : "  ";
+    }
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worshop3doing", "Worshop3doing\Worshop3doing.csproj", "{E9B71A05-98B8-4D88-8D3A-08F357907181}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9B71A05-98B8-4D88-8D3A-08F357907181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B71A05-98B8-4D88-8D3A-08F357907181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B71A05-98B8-4D88-8D3A-08F357907181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B71A05-98B8-4D88-8D3A-08F357907181}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35E2A803-A24D-4019-AFBC-5CC6BDC0D7D3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>@ViewBag.Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		/* .list{
+			margin-left:-26px
+		} */
+		
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 float-left   bg-primary">
+				<nav class="navbar  navbar-expand-md sidebar navbar-dark">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon bg-dark"></span>
+					</button>
+					<div class="collapse  navbar-collapse sidebar " id="collapsibleNavbar">
+						<ul class="list-group mt-3  float-left text-white list-unstyled">
+							@* <li class="list-group-item border-0 bg-primary"> *@
+							
+							@* </li> *@
+
+							<li class="list-group-item border-0 mt-4  bg-primary">
+								<img src="~/images/job_com_logo.jpg" style="margin-left:-35px" height="50px" width="80px" alt="Alternate Text" />
+							</li>
+
+							
+							<li class="list-group-item border-0 bg-primary">
+								<a class="text-decoration-none text-white" asp-page="/Homepage"><img src="~/images/dashboard 1 (1).png"><br />
+								<p class="list" style="margin-left:-32px">Dash Board</p></a>
+							</li>
+
+
+							<li class="list-group-item border-0 bg-primary">
+								<img src="~/images/application (1) 1.png"><br>
+								<p class="list" style="margin-left:-35px">Applications</p>
+							</li>
+							<li class="list-group-item border-0 bg-primary">
+								<a class="text-decoration-none text-white" asp-page="/Appliedjob"><img src="~/images/question (1) 1.png"><br>
+									<p class="list" style="margin-left:-26px">AppliedJob</p>
+								</a>
+							</li>
+							<li class="list-group-item border-0 bg-primary">
+								<img src="~/images/message 1.png"><br>
+								<p class="list" style="margin-left:-25px">Messages</p>
+							</li>
+
+							<li class="list-group-item border-0 bg-primary">
+								<img src="~/images/settings 1.png"><br>
+								<p class="list" style="margin-left:-23px">Settings</p>
+							</li>
+							
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="col-xl-11 col-lg-11 col-md-11 col-sm-10 bg-light">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 bg-white">
+						<img class="img-fluid float-right" src="~/images/Group 33999.png" width="50" height="50" />
+						<img class="img-fluid float-right" src="~/images/notification-bing.png" width="50" height="50" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-11 col-lg-11 col-md-11 col-sm-10 min-vh-100 ml-5 mt-2 ">
+
+						<h3>Welcome To Job.com</h3>
+						<div class="rounded-pill d-flex p-1 bg-white">
+							<img src="~/images/search copy 2 (1).png" class="mt-1 ml-2" width="40px" height="30px" alt="Alternate Text" />
+							<input type="search" class="form-control border-0 w-100" name="name" value="" />
+							<img src="~/images/icon filter.png" width="40px" height="30px" class="mt-1 mr-2" alt="Alternate Text" />
+						</div>
+
+						<div class="row">
+							<div class=" col-xl-12">
+								@RenderBody()
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+
+
+			</div>
+
+		</div>
+	</div>
+	</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div class="searchContainer w-50">
+            <input type="text" (input)="filterJobs($event)" id="searchBox"
+                placeholder="Search by Name Member ID,Designation" style="border:none; width: 90%;">
+
+        </div>
+        <div class="row ">
+            <div class="col-md-6">
+                <div class="scroll">
+                    <div *ngFor=" let list of filteredJobs" class="mt-3">
+                        <div class="card" (click)="getfunction(list)">
+                            <div class="card-body">
+                                <img [src]="list.companylogo" style="float: left; padding-bottom: 6px;">
+                                <div class="company">
+                                    <h4>{{list.jobpost}} <img [src]="list.saved" class="float-end"><br><small
+                                            style="color: dodgerblue;">{{list.companyname}}</small><small>&#8226;{{list.location}}</small>
+                                    </h4>
+                                    <p>{{list.description}}</p>
+                                    <button class="borders">full time</button>
+                                    <button class="borders">$235,00-$1000000</button>
+                                    <button class="borders">Thrissur</button>
+                                    <button class="borders">Onsite</button>
+                                    <button class="borders"> remove</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="col-md-6">
+                <app-child [childdata]="tempfile" [btnclick]="isclick"> </app-child>
+            </div>
+        </div>
+
+
+    </div>
+</div>

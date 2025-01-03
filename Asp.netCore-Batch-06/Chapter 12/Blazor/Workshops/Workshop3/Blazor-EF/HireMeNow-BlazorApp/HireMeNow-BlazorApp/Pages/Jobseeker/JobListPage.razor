@@ -1,0 +1,177 @@
+﻿@page "/Jobseeker/Jobs"
+@using HireMeNow_BlazorApp.Interfaces
+@using HireMeNow_BlazorApp.Models
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+@layout JobSeekerLayout
+@inject IJobService Jobservices
+@inject IApplicationService applicationService
+@inject ProtectedSessionStorage ProtectedSessionStore
+@inject NavigationManager NavigationManager
+@inject IUserService userService
+
+
+<div>
+	<div class="row fullscreen-div">
+        <div class="col-md-7 bg-light text-secondary small p-4 jobs-list">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <span class="text-dark font-weight-bold">Showing @Joblist.Count() Jobs</span>
+
+                </div>
+                <div class="col-md-6">
+                    <span>Sort by : <button class="btn  dropdown-toggle font-weight-bold" type="button" data-toggle="dropdown">Newest Jobs</button></span>
+                </div>
+                </div>
+            <div class="row">
+                @foreach (var jobs in Joblist)
+                {
+                    <ListJobComponent job="@jobs" OnJobSelected="SelectJob"></ListJobComponent>
+                }
+            </div>
+        </div>
+        <div class="col-md-5 bg-white " align="center">
+            <div class="header">
+                <div class="proImg">
+                    @if (selectedJob?.Company?.Logo != null)
+                    {
+                        <img class="img-fluid float-left mr-2" src="@selectedJob.Company.Logo" height="100px" width="100px">
+                    }
+                    else
+                    {
+                        <img class="img-fluid float-left mr-2" src="/jobseekerassets/images/company.png" height="100px" width="100px">
+                    }
+                </div>
+            </div>
+            <br><br>
+            @if (selectedJob != null)
+            {
+                <h2>@selectedJob.Company</h2>
+                <h2 class="clr-code-text">@selectedJob.Title</h2>
+                <div class="job-specs">
+                    <div class="spec">
+                        <i>Type of employment</i><br>
+                        <b>@selectedJob.JobType</b>
+                    </div>
+                    <div class="spec">
+                        <i>Location</i><br>
+                        <b>@selectedJob.Location</b>
+                    </div>
+                    <div class="spec">
+                        <i>Experience Level</i><br>
+                        <b>@selectedJob.Experience</b>
+                    </div>
+                    <div class="spec">
+                        <i>Onsite/Remote</i><br>
+                        <b>@selectedJob.TypeOfWorkPlace</b>
+                    </div>
+                    <div class="spec">
+                        <i>Salary Range</i><br>
+                        <b>$ @selectedJob.Salary</b>
+                    </div>
+                </div>
+                <div class="desc">
+                    <div class="container">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#company">Company</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#job-description">Job Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#responsibilities">Responsibilities</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="company">
+                                <h4>Company</h4>
+                                <p>@selectedJob.Company?.About</p>
+                            </div>
+                            <div class="tab-pane fade" id="job-description">
+                                <h4>Job Description</h4>
+                                <p>@selectedJob.Description</p>
+                            </div>
+                            <div class="tab-pane fade" id="responsibilities">
+                                <h4>Responsibilities</h4>
+                                <p>@selectedJob.Responsibilities</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                        <input type="hidden" name="jobId" value="@selectedJob.Id" />
+                        <button class="btn btn-primary" style="width: 40%;" @onclick="ShowConfirmation">
+                            Apply Job
+                        </button>
+                        <button class="btn" style="width: 40%;background-color: #ECECEC;">
+                            Send Message
+                        </button>
+                    
+                </div>
+            }
+        </div>
+        @if (showConfirmationOverlay)
+        {
+            <div class="overlay">
+                <div class="confirmation-box">
+                    <h2>Are you sure you want to Apply this Job?</h2>
+                    <div class="buttons">
+                        <button @onclick="SubmitForm">Yes</button>
+                        <button @onclick="HideConfirmation">No</button>
+                    </div>
+                </div>
+            </div>
+        }
+  </div></div>      
+@code {
+    List<Job> Joblist;
+    protected override void OnInitialized()
+    {
+        var loggedUser = userService.getLoggedUser();
+        if (loggedUser == null)
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            Joblist = Jobservices.GetJobs();
+        }
+    }
+    Job selectedJob;
+    bool showConfirmationOverlay = false;
+
+   
+   
+
+    private void SelectJob(Job job)
+    {
+        selectedJob = job;
+    }
+
+    private void ShowConfirmation()
+    {
+        showConfirmationOverlay = true;
+    }
+
+    private void HideConfirmation()
+    {
+        showConfirmationOverlay = false;
+    }
+
+    private async void SubmitForm()
+    {
+       
+        // Add your form submission logic here
+        // For example:
+        var result = await ProtectedSessionStore.GetAsync<Guid>("userId");
+        //var CurrentUser = result.Success ? _userService.getById(result.Value) : new();
+        applicationService.AddApplication(result.Value,selectedJob.Id);
+        NavigationManager.NavigateTo("/Jobseeker/MyApplication");
+        // Reset the selected job
+      //  selectedJob = null;
+    }
+
+}
+
+
+
+

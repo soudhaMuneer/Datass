@@ -1,0 +1,51 @@
+﻿@page
+@model RazorExercise.Pages.HomepageModel
+@{
+    Layout = "_Layout";
+}
+<style>
+    .card:hover{
+        scale:1.1;
+    }
+</style>
+<div class="row mt-3">
+ @for (int i = 0; i < Model.jobs.Count; i += 3)
+ {
+        <div class="row mb-2"> 
+
+            @for (int j = i; j < i + 3 && j < Model.jobs.Count; j++)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                    <div class="card-body">
+                            <h4> <img src="@Url.Content(Model.jobs[j].image)" alt="Alternate Text" width="60px" height="50px" /> @Model.jobs[j].Jobtitle</h4>
+                    <p>Comapny : @Model.jobs[j].Company </p>
+                    <p>Discription : @Model.jobs[j].Description</p>
+                    <span>Date : @Model.jobs[j].Date</span> <span>Location: @Model.jobs[j].Location</span>
+                            <form method="post">
+                                 <input type="hidden" name="id" value="@Model.jobs[j].Id" /> 
+                                <button type="submit" class="btn btn-primary mt-3">Apply</button>
+                            </form>
+            </div>
+            </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+           @*  <div class="card ml-4  w-50 p-3">
+                <h4> <img src="@job.image" alt="Alternate Text" width="60px" height="50px" />  @job.Jobtitle</h4>
+                <p>Comapny : @job.Company </p>
+                <p>Discription : @job.Description</p>
+                <span>Date : @job.Date</span> <span>Location: @job.Location</span>
+                <button class="btn btn-primary">Apply</button>
+            </div>
+            <div class="card ml-4  w-50 p-3">
+                <h4> <img src="@job.image" alt="Alternate Text" width="60px" height="50px" />  @job.Jobtitle</h4>
+                <p>Comapny : @job.Company </p>
+                <p>Discription : @job.Description</p>
+                <span>Date : @job.Date</span> <span>Location: @job.Location</span>
+                <button class="btn btn-primary">Apply</button>
+            </div> *@
+       
+  

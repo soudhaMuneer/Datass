@@ -1,0 +1,41 @@
+﻿@page
+@model Exercise_1.Pages.Manager.AppliedjoblistingModel
+@{
+    Layout = "_SidebarLayout";
+}
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <tr>
+            @* <th>Id</th> *@
+            <th scope="col">Title</th>
+            <th scope="col">Requirements</th>
+            <th scope="col">Location</th>
+            <th scope="col">Type</th>
+            <th scope="col">Salary</th>
+            @* <th>Apply</th> *@
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var job in Model.Appliedjobs)
+            {
+                <tr>
+                    @* <td>@job.id</td> *@
+                <td scope="row">@job.Title</td>
+                    <td>@job.Reqirements</td>
+                    <td>@job.Location</td>
+                    <td>@job.Type</td>
+                    <td>@job.Salary</td>
+                    @* <td>
+                        <form method="post">
+                            <input type="hidden" name="jobId" value="@job.id" />
+                        <button type="submit">Apply Job</button>
+                        </form>
+                    </td> *@
+                </tr>
+            }
+        
+
+    </tbody>
+</table>

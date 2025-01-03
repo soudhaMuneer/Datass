@@ -1,0 +1,38 @@
+﻿@page "/schedule"
+@model Workshop2.Pages.ScheduleInterviewModel
+@{
+    Layout = "home";
+}
+<div >
+    <button class="btn btn-primary mt-3"><a asp-page="/ScheduleInterview" class="text-decoration-none text-white">Interview Lists</a> </button>
+    <div class="shadow p-3 mb-5 mt-2 bg-white rounded ">
+          <form  method="post">
+			<div class="form-group text-dark">
+				<label for="Job Title"><h4>Job Title</h4></label>
+				<input asp-for="Interview.Job" type="text" name="Job" placeholder="Select Jobtitle" class="form-control bg-light p-4 border-0 rounded " required="">
+			</div>
+			<div class="form-group text-dark p-1">
+				<label for="Date"><h4>Date</h4></label>
+				<img class="img-fluid float-right" src="~/asset/images/calendar (4) 1.png">
+				<input asp-for="Interview.date" type="date" name="date" placeholder="Select Date" class="form-control bg-light p-4 border-0 rounded w-75 " required="">
+			</div>
+			<div class="form-group text-dark p-1">
+				<label for="Time"><h4>Time</h4></label>
+				<img class="img-fluid float-right" src="~/asset/images/clock 1.png">
+				<input asp-for="Interview.time" type="text" name="time" placeholder=" Enter time" class="form-control bg-light p-4 border-0 rounded w-75" required="">
+			</div>
+			<div class="form-group text-dark p-2">
+				<label for="Location"><h4>Location</h4></label>
+				<img class="img-fluid float-right" src="~/asset/images/location 1.png">
+				<input asp-for="Interview.Location" type="text" name="location" placeholder="Enter location" class="form-control bg-light p-4 border-0 rounded mb-5 w-75" required="">
+			</div>
+			<div class="form-group d-inline ">
+				<input class="btn  text-white mr-5 bg-primary text-white" type="submit" value="Send"></input>
+				<label><h5>Push Notification</h5></label>
+				<img class="img-fluid mr-5" src="~/asset/images/Group 14.png">
+				<label><h5>Email Notifications</h5></label>
+				<img class="img-fluid" src="~/asset/images/Group 14.png">
+			</div>
+          </form>
+    </div>
+</div>

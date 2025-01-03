@@ -1,0 +1,15 @@
+.post{
+    position: absolute;
+    left: 5rem;
+    top: 1rem;
+}
+.location{
+    position: absolute;
+    left: 5rem;
+    top: 3rem;
+}
+/* .cardscroll{
+    overflow-y: scroll;
+    width: 50rem;
+    height: 20rem;
+} */

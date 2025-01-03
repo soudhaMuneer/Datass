@@ -1,0 +1,38 @@
+<button type="button" class="btn btn-danger" (click)="AddNew()">Add New</button>
+<br>
+<br>
+<br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Color</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let i of StudentDetails">
+       <td>
+        <tr>{{i.id}}</tr>
+        
+       </td>
+       <td>
+        <tr>{{i.name}}</tr>
+       </td>
+       <td>
+        <tr>{{i.Price}}</tr>
+       </td>
+       <td>
+        <tr>{{i.Quantity}}</tr>
+       </td>
+       <td>
+        <tr>{{i.color}}</tr>
+       </td>
+       <td>
+        <td>
+            <tr><button type="button" class="btn btn-danger" (click)="Remove(i.id)" >Remove</button></tr>
+        </td>
+    </tr>
+    
+</table>
+

@@ -1,0 +1,52 @@
+body{
+    position: relative;
+}
+.main{}
+.navbar{
+    background-color: blueviolet;
+    position: absolute;
+    width: 250px;
+    height: 580px;
+}
+.navbar h3{position: absolute;
+        left: 100px;
+        top: -10px;
+        color: white;
+        font-size: 32px;
+
+}.nav{
+    position: relative;
+    left: 40px;top: 100px;
+    color: darkkhaki;
+}
+#nav1{
+    background-color: white;
+    padding: 9px;
+    margin-left: -10px;border-radius: 10px;margin-top: 40px;
+}.nav  #nav1::before{
+    content: url(images/Vector.png);
+}
+.nav  #nav2::before{
+    content: url(images/image\ 10.png);
+}
+.nav  #nav3::before{
+    content: url(images/image\ 6.png);
+}
+.nav  #nav4::before{
+    content: url(images/image\ 9.png);
+}
+.nav  #nav5::before{
+    content: url(images/ic_search.png);
+}
+.nav  #nav6::before{
+    content: url(images/Group\ 239604.png);
+}
+.nav  #nav7::before{
+    content: url(images/Vector2.png);
+}
+.nav  #nav8::before{
+    content: url(images/image\ 7.png);
+}
+.nav  #nav9::before{
+    content: url(images/image\ 8.png);
+}

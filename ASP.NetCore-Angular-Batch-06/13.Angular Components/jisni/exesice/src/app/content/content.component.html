@@ -1,0 +1,65 @@
+
+<div class="underline">
+    <p><b>{{totalJobs}}</b><br>Based On your Preference</p>
+  </div>
+    <div class="button">
+    <button class="my-button" (click)="filter('All')">All</button>&nbsp;&nbsp;&emsp;<button class="my-button" (click)="filter('pending')">Pending</button>&nbsp;&nbsp;&emsp;<button class="my-button" (click)="filter('on-hold')">On-Hold</button>&nbsp;&nbsp;&emsp;<button class="my-button" (click)="filter('candidate')">Candidate</button>
+    </div>
+    <td rowspan="13" valign="top" colspan="4" align="center">
+    <div class="content">
+       
+        <table class="fulltab" width="200%" align="" bgcolor="white" cellpadding="6px">
+
+            <tr >
+                <th>ID</th>
+                <th>Date Applied</th>
+                <th>Company</th>
+                <th>Type</th>
+                <th>Position</th>
+                <th>Contact</th>
+                <th>Status</th>
+
+
+            </tr>
+           
+<hr>
+            <tr align="" height="70px"  *ngIf="tempJobs.length "> 
+                <ng-container *ngFor="let list of tempJobs">
+                <td>
+                    <form>
+                        <input type="checkbox">
+                    </form> 
+                    {{list.id}}
+                </td>
+                   <td> {{list.dateapplied}}
+                </td>
+                <td>
+                    {{list.company}}
+                </td>
+                <td> 
+                    {{list.type}}
+
+                </td>
+                <td>
+                    {{ list.position}}
+
+                </td>
+                <td>
+                   {{list.contact}}
+                </td>
+                <td>
+                    <button  class="my-button1">{{list.status}}</button> 
+                </td>
+                </ng-container>
+            </tr>
+
+
+ 
+
+
+        </table>
+        <br>
+        
+    </div>
+</td>
+

@@ -1,0 +1,33 @@
+#job-list{
+    width: 30%;
+    height: 350px;
+    border-style: groove;
+    border-color: darkgray;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 15px;
+    
+}
+.button{
+
+    margin-left: 210px;
+    margin-top: -200px;
+    background-color: dodgerblue;
+    border-style: none;
+    font-size: 15px;
+    color: white;
+    width: 115px;
+    padding: 12px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: transform .2s;
+    
+}
+.button:hover{
+    transform: scale(1.2);
+    opacity: 3;
+}
+

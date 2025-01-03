@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Example
+{
+    class Program
+    {
+        public static void Main()
+        {
+            int[,] a = new int[2, 2];
+            int[,] b = new int[2, 2];
+            Console.WriteLine("Enter Elements OF first Matrix:");
+                for(int i=0;i<2;i++)
+                {
+                    for(int j=0;j<2;j++)
+                    {
+                        a[i,j]=Convert.ToInt32(Console.ReadLine());
+
+                    }
+                }
+            Console.WriteLine("Enter Elements of second matrix:");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    b[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Addition Of two matrix is");
+                for(int i=0;i<2;i++)
+                {
+                    for(int j=0;j<2;j++)
+                    {
+                        Console.Write(a[i, j] + b[i, j] + "\t");
+                    }
+                }
+            Console.ReadLine();
+        }
+    }
+}

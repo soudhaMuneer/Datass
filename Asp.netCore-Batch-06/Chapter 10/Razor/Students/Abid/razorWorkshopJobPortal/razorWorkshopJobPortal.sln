@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "razorWorkshopJobPortal", "razorWorkshopJobPortal\razorWorkshopJobPortal.csproj", "{3026640E-FD36-4916-9987-F1EC398EE2EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3026640E-FD36-4916-9987-F1EC398EE2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3026640E-FD36-4916-9987-F1EC398EE2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3026640E-FD36-4916-9987-F1EC398EE2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3026640E-FD36-4916-9987-F1EC398EE2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1B216C1-A950-452F-B6C9-C05CF0F8F787}
+	EndGlobalSection
+EndGlobal

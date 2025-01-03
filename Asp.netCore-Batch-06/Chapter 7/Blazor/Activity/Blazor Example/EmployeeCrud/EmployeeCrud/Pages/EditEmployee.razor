@@ -1,0 +1,64 @@
+﻿@page "/Edit/{Id}"
+@using EmployeeCrud.Data
+@inject EmployeeService employeeservice
+@inject NavigationManager navigationmanager
+<h3>EditEmployee</h3>
+
+<hr>
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="for-group">
+                <label for="Name"class="control-label">EmpNo</label>
+                <input form="EmpNo" class="form-control" @bind ='@obj.Id'>
+            </div>
+            <div class="for-group">
+                <label for="Name"class="control-label">FirstName</label>
+                <input form="FirstName" class="form-control" @bind ='@obj.FirstName'>
+            </div>
+            <div class="for-group">
+                <label for="Name"class="control-label">MiddleName</label>
+                <input form="MiddleName" class="form-control" @bind ='@obj.MiddleName'>
+            </div>
+             <div class="for-group">
+                <label for="Name"class="control-label">LastName</label>
+                <input form="LastName" class="form-control" @bind ='@obj.LastName'>
+            </div>
+                 <div class="for-group">
+                <label for="Name"class="control-label">Postalcode</label>
+                <input form="Postalcode" class="form-control" @bind ='@obj.PostalCode'>
+            </div>
+              <div class="for-group">
+                <label for="Name"class="control-label">Address</label>
+                <input form="Address" class="form-control" @bind ='@obj.Address'>
+            </div>
+            <div class="for-group">
+                <label for="Name"class="control-label">EmailAddress</label>
+                <input form="EmailAddress" class="form-control" @bind ='@obj.EmailAddress'>
+            </div>
+        </div>
+        <div class="row"><div class="col-md-4"><div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@update" value="UPDATE EMPLOYEE">
+                        <input type="button" class="btn btn-danger" @onclick=@Cancel value="cancel">
+
+        </div></div></div>
+    </div>
+</form>
+
+@code {
+    [Parameter]
+    public string id{ get; set; }
+    Employee obj = new Employee();
+     protected override void OnInitialized()
+    {
+        obj = employeeservice.GetEmployeeById(Convert.ToInt32(id));
+    }
+    protected void update(){
+        employeeservice.UpdateEmployee(obj);
+        navigationmanager.NavigateTo("Employees");
+    }
+    void Cancel()
+    {
+        navigationmanager.NavigateTo("Employees");
+    }
+}

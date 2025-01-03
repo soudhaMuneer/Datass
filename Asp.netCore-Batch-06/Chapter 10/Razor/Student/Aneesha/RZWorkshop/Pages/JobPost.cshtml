@@ -1,0 +1,62 @@
+﻿@page
+@model RZWorkshop.Pages.JobPost
+@{
+}
+
+<div class="content">
+    <h2>Post a Job</h2>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Input.Id"></label>
+            <input type="text" asp-for="Input.Id" class="form-control" placeholder="Enter job title">
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.Title"></label>
+            <textarea asp-for="Input.Title" type="text" class="form-control" placeholder="Enter description"></textarea>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.Description"></label>
+            <input asp-for="Input.Description" type="text" class="form-control" placeholder="Enter salary">
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.Location"></label>
+            <input asp-for="Input.Location" type="text" class="form-control" placeholder="Enter location">
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Input.Salary"></label>
+            <input asp-for="Input.Salary" type="text" class="form-control" placeholder="Enter location">
+        </div>
+        @* <div class="form-group">
+            <label asp-for="Jobss.Responsibilities"></label>
+            <input asp-for="Jobss.Responsibilities" type="text" class="form-control" placeholder="Enter location">
+        </div>
+        <div class="form-group">
+            <label asp-for="Jobss.JobType"></label>
+            <input asp-for="Jobss.JobType" type="text" class="form-control" placeholder="Enter location">
+        </div>
+        <div class="form-group">
+            <label asp-for="Jobss.VacanciesCount"></label>
+            <input asp-for="Jobss.VacanciesCount" type="text" class="form-control" placeholder="Enter location">
+        </div>
+        <div class="form-group">
+            <label asp-for="Jobss.VacanciesCount"></label>
+            <input asp-for="Jobss.VacanciesCount" type="text" class="form-control" placeholder="Enter location">
+        </div>
+        <div class="form-group">
+            <label asp-for="Jobss.AppliedCount"></label>
+            <input asp-for="Jobss.AppliedCount" type="text" class="form-control" placeholder="Enter location">
+        </div>
+        <div class="form-group">
+            <label asp-for="Jobss.Status"></label>
+            <input asp-for="Jobss.Status" type="text" class="form-control" placeholder="Enter location">
+        </div> *@
+       
+        <button class="btn">Post Job</button>
+    </form>
+    <div class="notifications">
+        <p>Push Notifications: <input type="checkbox"></p>
+        <p>Email Notifications: <input type="checkbox"></p>
+    </div>
+</div>
+    

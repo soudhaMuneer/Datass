@@ -1,0 +1,11 @@
+.sidebar{
+    background-color: steelblue;
+    height: 650px;
+}
+li{
+    list-style: none;
+    padding-top: 40px;
+}
+li:hover{
+    color: white;
+}

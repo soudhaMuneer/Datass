@@ -1,0 +1,72 @@
+﻿
+@page "/Itemcrud"
+@inject ItemService ItemService
+
+<h3>Item CRUD</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ItemService.GetItems())
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>
+                    <button @onclick="() => EditItem(item)">Edit</button>
+                    <button @onclick="() => DeleteItem(item.Id)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr />
+
+<h4>Add/Edit Item</h4>
+
+<form>
+    <div>
+        <label for="name">Name:</label>
+        <input id="name" @bind="@currentItem.Name" />
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <input id="description" @bind="@currentItem.Description" />
+    </div>
+    <button @onclick="SaveItem">Save</button>
+</form>
+@code {
+     private Item currentItem = new Item();
+        private void SaveItem()
+    {
+        if (currentItem.Id == Guid.Empty)
+        {
+            ItemService.AddItem(currentItem);
+        }
+        else
+        {
+            ItemService.UpdateItem(currentItem);
+        }
+
+        currentItem = new Item();
+    }
+        private void EditItem(Item item)
+    {
+        currentItem = item;
+    }
+
+    private void DeleteItem(Guid id)
+    {
+        ItemService.DeleteItem(id);
+    }
+
+}

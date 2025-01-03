@@ -1,0 +1,84 @@
+.contentcontainer{
+    border: 2px solid gray;
+    border-radius: 10px;
+    width:780px ;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+.firstimage{
+    height: 70px;
+    margin-top: 20px;
+}
+.jobname{
+    margin-top: -60px;
+    margin-left: 90px;
+    font-weight: bold;
+    font-size: large;
+
+}
+
+.companyname{
+    margin-left: 90px;
+    margin-top: 10px;
+    color: dodgerblue;
+}
+.location{
+    margin-left: 205px;
+    margin-top: -18px;
+    font-weight: bold;
+    color: gray;
+  
+}
+.save{
+    position: absolute;
+    margin-left: 730px;
+    margin-top: -80px;
+}
+.btn{
+    margin-left: 30px;
+    height: 40px;
+    font: bold;
+    color: white;
+    background-color: rgb(237, 183, 118);
+    border-radius: 30px;
+    border: none;
+}
+p{margin-left: 30px;
+color: gray;
+}
+
+.applynow{
+    width: 150px;
+    margin-left: 100px;
+    height:40px ;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    color: white;
+    border: none;
+
+    
+}
+.search{
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.lens{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.dropdown{
+    margin-left: 30px;
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    font-size: large;
+
+}

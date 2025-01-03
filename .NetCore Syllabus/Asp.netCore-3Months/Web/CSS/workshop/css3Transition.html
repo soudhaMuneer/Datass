@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img {
+            width: 100%;
+            height: auto
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: rgb(3, 3, 104);
+        }
+
+        h5 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        a {
+            color: rgb(24, 35, 159);
+            font-weight: bold;
+        }
+        div.exampleTransition {
+			width: 400px;
+			height: 60px;
+			margin: 20px 0;
+			}
+			div.exampleTransition div.transition {
+			width: 50px;
+			height: 50px;
+			background-color: #ED8029;
+			color: #fff;
+			padding: 10px;
+			border-radius: 5px;
+			margin-left: 0;
+			-webkit-transition: 3s linear;
+			-moz-transition: 3s linear;
+			-o-transition: 3s linear;
+			-ms-transition: 3s linear;
+			transition: 3s linear;
+			}
+			div.exampleTransition:hover div.transition {
+			width: 100px;
+			height: 100px;
+			margin-left: 300px;
+			-webkit-transform:rotate(360deg);
+			-moz-transform:rotate(360deg);
+			-o-transform:rotate(360deg);
+			-ms-transform:rotate(360deg);
+			transform:rotate(360deg);
+			-moz-box-shadow: -5px -5px 5px #999;
+			-webkit-box-shadow: -5px -5px 5px #999;
+			box-shadow: -5px -5px 5px #999;
+			}
+            div.transitionPropertyExample {
+            width: 400px;
+            height: 60px;
+            margin: 20px 0;
+        }
+        div.transitionPropertyExample div.transitionPrtoperty {
+            width: 50px;
+            height: 50px;
+            background-color: #ED8029;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 0;
+            transition: 3s linear;
+            transition-property: background-color, height, width, margin-left, transform, box-shadow;
+        }
+        div.transitionPropertyExample:hover div.transitionPrtoperty {
+            width: 100px;
+            height: 100px;
+			background-color: aqua;
+            margin-left: 300px;
+            transform: rotate(360deg);
+            box-shadow: -5px -5px 5px #999;
+        }
+        div.exampletransitionDuration {
+            width: 400px;
+            height: 60px;
+            margin: 20px 0;
+        }
+        div.exampletransitionDuration div.transitionDuration {
+            width: 50px;
+            height: 50px;
+            background-color: #ED8029;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 0;
+            transition-property: background-color, height, width,
+			 margin-left, transform, box-shadow;
+            transition-duration: 2s, 4000ms, 400ms, 4000ms, 4000ms, 8s;
+            transition-timing-function: linear;
+        }
+        div.exampletransitionDuration:hover div.transitionDuration {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-left: 300px;
+            transform: rotate(360deg);
+            box-shadow: -5px -5px 5px #0d8954;
+        }
+        div.exampletransitiontiming {
+            width: 400px;
+            height: 60px;
+            margin: 20px 0;
+        }
+        .transitiontimingEase,
+        .transitiontimingLinear,
+        .transitiontimingEasein,
+        .transitiontimingEaseout,
+        .transitiontimingEaseinout {
+            width: 50px;
+            height: 50px;
+            background-color: #ED8029;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 0;
+            transition-property: background-color, width, box-shadow;
+            transition-duration: 2s, 4s, 400ms;
+        }
+        .transitiontimingEase {
+            transition-timing-function: ease;
+        }
+        .transitiontimingLinear {
+            transition-timing-function: linear;
+        }
+        .transitiontimingEasein {
+            transition-timing-function: ease-in;
+        }
+        .transitiontimingEaseout {
+            transition-timing-function: ease-out;
+        }
+        .transitiontimingEaseinout {
+            transition-timing-function: ease-in-out;
+        }
+        div.exampletransitiontiming:hover div.transitiontimingEase, 
+        div.exampletransitiontiming:hover div.transitiontimingLinear, 
+        div.exampletransitiontiming:hover div.transitiontimingEasein, 
+        div.exampletransitiontiming:hover div.transitiontimingEaseout, 
+        div.exampletransitiontiming:hover div.transitiontimingEaseinout {
+            width: 300px;
+            background-color: aqua;
+            box-shadow: -5px -5px 5px #0d8954;
+        }
+        #ExampleC {
+		width: 520px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:14px;
+		}
+		#ExampleC div {
+		width: 100px;
+		margin: 5px 0;
+		padding: 5px;
+		color: white;
+		background-color: #640938;
+		text-align: right;
+		border-radius: 5px;
+		}
+		#ExampleC:hover div {
+		width: 410px;
+		}
+		#ExampleC div.no {
+		-webkit-transition: 3s linear;
+		-moz-transition: 3s linear;
+		-o-transition: 3s linear;
+		-ms-transition: 3s linear;
+		transition: 3s linear;
+		}
+		#ExampleC div.one {
+		-webkit-transition: 3s linear 1s;
+		-moz-transition: 3s linear 1s;
+		-o-transition: 3s linear 1s;
+		-ms-transition: 3s linear 1s;
+		transition: 3s linear 1s;
+		}
+		#ExampleC div.two {
+		-webkit-transition: 3s linear 2s;
+		-moz-transition: 3s linear 2s;
+		-o-transition: 3s linear 2s;
+		-ms-transition: 3s linear 2s;
+		transition: 3s linear 2s;
+		}
+		#ExampleC div.three {
+		-webkit-transition: 3s linear 3s;
+		-moz-transition: 3s linear 3s;
+		-o-transition: 3s linear 3s;
+		-ms-transition: 3s linear 3s;
+		transition: 3s linear 3s;
+		}
+		#ExampleC div.five {
+		-webkit-transition: 3s linear 5s;
+		-moz-transition: 3s linear 5s;
+		-o-transition: 3s linear 5s;
+		-ms-transition: 3s linear 5s;
+		transition: 3s linear 5s;
+		}
+		#ExampleC div.minustwo {
+		-webkit-transition: 3s linear -2s;
+		-moz-transition: 3s linear -2s;
+		-o-transition: 3s linear -2s;
+		-ms-transition: 3s linear -2s;
+		transition: 3s linear -2s;
+		}
+        #ExampleT {
+            width: 520px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        #ExampleT div {
+            width: 100px;
+            margin: 5px 0;
+            padding: 5px;
+            color: white;
+            background-color: #640938;
+            text-align: right;
+            border-radius: 5px;
+        }
+        #ExampleT:hover div {
+            width: 410px;
+        }
+        #ExampleT div.background {
+            transition: background-color 3s linear 1s;
+        }
+        #ExampleT div.easeinout {
+            transition: 4s ease-in-out;
+        }
+        #ExampleT div.five-seconds {
+            transition: 5s;
+        }
+        #ExampleT:hover div.background {
+            background-color: #065015; /* Green color */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a href="main.html"><i class="fa fa-angle-double-left" style="font-size:20px;"></i>Back</a>
+        <div class="row ">
+            <div class="col-md-12 d-flex justify-content-center p-5">
+                <h2>CSS3 TRANSITION</h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>1.how to change property values smoothly (over a given duration) instead of abruptly. </h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/transition/1.png">
+            </div>
+            <div class="col-md-6">
+                <div class="exampleTransition">
+                    <div class="transition">...</div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>2.Set Transition Property.Ensured the transition-property includes all the properties being animated .</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/transition/2.png">
+            </div>
+            <div class="col-md-6">
+                <div class="transitionPropertyExample">
+                    <div class="transitionPrtoperty">...</div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>3.transition-duration specifies the duration for each property transition. 
+                    Each value corresponds to the transition duration for the respective property listed in transition-property </h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/transition/3.png">
+            </div>
+            <div class="col-md-6">
+                <div class="exampletransitionDuration">
+                    <div class="transitionDuration">...</div>
+                </div>
+            </div>
+        </div>
+         <!-- ----------------------------------------------------------- -->
+         <div class="row ">
+            <div class="col-md-12 ">
+                <h5>4.The transition-timing-function property specifies the speed curve of the transition effect.</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/transition/4.png">
+            </div>
+            <div class="col-md-6">
+                <div class="exampletransitiontiming">
+                    <div class="transitiontimingEase">Ease</div>
+                    <div class="transitiontimingLinear">Linear</div>
+                    <div class="transitiontimingEasein">Ease_in</div>
+                    <div class="transitiontimingEaseout">Ease_out</div>
+                    <div class="transitiontimingEaseinout">Ease_in_out</div>
+                </div>
+            </div>
+        </div>
+         <!-- ----------------------------------------------------------- -->
+         <div class="row ">
+            <div class="col-md-12 ">
+                <h5>5.The transition-delay property specifies the The time to wait before starting the transition, specified in seconds (e.g., 2s) or milliseconds (e.g., 200ms).</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/transition/5.png">
+            </div>
+            <div class="col-md-6">
+                <div id="ExampleC">
+                    <div class="minustwo">-2s delay</div>
+                 <div class="no">no delay</div>
+                 <div class="one">1s delay</div>
+                 <div class="two">2s delay</div>
+                 <div class="three">3s delay</div>
+                 <div class="five">5s delay</div>    	        
+             </div>
+            </div>
+        </div>
+         <!-- ----------------------------------------------------------- -->
+         <div class="row ">
+            <div class="col-md-12 ">
+                <h5>6.The transition-delay property specifies the The time to wait before starting the transition, specified in seconds (e.g., 2s) or milliseconds (e.g., 200ms).</h5>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/transition/5.png">
+            </div>
+            <div class="col-md-6">
+                <div id="ExampleT">
+                    <div class="background">background</div>
+                    <div class="easeinout">easeinout</div>
+                    <div class="five-seconds">five-seconds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <a href="main.html"><i class="fa fa-angle-double-left" style="font-size:20px;"></i>Back</a>
+
+    </div>
+</body>
+
+</html>

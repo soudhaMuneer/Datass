@@ -1,0 +1,144 @@
+.background {
+    position: relative;
+    top: 100px;
+    left: 400px;
+    background-color: rgb(60, 221, 213);
+    height: 500px;
+    width: 900px;
+    border-radius: 30px;
+}
+
+h1 {
+    position: relative;
+    left: 420px;
+    top: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.p1 {
+    position: relative;
+    left: 430px;
+    top: 100px;
+    font-size: 20px;
+}
+
+.textbox1 {
+    position: relative;
+    top: 55px;
+    left: 540px;
+    height: 25px;
+    width: 230px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.p2 {
+    position: relative;
+    left: 430px;
+    top: 60px;
+    font-size: 20px;
+}
+
+.textbox2 {
+    position: relative;
+    top: 15px;
+    left: 540px;
+    height: 25px;
+    width: 230px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.p3 {
+    position: relative;
+    left: 430px;
+    top: 20px;
+    font-size: 20px;
+}
+
+.textbox3 {
+    position: relative;
+    bottom: 25px;
+    left: 540px;
+    height: 25px;
+    width: 230px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.p4 {
+    position: relative;
+    left: 430px;
+    bottom: 20px;
+    font-size: 20px;
+}
+
+.textbox4 {
+    position: relative;
+    bottom: 65px;
+    left: 540px;
+    height: 25px;
+    width: 230px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.p5 {
+    position: relative;
+    left: 430px;
+    bottom: 60px;
+    font-size: 20px;
+}
+
+.textbox5 {
+    position: relative;
+    bottom: 105px;
+    left: 540px;
+    height: 25px;
+    width: 230px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.button {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: aquamarine;
+    bottom: 20px;
+    right: 320px;
+
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button {
+    background-color: white;
+    color: black;
+}
+
+.button:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

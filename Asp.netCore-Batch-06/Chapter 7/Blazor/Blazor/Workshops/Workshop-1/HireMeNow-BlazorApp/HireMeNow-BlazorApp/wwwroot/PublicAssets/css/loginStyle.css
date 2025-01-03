@@ -1,0 +1,142 @@
+﻿html, body {
+    height: 100%;
+}
+#loginlayout {
+    background-image: url(../images/loginBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: inherit;
+}
+
+.wrapperDiv {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperRegDiv {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftDiv {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 1px 1px 4px 0px #303030de;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    background-color: white;
+    padding: 30px;
+}
+
+.wrapperRegDiv .leftDiv {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 1px 1px 4px 0px #303030de;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0%;
+    background-color: white;
+    padding: 30px;
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.googleDiv {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    box-shadow: 1px 2px 3px 1px #403f3fb5;
+}
+
+.btnlogin {
+    width: 100%;
+}
+
+.loginImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerDiv {
+    display: flex;
+    flex-direction: row;
+    /* align-content: center; */
+    justify-content: center;
+}
+.rightDiv {
+    background-position: center;
+    background-image: url(/publicassets/images/loginpageimg.png);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 1px 1px 4px 0px #303030de;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.wrapperRegDiv .rightDiv {
+    background-image: url('../images/register img.png');
+    background-position: initial;
+    background-size: cover;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.errors {
+    color: red;
+}
+
+.registerDivFooter {
+    justify-content: space-around;
+}
+    .registerDivFooter .btn {
+        width:100%;
+    }
+    @media (max-width: 700px) {
+        .wrapperRegDiv .rightDiv {
+        display: none;
+    }
+    .wrapperRegDiv .leftDiv {
+        border-radius: 25px;
+    }
+
+        .rightDiv {
+            display: none;
+          
+        }
+        .leftDiv {
+            border-radius: 20px;
+        }
+}

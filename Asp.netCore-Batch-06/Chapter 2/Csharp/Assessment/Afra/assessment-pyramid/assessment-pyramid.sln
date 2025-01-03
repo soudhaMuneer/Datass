@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34804.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assessment-pyramid", "assessment-pyramid\assessment-pyramid.csproj", "{DA710F25-0C99-4A3B-ABA8-E0485BA5D4BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA710F25-0C99-4A3B-ABA8-E0485BA5D4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA710F25-0C99-4A3B-ABA8-E0485BA5D4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA710F25-0C99-4A3B-ABA8-E0485BA5D4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA710F25-0C99-4A3B-ABA8-E0485BA5D4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1F0384C-3AD6-4A3F-9CEF-D84F65627B00}
+	EndGlobalSection
+EndGlobal

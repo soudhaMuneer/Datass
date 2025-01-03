@@ -1,0 +1,26 @@
+﻿@page
+@model Exercise_1.Pages.RegisterModel
+@{
+    Layout = "_HomeLayout";
+    ViewData["Title"] = "Register";
+}
+<h2>Register</h2>
+
+<form method="post">
+    <div class="form-group">
+        <span>Username</span>
+        <input class="form-control" />
+        
+   
+        <span>Email</span>
+        <input  class="form-control" />
+        
+        <span>Password</span>
+        <input  type="password" class="form-control" />
+        
+        <span>Confirm Password</span>
+        <input type="password" class="form-control" />
+        
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

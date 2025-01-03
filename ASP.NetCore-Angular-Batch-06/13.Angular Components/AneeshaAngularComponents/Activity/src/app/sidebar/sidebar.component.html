@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Template</title>
+    <style>
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        .sidebar .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar .nav li {
+            margin-bottom: 20px;
+        }
+        .sidebar .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar .nav a:hover {
+            color: #ccc;
+        }
+        .sidebar.collapsed {
+            width: 60px;
+        }
+        .sidebar.collapsed .nav a {
+            display: none;
+        }
+        .sidebar.collapsed .nav a.active {
+            display: block;
+        }
+        .sidebar.collapsed .nav a.active i {
+            display: block;
+        }
+        .sidebar.collapsed .nav a.active .label {
+            display: none;
+        }
+        .sidebar.collapsed .nav a i {
+            display: block;
+            font-size: 24px;
+            text-align: center;
+        }
+        .sidebar.collapsed .nav a .label {
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="nav">
+            <li>
+                <a href="#" class="active">
+                    <i class="fas fa-home"></i>
+                    <span class="label">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-users"></i>
+                    <span class="label">Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="label">Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span class="label">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    

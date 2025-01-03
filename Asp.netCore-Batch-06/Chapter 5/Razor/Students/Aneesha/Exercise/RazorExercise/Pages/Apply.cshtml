@@ -1,0 +1,92 @@
+﻿@page
+@model RazorExercise.Pages.ApplyModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Job Application</title>
+    <style>
+        /* General form styling */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+            /* Label styling */
+            form div label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+
+            /* Input field styling */
+            form div input[type="text"],
+            form div input[type="email"],
+            form div input[type="tel"] {
+                width: calc(100% - 20px);
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+        /* Validation message styling */
+        .text-danger {
+            color: red;
+            font-size: 0.875em;
+        }
+
+        /* Submit button styling */
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+            form button:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+
+<h1>Job Application</h1>
+
+<form method="post">
+    <div>
+        <label>Name</label>
+        <input asp-for="application.Name" />
+        <span asp-validation-for="application.Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="application.Email"></label>
+        <input asp-for="application.Email" />
+        <span asp-validation-for="application.Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="application.Phone"></label>
+        <input asp-for="application.Phone" />
+        <span asp-validation-for="application.Phone" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="application.Resume"></label>
+        <input asp-for="application.Resume" />
+        <span asp-validation-for="application.Resume" class="text-danger"></span>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

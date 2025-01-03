@@ -1,0 +1,22 @@
+﻿@page "/"
+@*For default page*@
+@using BlazorworkShop.Pages.HomePageComponent
+@layout PublicLayout
+@inject NavigationManager NavManager
+<link href="publicassets/css/landingstyle.css" rel="stylesheet" />
+<HomeSection />
+<CategorySectionComponent></CategorySectionComponent>
+<JobAlertSectionComponent></JobAlertSectionComponent>
+<PopularJobsComponent></PopularJobsComponent>
+<HiredComponent></HiredComponent>
+<AboutUsComponent></AboutUsComponent>
+<HelpComponent></HelpComponent>
+<FooterComponent></FooterComponent>
+
+
+@code {
+    private async void Login()
+    {
+        NavManager.NavigateTo("/login");
+    }
+}

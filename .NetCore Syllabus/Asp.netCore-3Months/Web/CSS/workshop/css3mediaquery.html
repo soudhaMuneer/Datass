@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mediaquery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img {
+            width: 100%;
+            height: auto
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: rgb(3, 3, 104);
+        }
+
+        h5 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        a {
+            color: rgb(24, 35, 159);
+            font-weight: bold;
+        }
+        .media {
+		
+		height: 75vh;
+        background: gray;
+        display: block;
+        }
+        
+        @media screen and (max-width: 500px) {
+           .media {
+                background: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a href="main.html"><i class="fa fa-angle-double-left" style="font-size:20px;"></i>Back</a>
+        <div class="row ">
+            <div class="col-md-12 d-flex justify-content-center p-5">
+                <h2>CSS3 MEDIA QUERY</h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h5>1.Media queries will allow us to change our layouts to suit the extract need of different devices – without changing the content</h5>
+                <p><b> Media query syntax: internal </b> Make the background gray. But up to a maximum width of 500 pixels, make the background blue.</p>
+            </div>
+        </div>
+        <div class="row p-5 ">
+            <div class="col-md-6">
+                <img src="images/media/1.png">
+            </div>
+            <div class="col-md-6">
+                <div class="media">
+                    <h5>Responsive Background Color Example</h5>
+                    <p>Resize the browser window to see the background color change.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 ">
+                <div class="description"><span>Media query syntax: external</span>Extend the existing media part of the link element <span>or</span> @import rule:</div>
+                <div class="code-full">       
+                <pre name="code" class="brush:html"> 
+                <link href="narrow.css" rel="stylesheet" media="only screen and (max-width:500px)">
+                @import url(narrow.css) only screen and (max-width:500px);
+            </div>
+        
+        </div>
+        <a href="main.html"><i class="fa fa-angle-double-left" style="font-size:20px;"></i>Back</a>
+
+    </div>
+</body>
+
+</html>

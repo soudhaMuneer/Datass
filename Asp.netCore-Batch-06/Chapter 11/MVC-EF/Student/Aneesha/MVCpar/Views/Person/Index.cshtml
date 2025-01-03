@@ -1,0 +1,9 @@
+﻿@Model List<MVCpar.Models.Person>
+    <h2>
+        People List
+    </h2>
+
+    @foreach (var person in Model)
+    {
+        @Html.Partial("_Personcshtml",person)
+    }

@@ -1,0 +1,72 @@
+﻿@page
+@model RazorExercise.Pages.ApplicationModel
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Application List</title>
+    <style>
+        /* General table styling */
+        table ,a {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+            /* Table header styling */
+            table thead ,a {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            a{
+                width: 40%;
+                height:40%;
+          }
+
+            table th, table td {
+                padding: 12px;
+                border: 1px solid #ddd;
+            }
+
+            /* Row styling */
+            table tbody tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            /* Hover effect for rows */
+            table tbody tr:hover {
+                background-color: #ddd;
+            }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Resume</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var i in Model.apps)
+            {
+                <tr>
+                    <td>@i.Name</td>
+                    <td>@i.Email</td>
+                    <td>@i.Phone</td>
+                    <td>@i.Resume</td>
+                </tr>
+            }
+            <a asp-page="/JobList">Back Job List</a>
+        </tbody>
+    </table>
+</body>
+</html>

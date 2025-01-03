@@ -1,0 +1,60 @@
+﻿@page
+@model Workshop.Pages.InterviewsheduleModel
+
+@{
+    ViewData["Title"] = "Interviewshedule";
+    Layout = "_Layout";
+}
+
+<h1>Interviewshedule</h1>
+
+@* <h4>Interviews</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Interviews.JobId" class="control-label"></label>
+                <input asp-for="Interviews.JobId" class="form-control" />
+                <span asp-validation-for="Interviews.JobId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interviews.Company" class="control-label"></label>
+                <input asp-for="Interviews.Company" class="form-control" />
+                <span asp-validation-for="Interviews.Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interviews.Post" class="control-label"></label>
+                <input asp-for="Interviews.Post" class="form-control" />
+                <span asp-validation-for="Interviews.Post" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interviews.Date" class="control-label"></label>
+                <input asp-for="Interviews.Date" class="form-control" />
+                <span asp-validation-for="Interviews.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interviews.Location" class="control-label"></label>
+                <input asp-for="Interviews.Location" class="form-control" />
+                <span asp-validation-for="Interviews.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interviews.Time" class="control-label"></label>
+                <input asp-for="Interviews.Time" class="form-control" />
+                <span asp-validation-for="Interviews.Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div> *@
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

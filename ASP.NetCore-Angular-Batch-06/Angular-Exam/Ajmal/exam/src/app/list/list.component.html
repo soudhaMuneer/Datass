@@ -1,0 +1,16 @@
+<div class="text-center ">
+
+<div *ngFor="let i of items">
+    <div class="d-flex">
+    <div class="card p-5 mt-5 ms-5 fs-5 fw-bold">
+    <p>Item Name : <b>{{i.itemName}}</b></p>
+    <p>Item Quantity : <b>{{i.Quantity}}</b></p>
+    <p>Item Price : <b>{{i.price}}</b></p>
+    
+    <button type="submit" class="btn btn-danger" (click)="deleteitem(i.id)">Delete</button>
+</div>
+
+</div>
+</div>
+
+</div>

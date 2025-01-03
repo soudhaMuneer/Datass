@@ -1,0 +1,121 @@
+.bg1 {
+  background-color: rgb(120, 34, 237);
+  height: 740px;
+  width: 330px;
+}
+
+.select {
+  position: relative;
+  height: 50px;
+  width: 290px;
+  left: 40px;
+  top: 150px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.button {
+  position: relative;
+  height: 50px;
+  width: 270px;
+  right: 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  bottom: 5px;
+  background-color: rgb(120, 34, 237);
+  color: white;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgba(255, 255, 255, 0); 
+  color: black; 
+  border: 0px solid rgb(120, 34, 237);
+}
+
+.button1:hover {
+  background-color: rgba(255, 255, 255, 0.618);
+  color: white;
+}
+
+
+.bg2 {
+  position: relative;
+  background-color: rgb(205, 197, 197);
+  height: 740px;
+  width: 1100px;
+  bottom: 740px;
+  left: 300px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+input {
+  position: relative;
+  top: 45px;
+  left: 360px;
+  width: 380px;
+  height: 30px;
+  background-color: rgba(167, 97, 187, 0.224);
+  border: none;
+  border-radius: 20px;
+}
+
+.box1 {
+  position: relative;
+  background-color: green;
+  height: 110px;
+  width: 200px;
+  left: 145px;
+  top: 150px;
+}
+
+.box2 {
+  position: relative;
+  background-color: rgb(120, 34, 237);
+  height: 110px;
+  width: 200px;
+  left: 145px;
+  top: 150px;
+  margin-top: 5%;
+}
+
+.box3 {
+  position: absolute;
+  background-color: rgb(36, 224, 233);
+  height: 110px;
+  width: 200px;
+  left: 450px;
+  top: 182px;
+}
+
+.box4 {
+  position: relative;
+  background-color: rgb(36, 224, 233);
+  height: 110px;
+  width: 200px;
+  left: 450px;
+  bottom: 15px;
+  margin-top: 5%;
+}
+
+.box5 {
+  position: absolute;
+  background-color: rgb(120, 34, 237);
+  height: 110px;
+  width: 200px;
+  left: 750px;
+  top: 182px;
+}
+
+.box6 {
+  position: relative;
+  background-color: green;
+  height: 110px;
+  width: 200px;
+  left: 750px;
+  bottom: 125px;
+}

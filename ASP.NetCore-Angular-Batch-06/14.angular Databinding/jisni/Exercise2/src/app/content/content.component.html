@@ -1,0 +1,32 @@
+<div class="navbar">
+    <h3>Short List</h3>
+<form action="">
+<input type="search" placeholder="search by name Member ID. Destination" class="search" (input)="filterperson($event)">
+</form>
+
+<button type="submit" class="submit-button"><img class="image-two" src="../../assets/Image/icon filter.png" style="width: 30px;"></button>
+<a href="#"><img class="image-three" src="../../assets/Image/Group 5689.png" style="width: 30px;"></a>
+<a href="#"><img class="image-four" src="../../assets/Image/mi_log-out.png" style="width:30px;"></a>
+</div>
+
+<div   id="scroll">
+
+    <div class="row">
+   
+        <div *ngFor="let list of filteredjob">
+            
+        <img [src]="list.image1">
+        <p>{{list.Name}}</p>
+        <p>{{list.education}}</p>
+        <p>{{list.experince}}</p>
+        <p>{{list.location}}</p>
+        <br>
+       
+        <button class="view">{{list.view}}</button>
+        </div>
+</div> 
+</div>
+
+   
+
+

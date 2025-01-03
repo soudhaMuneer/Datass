@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page Rinshad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+</head>
+<style>
+   body{
+            background-color: #cedef0;
+        }
+ 
+    .nest{
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  #sidebar{
+    background-color:  #6b9bd1;
+  }
+  .image{
+width: 20rem;
+height: 18rem;
+/* margin-left: 100px;
+margin-top: 100px; */
+
+  }
+  .bg{
+    background-color: #6b9bd1;
+    
+  }
+  
+  .h{
+    height: 2rem;
+  }
+  .padd{
+    padding-top: 5rem;
+  }
+
+
+.btn{
+    background-color:#6b9bd1;
+    border-color: #cedef0;
+ }
+ .btn:hover{
+    background-color:#cedef0;
+    border-color:#6b9bd1;
+ }
+ .fts{font-size: 1.4vw}
+ 
+
+</style>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>   
+<div class="container-fluid ">
+  <div class="row">
+    <div class="  col-md-3  col-3   min-vh-100" id="sidebar">
+     <div class= "  text-white h">
+<h5 class="nest text-white ">Nest</h5>
+<div class="text-capitalize pt-5 text-white fw-bold fts"> one stop web application 
+  for job-providers</div>
+<div class="py-5"></div>
+<img class="image rounded-4 img-fluid ms-5 " src="./images/nest nest.jpg" >
+   </div>
+   
+</div>
+
+  <div class="col-md-1   col-1    pt-4">
+  <span class=" fs-4 text-nowrap fw-bold">Create Account</span>
+  
+</div>
+<div class="col-md-6  col-6  padd px-5">
+  <div class="row">
+    <div class="col-md-5  pb-2">
+  <form action="">
+    <label >First Name</label>
+    <input class="form-control " type="text" placeholder="first name " required>  
+    <div class="valid-feedback">Valid.</div>
+  <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+  <div class="col-md-1  ">
+  </div>
+
+  <div class="col-md-5   ">
+    <label for="">Last Name</label>
+    <input class="form-control" type="text" placeholder="Last Name" required> 
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+ 
+  </div>
+</div>
+<div class="pe-5">
+<label  class="pt-3">Company Name</label>
+<input class="form-control " type="text" placeholder="Company Name" required> 
+<div class="valid-feedback">Valid.</div>
+<div class="invalid-feedback">Please fill out this field.</div>
+<label class="pt-3">Email</label>
+<input class="form-control" type="text" placeholder="Email" required> 
+<div class="valid-feedback">Valid.</div>
+<div class="invalid-feedback">Please fill out this field.</div>
+<label class="pt-3">Password</label>
+  <input class="form-control" type="password" placeholder="Password" required> 
+  <div class="valid-feedback">Valid.</div>
+  <div class="invalid-feedback">Please fill out this field.
+    <span class="forgot wid3">Forgot Password? </span>
+  </div>
+</form>
+
+<div class="d-grid gap-2  pt-4 ">
+  <button class="btn rounded-pill " type="submit">Create Account</button>
+
+</div>
+<div class="form-check-end  pt-4 text-center  ps-4">
+  <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label " for="flexCheckDefault">
+    Accept the Terms & Conditions <a href="terms&conditions.html"> Read</a>
+  </label>
+
+</div>
+<p class="text-center ps-4 fw-bold"> Already have an account? <button class=" btn " >Log in</button></p>
+</div>
+
+    </div>
+  </div>
+</div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding-top: 15px;
+    background-color:dodgerblue;/* Sidebar background color */
+    border-right: 1px solid #dee2e6; /* Sidebar border color */
+  }
+
+  .sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    color: #343a40; /* Sidebar text color */
+  }
+
+  .sidebar a:hover {
+    background-color: #e2e6ea; /* Sidebar link hover background color */
+  }
+  .sidebar a.active {
+    color: #ffffff; /* Active link color */
+    background-color: #007bff; /* Active link background color */
+  }

@@ -1,0 +1,13 @@
+﻿@page
+@model Workshop1.Pages.SheduledinterviewModel
+@{
+    Layout = "_home";
+}
+<body>
+    <ul>
+    @foreach (var intt in Model.Interviewss)
+    {
+        <li>@intt.Post</li>
+    }
+    </ul>
+</body>

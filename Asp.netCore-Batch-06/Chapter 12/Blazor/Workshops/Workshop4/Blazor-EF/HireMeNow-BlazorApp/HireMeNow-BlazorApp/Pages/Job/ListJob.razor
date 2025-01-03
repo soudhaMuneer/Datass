@@ -1,0 +1,160 @@
+﻿@using HireMeNow_BlazorApp.Interfaces
+@using HireMeNow_BlazorApp.Models
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+@inject IApplicationService applicatioService
+@inject ProtectedSessionStorage protectedSessionStore
+@inject NavigationManager NavigationManager
+<style>
+    .jobData {
+        /*width: 80%;*/
+    }
+
+    .btn-apply {
+        width: -webkit-fill-available;
+        height: 40px;
+    }
+
+    .job-card {
+        /*width: 60%;*/
+        margin: auto;
+        margin-bottom: 13px;
+        padding: 10px;
+        box-shadow: 3px 4px 17px 0px #504d4d7d;
+        
+    }
+
+    /* .job-card :hover {
+
+                box-shadow: 3px 4px 17px 0px #504d4d7d;
+            }*/
+    .applySection {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logoDiv {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .jobListDiv {
+        justify-content: center;
+    }
+
+    progress {
+        width: 100%;
+        height: 8px;
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+        progress::-webkit-progress-bar {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+    .JobWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tags {
+        flex-wrap: wrap
+    }
+
+    .progressSpan {
+        font-size: small;
+    }
+</style>
+          
+                <div class="job-card" style="">
+                    <div width="" class="JobWrapper">
+                        <div align="center" class="col-md-1 logoDiv">
+         
+                <img src="publicassets/images/group 1126.png" width="60px" alt="Google" title="Google" height="60px">
+                        </div>
+                        <div class="col-md-8 jobData">
+                            <b>
+                                <font size="5px" color="#3487bf">@job.Title </font>
+                            </b>
+                            <br>
+
+                            <div>
+                               company: <b>@job.CompanyId</b> <br>
+                                Location: <b>@job.Location</b> <br>
+                                salary : <b>@job.Salary</b>
+
+                            </div>
+                            <br>
+            <div class="col-md-8">
+
+                                <div class="row tags">
+                                    <div class="fulltime"> @job.TypeOfWorkPlace </div>
+                                    <div class="marketing"> <b>Marketing</b> </div>
+                                    <div class="design"> Designing </div>
+                                </div>
+
+                            </div>
+                            <br>
+
+                        </div>
+                        <div class="col-md-2 applySection">
+                            <form method="post">
+                                <input type="hidden" name="parameter" value="@job.Id" />
+                               
+                            </form>
+
+            <button class="btn btn-lg bg-primary float-right mx-auto d-block" @onclick=ApplyJob>ApplyJob</button>
+                            <progress id="progressBar" value=@job.AppliedCount max=@job.VacanciesCount></progress>
+                            <span class="progressSpan">@job.AppliedCount applied of @job.VacanciesCount capacity</span>
+                        </div>
+                    </div>
+               
+            
+
+           
+
+
+
+
+
+    </div>
+
+@code {
+    [Parameter]
+    public string id { get; set; }
+    [Parameter]
+    public Job job{ get; set; }
+
+    public async void ApplyJob()
+    {
+        var result = await protectedSessionStore.GetAsync<Guid>("userId");
+        if (result.Value!=new Guid())
+        {
+            applicatioService.AddApplication(job.Id, result.Value);
+            NavigationManager.NavigateTo("/Jobseeker/MyApplication");
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/Login");
+        }
+
+
+    }
+}

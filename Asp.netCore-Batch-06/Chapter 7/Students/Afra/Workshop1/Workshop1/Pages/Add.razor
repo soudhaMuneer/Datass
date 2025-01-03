@@ -1,0 +1,57 @@
+﻿@page "/Add"
+@using Workshop1.Model
+@using Workshop1.Repository
+@using Workshop1.Service
+@inject JobService jobService
+@inject NavigationManager navigationManager
+<style>
+    .btn{
+        background-color:blueviolet;
+        color:#fff;
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Add Job</h3>
+                <div class="row">
+                    <div class="col-md-8">
+                        <form mathod="post">
+                            <label class="control-label" for="Title">Title</label>
+                            <input class="form-control" id="Title" placeholder="Enter Title" @bind="@job.Title"/>
+                            <label class="control-label" for="Description">Description</label>
+                            <input class="form-control" id="Description" placeholder="Enter Description" @bind="@job.Description" />
+                            <label class="control-label" for="Location">Location</label>
+                            <input class="form-control" id="Location" placeholder="Enter Location" @bind="@job.Location" />
+                            <label class="control-label" for="Experience">Experience</label>
+                            <input class="form-control" id="Experience" placeholder="Enter Experience" @bind="@job.Experience" />
+                            <label class="control-label" for="Type">Type</label>
+                            <input class="form-control" id="Type" placeholder="Enter Type" @bind="@job.Type" />
+                            <label class="control-label" for="Salary">Salary</label>
+                            <input class="form-control" id="Salary" placeholder="Enter Salary" @bind="@job.Salary" />
+                            <label class="control-label" for="CompanyName">CompanyName</label>
+                            <input class="form-control" id="CompanyName" placeholder="Enter CompanyName" @bind="@job.CompanyName" />
+                            <label class="control-label" for="CompanyId">CompanyId</label>
+                            <input class="form-control" id="Companyid" placeholder="Enter CompanyId" @bind="@job.CompanyId" />
+                            <br /><br />
+                            <button class="btn " @onclick="@AddJob">Add</button>
+                            <a class="btn" href="/Index">Go to Jobs List</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+@code {
+    Job job = new Job();
+    protected void AddJob()
+    {
+        jobService.AddJoblist(job);
+    }
+
+}

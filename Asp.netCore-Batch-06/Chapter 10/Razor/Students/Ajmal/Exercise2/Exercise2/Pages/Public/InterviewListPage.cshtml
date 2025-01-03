@@ -1,0 +1,35 @@
+﻿@page
+@model Exercise2.Pages.Public.InterviewListPageModel
+@{
+    Layout = "HomeLayout";
+}
+<a class="text-decoration-none " asp-page="/Public/ScheduleInterview"><button class="btn btn-primary mt-3">Shedule Interview</button></a>
+
+<div class="row mt-3">
+    <div class="col-xl-12">
+
+    
+    @for (int i = 0; i < Model.interviews.Count; i += 3)
+    {
+        <div class="row mb-2">
+
+            @for (int j = i; j < i + 2 && j < Model.interviews.Count; j++)
+            {
+                <div class="col-xl-5 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4> @Model.interviews[j].Company</h4>
+                            <p>Comapny : @Model.interviews[j].Post </p>
+                            <p>Discription : @Model.interviews[j].Location</p>
+                            <span>Date : @Model.interviews[j].Date</span> <span>Location: @Model.interviews[j].Time</span>
+                            <form method="post">
+                                <input type="hidden" name="id" value="@Model.interviews[j].Id" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+</div>

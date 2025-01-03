@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise1</title>
+    <style>
+        .h3 {
+            position: relative;
+            color: rgb(51, 93, 201);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+        }
+
+        .para {
+            color: rgb(51, 93, 201);
+            font-size: 49px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .para1 {
+            color: gray;
+            font-size: 20px;
+        }
+
+        .box {
+            background-color: aliceblue;
+            height: 33px;
+            width: 340px;
+            padding: 2px;
+            padding-left: 20px;
+            padding-top: 2px;
+            padding-bottom: 30px;
+            color: gray;
+        }
+
+        .box1 {
+            position: relative;
+            right: 20px;
+        }
+
+        .box2 {
+            position: relative;
+            left: 2px;
+        }
+
+        .diagram {
+            position: absolute;
+            top: 10px;
+            left: 420px;
+            height: 470px;
+            border-radius: 25px;
+            width: 980px;
+            background-color: rgb(0, 162, 255);
+        }
+
+        .image {
+            position: relative;
+            top: 46px;
+            width: 600px;
+            height: 350px;
+        }
+
+        .head {
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+            left: 80px;
+        }
+
+        .page2 {
+            position: absolute;
+            left: 350px;
+        }
+
+        .dash {
+            position: relative;
+            left: 80px;
+        }
+
+        .nice {
+            position: relative;
+            left: 30px;
+        }
+
+        .mini1 {
+            position: relative;
+            top: 120px;
+            left: 50px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            height: 130px;
+            width: 170px;
+        }
+
+        .img {
+            position: relative;
+            top: 20px;
+        }
+
+        .text {
+            position: relative;
+            top: 24px;
+        }
+
+        .para2 {
+            position: relative;
+            top: 15px;
+            font-size: 13px;
+        }
+
+        .mini2 {
+            position: relative;
+            left: 250px;
+            top: -28px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            height: 130px;
+            width: 170px;
+        }
+
+        .img1 {
+            position: relative;
+            top: 20px;
+        }
+
+        .text1 {
+            position: relative;
+            top: 24px;
+        }
+
+        .para3 {
+            position: relative;
+            top: 15px;
+            font-size: 13px;
+        }
+
+        .mini3 {
+            position: relative;
+            left: 450px;
+            top: -177px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            height: 130px;
+            width: 170px;
+        }
+
+        .img2 {
+            position: relative;
+            top: 20px;
+        }
+
+        .text2 {
+            position: relative;
+            top: 24px;
+        }
+
+        .para4 {
+            position: relative;
+            top: 15px;
+            font-size: 13px;
+        }
+
+        .mini4 {
+            position: relative;
+            left: 650px;
+            top: -325px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            height: 130px;
+            width: 170px;
+        }
+
+        .img3 {
+            position: relative;
+            top: 20px;
+        }
+
+        .text3 {
+            position: relative;
+            top: 24px;
+        }
+
+        .para5 {
+            position: relative;
+            top: 15px;
+            font-size: 13px;
+        }
+
+        .mini5 {
+            position: relative;
+            left: 50px;
+            top: -325px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            height: 130px;
+            width: 170px;
+        }
+
+        .img4 {
+            position: relative;
+            top: 20px;
+        }
+
+        .text4 {
+            position: relative;
+            top: 24px;
+        }
+
+        .para6 {
+            position: relative;
+            top: 15px;
+            font-size: 13px;
+        }
+
+        .mini6 {
+            position: relative;
+            left: 250px;
+            top: -472px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            height: 130px;
+            width: 170px;
+        }
+
+        .img5 {
+            position: relative;
+            top: 20px;
+        }
+
+        .text5 {
+            position: relative;
+            top: 24px;
+        }
+
+        .para7 {
+            position: relative;
+            top: 15px;
+            font-size: 13px;
+        }
+
+        .mini7 {
+            position: relative;
+            left: 450px;
+            top: -620px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            height: 130px;
+            width: 170px;
+        }
+
+        .img6 {
+            position: relative;
+            top: 20px;
+        }
+
+        .text6 {
+            position: relative;
+            top: 24px;
+        }
+
+        .para8 {
+            position: relative;
+            top: 15px;
+            font-size: 13px;
+        }
+
+        .mini8 {
+            position: relative;
+            left: 650px;
+            top: -786px;
+            background-color: rgb(27, 129, 219);
+            border-radius: 10px;
+            height: 130px;
+            width: 170px;
+        }
+
+        .para9 {
+            position: relative;
+            top: 15px;
+            left: 20px;
+            font-size: 17px;
+        }
+
+        .dot {
+            position: relative;
+            top: 330px;
+            right: 600px;
+        }
+
+        .hand {
+            position: relative;
+            right: 500px;
+            top: 80px;
+
+        }
+
+        .head1 {
+            position: relative;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 35px;
+            bottom: 340px;
+            right: 30px;
+            width: 400px;
+        }
+
+        .alert {
+            position: relative;
+            bottom: 510px;
+            right: 280px;
+            background-color: rgb(244, 224, 199);
+            border-radius: 10px;
+            width: 120px;
+            height: 140px;
+        }
+
+        .build {
+            position: relative;
+            bottom: 330px;
+            right: 20px;
+        }
+
+        .head2 {
+            position: relative;
+            bottom: 386px;
+            left: 20px;
+        }
+
+        .head3 {
+            position: relative;
+            bottom: 409px;
+            left: 20px;
+        }
+
+        .build4 {
+            position: relative;
+            bottom: 400px;
+            right: 24px;
+        }
+
+        .head5 {
+            position: relative;
+            bottom: 460px;
+            left: 20px;
+        }
+
+        .head6 {
+            position: relative;
+            bottom: 485px;
+            left: 20px;
+        }
+
+        .build7 {
+            position: relative;
+            bottom: 470px;
+            right: 24px;
+        }
+
+        .head8 {
+            position: relative;
+            bottom: 530px;
+            left: 20px;
+        }
+
+        .head9 {
+            position: relative;
+            bottom: 553px;
+            left: 22px;
+        }
+
+        .job {
+            position: relative;
+            bottom: 20px;
+            left: 15px;
+        }
+
+        .small {
+            position: relative;
+            font-size: 14px;
+            bottom: 20px;
+            left: 8px;
+        }
+
+        .cls18 {
+            position: relative;
+            width: 500px;
+            left: 20px;
+        }
+
+        .cls19 {
+            position: relative;
+            font-size: small;
+            color: dimgray;
+        }
+
+        .cls20 {
+            position: relative;
+            width: 240px;
+            height: 250px;
+            background-color:aliceblue;
+            border-radius: 10px;
+            right: 200px;
+            top: 30px;
+        }
+
+        .cls21 {
+            position: relative;
+            width: 240px;
+            height: 250px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            bottom: 220px;
+            left: 60px;
+        }
+
+        .cls22 {
+            position: relative;
+            width: 240px;
+            height: 250px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            bottom: 470px;
+            left: 320px;
+        }
+
+        .cls23 {
+            position: relative;
+            width: 240px;
+            height: 250px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            bottom: 450px;
+            right: 200px;
+        }
+
+        .cls24 {
+            position: relative;
+            width: 240px;
+            height: 250px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            bottom: 700px;
+            left: 60px;
+        }
+
+        .cls25 {
+            position: relative;
+            width: 240px;
+            height: 250px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            bottom: 950px;
+            left: 320px;
+        }
+
+        .cls26 {
+            position: relative;
+            width: 95px;
+            height: 25px;
+            background-color: lightblue;
+            border-radius: 10px;
+            color: blue;
+            left: 8.5em;
+            bottom: 2em;
+        }
+
+        .abc {
+            position: relative;
+            bottom: 1em;
+        }
+
+        .aaa {
+            position: relative;
+            font-size: x-small;
+            color: dimgray;
+        }
+
+        .cls27 {
+            position: relative;
+            width: 65px;
+            height: 25px;
+            background-color: orange;
+            color: orangered;
+            left: 10em;
+            bottom: 2em;
+        }
+
+        .def {
+            position: relative;
+            bottom: 1em;
+        }
+
+        .bbb {
+            position: relative;
+            font-size: x-small;
+            color: dimgray;
+        }
+
+        .cls28 {
+            position: relative;
+            width: 55px;
+            height: 25px;
+            background-color: violet;
+            color: darkorchid;
+            left: 10em;
+            bottom: 2em;
+        }
+
+        .ccc {
+            position: relative;
+            font-size: x-small;
+            color: dimgray;
+        }
+
+        .ddd {
+            position: relative;
+            bottom: 1em;
+        }
+
+        .cls29 {
+            position: relative;
+            width: 100px;
+            height: 25px;
+            background-color: dodgerblue;
+            color: darkblue;
+            left: 8.4em;
+            bottom: 2em;
+        }
+
+        .eee {
+            position: relative;
+            bottom: 1em;
+        }
+
+        .fff {
+            position: relative;
+            font-size: x-small;
+            color: dimgray;
+        }
+
+        .cls30 {
+            position: relative;
+            width: 55px;
+            height: 25px;
+            background-color: violet;
+            color: darkorchid;
+            left: 10em;
+            bottom: 2em;
+        }
+
+        .ggg {
+            position: relative;
+            bottom: 1em;
+        }
+
+        .hhh {
+            position: relative;
+            font-size: x-small;
+            color: dimgray;
+        }
+
+        .cls31 {
+            position: relative;
+            width: 95px;
+            height: 25px;
+            background-color: lightskyblue;
+            color: dodgerblue;
+            left: 8.5em;
+            bottom: 2em;
+        }
+
+        .iii {
+            position: relative;
+            bottom: 1em;
+        }
+
+        .jjj {
+            position: relative;
+            font-size: x-small;
+            color: dimgray;
+        }
+
+        .ss2 {
+            position: relative;
+            bottom: 100em;
+            left: 15em;
+            font-size: larger;
+        }
+
+        .ss6 {
+            position: relative;
+            width: 130px;
+            height: 20px;
+            background-color: dodgerblue;
+            border-radius: 10px;
+            color: aliceblue;
+            bottom: 900px;
+            left: 120px;
+            padding: 10px;
+        }
+
+        .ss3 {
+            position: relative;
+            right: 260px;
+            bottom: 900px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+<!-- < Page - 1 > -->
+
+
+
+    <div>
+        <h3 class="h3">Hire Me Now !</h3>
+        <p class="para"><b>The Best Place <br>
+                To Find Your <br>
+                Dream Company</b></p>
+        <p class="para1">Ideal platform for job seekers passionate about <br> satartup and seeking new career
+            opportunites.</p>
+        <div class="box">
+            <p>Job title or Company &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="button" value="Explore"
+                    style="color: white; background-color: rgb(0, 162, 255); border: 0px; border-radius: 4px; height: 30px; width: 70px;">
+            </p><br>
+            <input class="box1" type="button" value="Land Your Dream Job"
+                style="color: white; background-color: rgb(28, 196, 140); border: 0px; border-radius: 2px; height: 25px; width: 168px;">
+            <input class="box2" type="button" value="Recruit the Prefect Fit"
+                style="color: white; background-color: rgb(28, 196, 140); border: 0px; border-radius: 2px; height: 25px; width: 168px;">
+        </div>
+    </div>
+    <div>
+        <div class="diagram">
+            <div><br>
+                <pre><font color="white">     <b>Home       Post A Job      About      Feature                                                      Login | <input type="button" value="Sign In" style="color: white; background-color:rgb(8, 105, 161); border: 0px; height: 30px; width: 70px;"></b></font></pre>
+            </div>
+            <center><img class="image" src="images/back-image.png" height="250px" width="290px" alt=""></center>
+        </div>
+    </div><br><br><br>
+
+
+
+
+<!-- < Page - 2 > -->
+
+
+
+
+    <div>
+        <div class="page2">
+            <h2 class="head">Explore By Category</h2>
+            <p class="dash">open the doors to endles career posibilites <br> &emsp;and find your dream job with ease.
+            </p>
+        </div>
+        <div class="nice">
+            <div class="mini1">
+                <center><img class="img" src="images/Logo.png" alt="" height="40px"><br>
+                    <b class="text">Develpoment</b><br>
+                    <p class="para2">
+                        <font color="gray">512 available jobs</font>
+                    </p>
+                </center>
+            </div><br>
+
+            <div class="mini2">
+                <center><img class="img1" src="images/blue-briefcase.png" alt="" height="40px"><br>
+                    <b class="text1">Develpoment</b><br>
+                    <p class="para3">
+                        <font color="gray">223 available jobs</font>
+                    </p>
+                </center>
+            </div><br>
+            <div class="mini3">
+                <center><img class="img2" src="images/blue-briefcase.png" alt="" height="40px"><br>
+                    <b class="text2">Develpoment</b><br>
+                    <p class="para4">
+                        <font color="gray">125 available jobs</font>
+                    </p>
+                </center>
+            </div><br>
+            <div class="mini4">
+                <center><img class="img3" src="images/blue-briefcase.png" alt="" height="40px"><br>
+                    <b class="text3">Develpoment</b><br>
+                    <p class="para5">
+                        <font color="gray">400 available jobs</font>
+                    </p>
+                </center>
+            </div><br>
+            <div class="mini5">
+                <center><img class="img4" src="images/blue-briefcase.png" alt="" height="40px"><br>
+                    <b class="text4">Finance</b><br>
+                    <p class="para6">
+                        <font color="gray">49 available jobs</font>
+                    </p>
+                </center>
+            </div><br>
+            <div class="mini6">
+                <center><img class="img5" src="images/blue-briefcase.png" alt="" height="40px"><br>
+                    <b class="text5">Human Resource</b><br>
+                    <p class="para7">
+                        <font color="gray">116 available jobs</font>
+                    </p>
+                </center>
+            </div><br>
+            <div class="mini7">
+                <center><img class="img6" src="images/blue-briefcase.png" alt="" height="40px"><br>
+                    <b class="text6">Content Writing</b><br>
+                    <p class="para8">
+                        <font color="gray">123 available jobs</font>
+                    </p>
+                </center>
+            </div><br>
+            <div class="mini8">
+                <p class="para9">
+                    <font color="white">Explore <br>More 32+ <br>Companies <br><br> ---></font>
+                </p>
+
+
+
+
+<!-- < Page - 3 > -->
+
+
+
+
+                <div>
+                    <img class="dot" src="images/Decoration.png" alt="">
+                    <img class="hand" src="images/hands.png" alt="" height="400px">
+                    <h2 class="head1">Help You Find A Job That Suits You</h2>
+
+                    <img class="build" src="images/blue-building.png" alt="">
+                    <h5 class="head2">Truested and Accurate</h5>
+                    <p class="head3" style="font-size: 10px; width: 190px;">Trust us to help you find your perfect job
+                        with <br> accurate job setting and reliable job portal.</p>
+
+                    <img class="build4" src="images/blue-briefcase.png" alt="">
+                    <h5 class="head5">Hired By Top Companies</h5>
+                    <p class="head6" style="font-size: 10px; width: 190px;">Get one step closer to ypur career goals and
+                        <br> be employed bt the best.</p>
+
+                    <img class="build7" src="images/blue-right.png" alt="">
+                    <h5 class="head8">Various Categories</h5>
+                    <p class="head9" style="font-size: 10px; width: 190px;">Discover exciting career opportunites across
+                        a <br> wide range of industries.</p>
+                    <div class="alert">
+                        <img src="images/check-circle.png" alt="">
+                        <h4 class="job">Job Alert!</h4>
+                        <p class="small" style="color: gray;">104 jon openings available, don't waste time</p>
+
+
+
+
+
+
+
+<!-- < Page - 4 > -->
+
+
+
+
+
+                        <div class="cls18">
+                            <b><span style="font-size: xx-large;"> Recently Popular Jobs</span></b><br>
+                            <div class="cls19">Amet Minim molit non deserant ullamco Est Sit Aliqua Dolor Do<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Velit Officia Consequent Duis Enim Velit
+                                Molilt.
+
+
+                            </div>
+                        </div>
+                        <div class="cls20"><br>
+                            &nbsp;&nbsp; <img src="images/google.jpg" width="40"
+                                align="center"><b>&nbsp;&nbsp;Google</b><br>
+                            <div class="cls26">
+                                Development
+                            </div>
+                            <b class="abc">&nbsp;Front End Dev</b><br>
+                            &nbsp; &nbsp;<img src="images/location-marker.png" width="20" align="center">New York &nbsp;
+                            &nbsp;
+                            &nbsp; <img src="images/clock.png" width="20" align="center">Part Time
+                            <hr width="190px"><br>
+                            <p class="aaa">Amet Minim molit non deserant ullamco Est Sit Aliqua Dolor Do
+                                Velit Officia Consequent Duis Enim Velit Molilt.</p>
+                        </div>
+                        <div class="cls21"><br>
+                            &nbsp;&nbsp;<img src="images/Frame 1368 (1).png" width="40" align="center"><b>
+                                &nbsp;Microsoft</b><br>
+                            <div class="cls27">
+                                Finance
+                            </div>
+                            <b class="def">&nbsp;Accountant</b><br>
+                            &nbsp; &nbsp;<img src="images/location-marker.png" width="20" align="center">Mine Apolis
+                            &nbsp;
+                            &nbsp; &nbsp;<img src="images/clock.png" width="20" align="center">Part Time
+                            <hr width="190px"><br>
+                            <p class="bbb">
+                                Amet Minim molit non deserant ullamco Est Sit Aliqua Dolor Do
+                                Velit Officia Consequent Duis Enim Velit Molilt.
+                            </p>
+                        </div>
+                        <div class="cls22"><br>
+                            &nbsp;&nbsp;<img src="images/slang.png" width="40" align="center"><b>&nbsp;Slack</b><br>
+                            <div class="cls28">
+                                Design
+                            </div>
+                            <b class="ddd">Product Designer</b><br>
+                            &nbsp;&nbsp;<img src="images/location-marker.png" width="20"
+                                align="center">California&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/clock.png" width="20"
+                                align="center">Part Time
+                            <hr width="190px"><br>
+                            <p class="ccc">
+                                Amet Minim molit non deserant ullamco Est Sit Aliqua Dolor Do
+                                Velit Officia Consequent Duis Enim Velit Molilt
+                            </p>
+
+                        </div>
+                        <div class="cls23"><br>
+                            &nbsp;&nbsp;<img src="images/slang.png" width="40" align="center"><b>&nbsp;Slack</b><br>
+                            <div class="cls29">
+                                Content Writer
+                            </div>
+                            <b class="eee">Copy Writer</b><br>
+                            &nbsp;&nbsp;<img src="images/location-marker.png" width="20"
+                                align="center">London&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                src="images/clock.png" width="20" align="center">Part Time
+                            <hr width="190px"><br>
+                            <p class="fff">
+                                Amet Minim molit non deserant ullamco Est Sit Aliqua Dolor Do
+                                Velit Officia Consequent Duis Enim Velit Molilt
+                            </p>
+
+                        </div>
+                        <div class="cls24"><br>
+                            &nbsp;&nbsp;<img src="images/slang.png" width="40" align="center"><b>&nbsp;Slack</b><br>
+                            <div class="cls30">
+                                Design
+                            </div>
+                            <b class="ggg">Graphic Desiner</b><br>
+                            &nbsp;&nbsp;<img src="images/location-marker.png" width="20"
+                                align="center">jankess&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/clock.png" width="20"
+                                align="center">Part Time
+                            <hr width="190px"><br>
+                            <p class="hhh">
+                                Amet Minim molit non deserant ullamco Est Sit Aliqua Dolor Do
+                                Velit Officia Consequent Duis Enim Velit Molilt
+                            </p>
+
+                        </div>
+                        <div class="cls25"><br>
+                            &nbsp;&nbsp;<img src="images/slang.png" width="40" align="center"><b>&nbsp;Slack</b><br>
+                            <div class="cls31">
+                                Development
+                            </div>
+                            <b class="iii">Mobile Developer</b><br>
+                            &nbsp;&nbsp;<img src="images/location-marker.png" width="20"
+                                align="center">Bankok&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/clock.png" width="20"
+                                align="center">Part Time
+                            <hr width="190px"><br>
+                            <p class="jjj">
+                                Amet Minim molit non deserant ullamco Est Sit Aliqua Dolor Do
+                                Velit Officia Consequent Duis Enim Velit Molilt
+                            </p>
+
+
+
+<!-- < Page - 5 > -->
+
+
+
+                        </div>
+                        <div class="ss6">View All Jobs<img src="images/arrow.png" width="20" align="center"></div>
+                        <div class="ss3">
+                            <img src="images/Section 5.png" width="900px">
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

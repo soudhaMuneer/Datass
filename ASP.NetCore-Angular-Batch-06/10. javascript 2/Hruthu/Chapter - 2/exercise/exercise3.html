@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Chap.2</title>
+    <link rel="shortcut icon" href="image/dragon.png">
+    <style>
+        .body {
+            position: relative;
+        }
+
+        .sidebar {
+            height: 720px;
+            width: 20%;
+            background: #117ebd;
+            float: left;
+
+        }
+
+        .sidebar-menu {
+
+            padding: 10px 10px 10px 20px;
+            font-size: 20px;
+            display: block;
+        }
+
+        .header {
+            height: 60px;
+            width: 75%;
+            vertical-align: middle;
+            float: left;
+        }
+
+        .bell {
+            position: absolute;
+            left: 1220px;
+            height: 40px;
+            width: 40px;
+        }
+
+        .lady {
+            position: absolute;
+            left: 1260px;
+            height: 40px;
+            width: 40px;
+        }
+
+        .exit {
+            position: absolute;
+            left: 1300px;
+            height: 40px;
+            width: 40px;
+        }
+
+        .Company {
+            position: absolute;
+            left: 320px;
+            top: 120px;
+        }
+
+        .m1 {
+            position: absolute;
+            top: 210px;
+            left: 320px;
+            height: 60px;
+            width: 60px;
+        }
+
+        .cheer {
+            position: absolute;
+            top: 210px;
+            left: 650px;
+            height: 60px;
+            width: 60px;
+        }
+
+        .person3 {
+            position: absolute;
+            top: 510px;
+            left: 320px;
+            height: 60px;
+            width: 60px;
+        }
+
+        .person4 {
+            position: absolute;
+            top: 510px;
+            left: 650px;
+            height: 60px;
+            width: 60px;
+        }
+
+        #tabledata {
+            position: absolute;
+            top: 200px;
+            left: 340px;
+        }
+
+        #datatable {
+            position: absolute;
+            top: 200px;
+            left: 700px;
+        }
+
+        .outer {
+            position: absolute;
+            height: 20px;
+            width: 1420px;
+            background-color: black;
+            top: 720px;
+
+        }
+    </style>
+</head>
+
+<body onload="listdata()">
+    <div class="body">
+        <div class="sidebar">
+            <h2 style="text-align: center;margin-top:80px;color:white;">HireMe Now!</h2>
+            <ul type="none">
+                <li style="color: white;"> <img src="image/dashboard 1.png" align="center">Dash Board</p>
+                </li>
+                <li style="color: white;"><img src="./image/suitcase 2.png" align="center">Jobs</li><br>
+                <li style="color: white;"> <img src="./image/application (1) 1.png" align="center">Applications</li><br>
+                <li style="color: white;"><img src="./image/question (1) 1.png" align="center">Interviews</li><br>
+                <li style="color: white;"><img src="./image/message 1.png" align="center">Messages</li><br>
+                <li style="color: white;"><img src="./image/settings 1.png" align="center">Settings</li><br>
+            </ul>
+            <div style="text-align: center; color: white;">
+                <img src="./image/add-group (1) 1.png"><br>AddNew</a>
+            </div>
+        </div>
+        <div>
+            <img class="bell" src="./image/bell.png">
+            <img class="lady" src="./image/cheerful-curly-business-girl-wearing-glasses 1.png">
+            <img class="exit" src="./image/exit 1.png">
+
+        </div>
+        <div class="outer"></div>
+        <div>
+            <h3 class="Company">Find Company Members</h3>
+        </div>
+        <div id="tabledata"></div>
+        <div id="datatable"></div>
+
+
+
+
+
+    </div>
+
+    <script>
+        var shortlist = [
+            { image: "image/m1.png", person: "Manu", job: "Job Role : Java Developer", year: "Phone : 3 year", email: "Email : Banglore" },
+            { image: "image/m2.png", person: "Lamiya", job: "Job Role : Marketing Executive", year: "Phone : 2 year", email: "Email : Chennai" }
+
+        ]
+
+        var tablediv = document.getElementById("tabledata");
+        for (let value in shortlist) {
+            var tablecell1 = document.createElement("tr");
+            var tablecell2 = document.createElement("h3");
+            var tablecell3 = document.createElement("tr");
+            var tablecell4 = document.createElement("tr");
+            var tablecell5 = document.createElement("tr");
+            var tablecell11 = document.createElement("br");
+
+
+            var img1 = document.createElement("img");
+            img1.src = shortlist[value].image;
+
+
+            var td1 = document.createElement("td");
+            td1.textContent = shortlist[value].person;
+            var td2 = document.createElement("td");
+            td2.textContent = shortlist[value].job;
+            var td3 = document.createElement("td");
+            td3.textContent = shortlist[value].year;
+            var td4 = document.createElement("td");
+            td4.textContent = shortlist[value].email;
+
+
+
+            tablecell1.appendChild(img1);
+            tablecell2.appendChild(td1);
+            tablecell3.appendChild(td2);
+            tablecell4.appendChild(td3);
+            tablecell5.appendChild(td4);
+
+
+
+            tabledata.appendChild(tablecell1);
+            tabledata.appendChild(tablecell2);
+            tabledata.appendChild(tablecell3);
+            tabledata.appendChild(tablecell4);
+            tabledata.appendChild(tablecell5);
+            tabledata.appendChild(tablecell11);
+        }
+
+        var nextshortlist = [
+            { image: "./image/girl.png", person: "Alexander", job: "Job Role : H R Manager", year: "Phone : 5 year", email: "Email : Thiruvanthapuram" },
+            { image: "./image/m1.png", person: "Deepak", job: "Job Role : System Anlyst", year: "Phone : 2 year", email: "Email : Calicut" },
+
+
+        ]
+        var newtable = document.createElement("table");
+        var nextdiv = document.getElementById("datatable");
+        for (let value in nextshortlist) {
+            var tablecell6 = document.createElement("tr");
+            var tablecell7 = document.createElement("h3");
+            var tablecell8 = document.createElement("tr");
+            var tablecell9 = document.createElement("tr");
+            var tablecell10 = document.createElement("tr");
+            var tablecell12 = document.createElement("br");
+
+
+            var img2 = document.createElement("img");
+            img2.src = nextshortlist[value].image;
+
+
+            var td6 = document.createElement("td");
+            td6.textContent = nextshortlist[value].person;
+            var td7 = document.createElement("td");
+            td7.textContent = nextshortlist[value].job;
+            var td8 = document.createElement("td");
+            td8.textContent = nextshortlist[value].year;
+            var td9 = document.createElement("td");
+            td9.textContent = nextshortlist[value].email;
+
+
+
+            tablecell6.appendChild(img2);
+            tablecell7.appendChild(td6);
+            tablecell8.appendChild(td7);
+            tablecell9.appendChild(td8);
+            tablecell10.appendChild(td9);
+
+
+            datatable.appendChild(tablecell6);
+            datatable.appendChild(tablecell7);
+            datatable.appendChild(tablecell8);
+            datatable.appendChild(tablecell9);
+            datatable.appendChild(tablecell10);
+            datatable.appendChild(tablecell12)
+        }
+    </script>
+
+</body>
+
+</html>

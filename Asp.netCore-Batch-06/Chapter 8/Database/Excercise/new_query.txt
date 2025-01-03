@@ -1,0 +1,22 @@
+
+Create table Using Query
+---------------------
+
+create table Employee(
+		EmpNo bigint ,EName varchar(50) ,DeptNo bigint ,Job varchar(10),HireDate datetime,Salary float)
+
+create table Dept(
+		DeptNo bigint ,DName varchar(20) ,Loc varchar(20) )
+
+
+
+
+1) List Top 2 Salary from EMP table.
+2) Highest salary from each DEPT.
+3) Lowest Salary from EMP.
+4) Find senior from EMP.
+5) Find senior from each DEPT.
+6) Find diffrence of top salary from Dept ''Marcketing" and "Reaearch".
+7) find salary of senior of Dept "Marcketing"
+8) Total persons in each Designation.
+9) find highest salary of John's Department.

@@ -1,0 +1,62 @@
+﻿@page "/Employees" 
+@*--url of the page*@
+@using EmployeeCrud.Data
+@inject EmployeeService employeesService
+
+<NavLink class="nav-link" href="AddEmployee">
+     <span class="oi oi-list-rich" aria-hidden="true"></span> Add Employee
+</NavLink>
+<h3>EmployeesList</h3>
+@*@if(employee is null)
+{
+    <p><em>...............................................Loading!</em></p>
+}
+else
+{
+    <table class="table-bordered" border="1" cellpadding="5px"><thead><tr><th>Id</th>
+        <th>FullName</th>
+    
+   
+    <th>PostalCode</th>
+    <th>Address</th
+        <th>Email</th>
+           <th>Actions</th>
+    </tr></thead>
+        <tbody>@foreach(var emp in employee)
+            {
+                <tr>
+        <td>@emp.Id</td>
+        <td>@emp.FullName</td>
+         
+           <td>@emp.PostalCode</td>
+                      <td>@emp.Address</td>
+<td>@emp.EmailAddress</td>
+<td>
+    <a class="nav-link btn btn-primary" href="Edit/@emp.Id">
+        <span class="oi oi-pencil" aria-hidden="true" >Edit</span>
+    </a>
+    
+</td>
+
+<td>
+    <a class="nav-link btn btn-danger" href="Delete/@emp.Id">
+        <span class="oi oi-trash" aria-hidden="true" >Delete</span>
+    </a>
+    
+</td>
+    </tr>
+            }
+</tbody></table>
+}*@
+@foreach(var emp in employee)
+            {
+
+<EmployeComponent employee = "@emp" ></EmployeComponent>
+            }
+@code {
+    List<Employee> employee;
+    protected override void OnInitialized()
+    {
+        employee = employeesService.GetEmployees();
+    }
+}

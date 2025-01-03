@@ -1,0 +1,33 @@
+﻿@page
+@model Razoractivity3.Pages.Register_pageModel
+@{
+}
+<div>
+    <form method="post">
+        <label>Id:</label><input type="text" asp-for="formdata.Id"/>
+       <label>Name:</label><input type="text" asp-for="formdata.Name" /><br />
+        <label>Age:</label><input type="text" asp-for="formdata.Age" /><br />
+        <input type="submit" name="name" value="submit" />
+
+
+       
+    </form>
+</div>
+<div>
+    <table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+        @foreach (var pps in Model.peoples1)
+        {
+            <tr>
+                <td>@pps.Id</td>
+                <td>@pps.Name</td>
+                <td>@pps.Age</td>
+            </tr>
+        }
+        
+</table>
+</div>

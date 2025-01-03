@@ -1,0 +1,36 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>Workshop1</PageTitle>
+<style>
+    input{
+        border-radius:20px;
+        border-color:#fff;
+        margin-left:5%;
+        margin-right:5%;
+    }
+</style>
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <img src="/Images/ic_menu.png" />
+            <input type="text" placeholder="Search Here" size="70" />
+           <img src="/Images/notification.png" />
+           <img src="/Images/noti.png" />
+           <img src="/Images/profile.png" />
+        </div>
+        <div class="job">
+            <div class="col-md-12">
+                <h2>Jobs</h2>
+            </div>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>

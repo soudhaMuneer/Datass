@@ -1,0 +1,20 @@
+.borders{
+    border-radius: 8px;
+    margin-left: 2px;
+}
+.searchContainer
+{
+    height: 30%;
+    width: 90%;
+    padding: 3px;
+    border-radius: 15px;
+    
+}
+.scroll{
+    overflow: scroll;
+    height: 660px;
+}
+.search{
+    border-radius: 7px;
+    background-color: lightblue;
+ }

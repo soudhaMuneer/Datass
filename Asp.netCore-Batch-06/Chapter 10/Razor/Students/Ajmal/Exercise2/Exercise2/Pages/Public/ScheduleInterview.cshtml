@@ -1,0 +1,57 @@
+﻿@page
+@model Exercise2.Pages.Public.ScheduleInterviewModel
+
+@{
+    ViewData["Title"] = "ScheduleInterview";
+    Layout = "HomeLayout";
+}
+ <div class="row">
+
+					 <div class="col-md-10 p-5 mx-auto d-block border rounded mb-5" style="border-radius: 30px; box-shadow: 0px 0px 5px 2px gray;">
+						<form method="post">
+						 <div class="row">
+							 <div class="col-md-10">
+								 <div class="form-group">
+									 <label for="jobTitle"><h4>Job Title</h4></label>
+									 <br>
+									 <input asp-for="interviewDtos.Company"class="form-control p-4 bg-light" type="text" placeholder="Enter Company"required="">
+								 </div>
+								 <div class="form-group">
+									 <label for="description"><h4>Job</h4></label>
+									 <br>
+									 <input  asp-for="interviewDtos.Post"class="form-control p-4 bg-light" type="text" placeholder="Enter JobName"required="">
+								 </div>
+								 <div class="form-group">
+									 <label for="Salary"><h4>Location</h4></label>
+									 <br>
+									 <input  asp-for="interviewDtos.Location"class="form-control p-4 bg-light" type="text" placeholder="Enter Location"required="">
+								 </div>
+								 <div class="form-group">
+									 <label for="Location"><h4>Date</h4></label>
+									 <br>
+									 <input asp-for="interviewDtos.Date"class="form-control p-4 bg-light" type="text"  placeholder="Enter Date"required="">
+								 </div>
+								 <div class="form-group">
+									 <label for="Location"><h4>Time</h4></label>
+									 <br>
+									 <input asp-for="interviewDtos.Time"class="form-control p-4 bg-light" type="text"  placeholder="Enter Time"required="">
+								 </div>
+							 </div>
+						 </div>
+						 <div class="row pt-4">
+							 <div class="col-md-3">
+								 <input class="btn bg-primary pl-5 pr-5" type="submit" value="Post Job"></input>
+								
+							 </div>
+							 <div class="col-md-3">
+								 <label >Push Notification</label>
+								 <img class="img-fluid" src="~/job/images/Group 14.png">
+							 </div>
+							 <div class="col-md-3">
+								 <label>Email Notification</label>
+								<img class="img-fluid" src="~/job/images/Group 14.png">
+							</div>
+						 </div>	
+						 </form>
+					 </div>
+				 </div

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/publicassets/css/home.css" rel="stylesheet" />
+
+</head>
+<body>
+    <style>
+        .navbar li a {
+            padding: 55px;}</style>
+    <div class="navbar">
+        <ul>
+            <li>
+                <div class="navitem">
+                    <b>
+                        <font size="5px">Hire Me Now!</font>
+                    </b>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="navitem"><a href="#" class="selected"> Find Jobs </a></div>
+            </li>
+            <li class="menu-item">
+                <div class="navitem"> <a href="#">Browse Companies</a></div>
+            </li>
+            <li class="menu-item">
+                <div class="navitem"> <a href="/PostJob">PostJob</a> </div>
+            </li>
+            <li class="menu-item">
+                <div class="navitem"> <a href="/index">Home</a> </div>
+            </li>
+        </ul>
+    </div>
+    <style>
+    .jobData{
+        width: 80%;
+    }
+
+    .btn-apply {
+        height: 30px;
+        color:dodgerblue;
+    }
+
+    .job-card {
+        /*width: 60%;*/
+        margin:  auto;
+        margin-bottom: 13px;
+        padding: 10px;
+        box-shadow: 3px 4px 17px 0px #504d4d7d;
+    }
+
+       /* .job-card :hover {
+
+        box-shadow: 3px 4px 17px 0px #504d4d7d;
+    }*/
+    .applySection{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logoDiv{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .jobListDiv{
+        justify-content: center;
+    }
+
+    progress {
+        width: 100%;
+        height: 8px;
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+        margin-top:5px;
+    }
+
+        progress::-webkit-progress-bar {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+    .JobWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .tags{
+        flex-wrap: wrap
+    }
+
+</style>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
