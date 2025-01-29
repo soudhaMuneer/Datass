@@ -1,0 +1,309 @@
+{
+	"folder_history":
+	[
+	],
+	"last_version": 3211,
+	"last_window_id": 1,
+	"log_indexing": false,
+	"settings":
+	{
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"li",
+						"link\tTag"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"contents": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>bootsreap</title>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap.css\">\n</head>\n<body>\n<h1>Lean</h1>\n<!--bootstrapjs-->\n\n</body>\n</html>",
+					"file": "/C/Users/aitrich/Desktop/New folder (3)/bwrk/index.html",
+					"file_size": 179,
+					"file_write_time": 133121474076665988,
+					"settings":
+					{
+						"buffer_size": 187,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"contents": "",
+					"settings":
+					{
+						"buffer_size": 0,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"contents": "<StockSummary><DSPACCNAME>\n  <DSPDISPNAME>10000 ISI</DSPDISPNAME>\n</DSPACCNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>9 No</DSPCLQTY>\n   <DSPCLRATE>204025.43</DSPCLRATE>\n   <DSPCLAMTA>-1836228.88</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>123</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>-5 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>282203.40</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>2021-01-21/TRA-134</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-116694.92</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>2882</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-112881.36</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>3043</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-112881.36</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>3173</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-112881.36</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>3316</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>3411</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>3629</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-112881.36</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>3684</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>3731</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>3759</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-116694.92</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>401</SSBATCH>\n  <SSGODOWN>AQUATECH</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>57203.39</DSPCLRATE>\n   <DSPCLAMTA>-114406.78</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>4083</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-116694.92</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>4158</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-58347.46</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>4263</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-58347.46</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>4327</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-116694.92</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>4505</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-116694.92</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>4606</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>2 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-116694.92</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>4685</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>58347.46</DSPCLRATE>\n   <DSPCLAMTA>-58347.46</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>592</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>636</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>639</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>693</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>3 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-169322.04</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>731</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>742</SSBATCH>\n  <SSGODOWN>AQUATECH</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>-2 No</DSPCLQTY>\n   <DSPCLRATE></DSPCLRATE>\n   <DSPCLAMTA></DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>754</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>1 No</DSPCLQTY>\n   <DSPCLRATE>56440.68</DSPCLRATE>\n   <DSPCLAMTA>-56440.68</DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>Primary Batch</SSBATCH>\n  <SSGODOWN>Main Location</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>-26 No</DSPCLQTY>\n   <DSPCLRATE></DSPCLRATE>\n   <DSPCLAMTA></DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <SSBATCHNAME>\n  <SSBATCH>Primary Batch</SSBATCH>\n  <SSGODOWN>Stock Items to Be Repaired</SSGODOWN>\n</SSBATCHNAME>\n <DSPSTKINFO>\n  <DSPSTKCL>\n   <DSPCLQTY>5 No</DSPCLQTY>\n   <DSPCLRATE></DSPCLRATE>\n   <DSPCLAMTA></DSPCLAMTA>\n</DSPSTKCL>\n</DSPSTKINFO>\n <StockSummary>",
+					"settings":
+					{
+						"buffer_size": 7130,
+						"line_ending": "Windows",
+						"name": "<StockSummary><DSPACCNAME>"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+			],
+			"find":
+			{
+				"height": 39.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"<DSPACCNAME>",
+					"DSPACCNAME"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 2,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/C/Users/aitrich/Desktop/New folder (3)/bwrk/index.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 187,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										187
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/HTML/HTML.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 0,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/XML/XML.sublime-syntax",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 7130,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										7117,
+										7129
+									]
+								],
+								"settings":
+								{
+									"auto_name": "<StockSummary><DSPACCNAME>",
+									"syntax": "Packages/XML/XML.sublime-syntax",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 5305.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,2,3,-1,-1,-1,-1,617,78,78,734",
+			"project": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}
